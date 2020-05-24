@@ -1,0 +1,349 @@
+import mysql.connector
+from music import *
+import datetime
+from cities import get_cities
+
+MONTH = {1: "january", 2: "february", 3: "march", 4: "april", 5: "may", 6: "june", 7: "july",
+     8: "august", 9: "september", 10: "october", 11: "november", 12: "december"}
+
+name ="Isinka"
+
+def day(delta):
+    today = str(datetime.datetime.today() + datetime.timedelta(days=delta))
+    return str(int(today[8:10])) + " of " + MONTH[int(today[5:7])]
+
+def get_dates():
+    day = datetime.datetime(2020, 1, 1)
+    days = []
+    for i in range(1, 367):
+        str_day = str(int(str(day)[8:10])) + " of " + MONTH[int(str(day)[5:7])]
+        days.append(str_day)
+        day = day + datetime.timedelta(days=1)
+    return days
+
+
+"""
+Instruction how to add new item to dictionary:
+1)Generate new key for you command (for example weather >> wthr)
+    * be sure that there's no any requests with this key
+2)Add this key to keylist "cmds" like this ==> "wthr": ("", ""),
+3)Generate some questions can be asked to VoiceHelper and write it to tuple
+    like this "wthr": ("Hey", "Hay"),
+4)To add answer on your query go to keylist answ
+5)Create the same key like this ==> "wthr": ("", ""),
+6)Add some content to your answer list like this
+    ==> "wthr": ("Answer1", "Answer2"),
+7)That's all!
+
+"""
+
+"""
+1)Do you have any friends
+2)How many centimeeters ...
+
+
+"""
+
+
+opts = {
+    "names": ('ee', 'hey', 'bay', name),
+    #writting this case be sure any song names don't contain ANY of this words
+    #becase may be something like this
+    #please please me ===> me
+    "tbr": ("detect", "turn on", "turn off"),
+
+    # love me like there's no tomorrow ==> love me like there's no 7 of may
+    "tbc": {"today": day(0), "tomorrow": day(1), "day after tomorrow": day(2),
+            "day after today": day(1)},
+    "change_request": {"turn on something": "turn on queen"},
+    "cmds": {
+        # commands that should be prepared
+        "time": ("what time", "when", "what time is it", "time", "give me time", "give time",
+                 "share time", "share me time", "what is the time now"),
+        "whatdayweek": ('what day of a week today', 'is it wednesday today'),
+        "whatdaytoday": ('what day is it ' + day(0), 'which day is ' + day(0), 'which day is it ' + day(0), 'what day is ' + day(0),
+                         'do you know what day is it ' + day(0)),
+        "whatdom": ('what day of the month is it ' + day(0), 'what day of month ' + day(0), 'what day month'),
+        "hi":  ('hi', 'hello', 'big hello', 'hey', 'great hello', 'hello from me',"good morning", "good afternoon", "good evening", "good night"),
+        "sfd": ('what the hell','whats the damn', 'what the shit'),
+        "wwyb":  ('how old are you', 'how many years you are', 'as far are you old', 'as far are you young',
+                  'how many days you are', 'how many months you are', 'what is you age'),
+        # don't forget to write goodbye function for name
+        "bye": ('goodbye', 'bye bye', 'go away', 'go out', 'shut up', "bye", 'see you later', 'see you soon', 'good luck', "have a good trip", "good night"),
+        "hmr": ('how many requests have you prepared', 'how many requests have you prepared', 'how many requests'),
+        "ago": ('i haven\'t hear you for a long time', 'didn\'t hear you for a long time'),
+        "wdyh": ('what did you hear', 'what did i tell', 'what have you heard'),
+        "music": ['turn on SONG', 'switch on SONG', 'turn on the SONG', 'switch on the SONG',
+                  'turn on an ALBUM', 'turn on ALBUM', 'switch on ALBUM', 'switch on the ALBUM',
+                  'turn on an ARTIST', 'turn on ARTIST', 'switch on ARTIST', 'switch on the ARTIST',
+                  'SONG', 'ALBUM', 'ARTIST', 'turn on something'],
+
+qqq        "weather_forecast": ('tell me weather forecast in CITY', 'weather forecast in CITY', 'weather forecast in CITY on 15 of MONTH',
+			     'weather forecast on 15 of MONTH', 'weather forecast in CITY on today',
+			     'weather forecast in CITY on day after tomorrow', 'weather forecast on today', 'weather forecast on tomorrow'
+			     'weather forecast on day after tommorow', 'what is the weather in CITY', 'weather in CITY',
+			     "what is the weather in CITY", "CITY weather", "current weather in CITY", 'weather forecast',
+			     'weather forecast on the street', 'weather forecat outside', 'what is the weather outside',
+			     'the weather on the street','weather outside', 'weather'),
+
+
+       "temperature": ('what temperature in CITY', 'which temperature in CITY now', 'what temperature in CITY is now', 'which temperature in CITY is now',
+		       'what temperature in CITY '+ day(0), 'temperature in CITY', 'temperature on the street'),
+       "wind": ('wind speed on the street', 'wind speed in CITY', 'wind speed', 'wind'),
+       "pressure": ('pressure on the street', 'pressure in CITY', 'pressure'),
+       "sunrise": ('when is sunrise in CITY', 'when is sunrise on the street', 'sunrise'),
+       "sunset": ('when is sunset in CITY', 'when is sunset on the street', 'sunset'),
+       "status": ('weather status in CITY', 'weather status on the street', 'weather status'),
+       "servo": ('rotate servo on', 'servo on', 'turn servo'),
+        #this tuple useful for two-phrases dialog with computer
+        #it can be used like this:
+        # - name, turn on please please me
+        # - should it be an album or a song '?'
+        # - an album
+        "answer": ('an album', 'album', 'a song', 'song', 'its better to turn on a song', 'its better to turn on song',
+                    'its better to turn on album', 'its better to turn on an album'),
+        # commands that should go to buffer:
+        # pass
+
+
+
+        # commands that should return dynamic answer
+        "toy": ("what time of year do you like best", "what time of year do you prefer", "what time dio you like more"),
+        "hmc": ("how many millimeters in one cantimeter", "how many millimeters there is in one cantimeter", "how much millimiters in one cantemeter"),
+        "hmm": ("how many millimeters in one meter", "how many millimeters there is in one meter", "how much millimeters in one meter"),
+        "hck": ("how many cantimeters in one kilometer", "how many cantemeters there is in one kilometer","how much cantemeters in one kilometer"),
+        "hmik": ("how many millimeters there is in one meter", "how many millimeters in one kilometer", "how much millimiters in one kilometer"),
+        "hcm": ("how many centimeters in one meter", "how many cantimeters there is in one meter", "how much cantimeters in one meter"),
+        "fr": ("have you got any friends", "are you having any friends", "friends have", "friends", "any friends"),
+        "hmk": ("how many meters in one kilometer", "how many meters there is in one kilometer", "how much meters in one kilometer"),
+        "happy": ('i am happy to hear you', 'i am very happy to hear you'),
+        "welcome": ('thanks for work', 'thanks for your work', 'thanks for work you are doing', 'thank you very much',
+                    'i am satisfied for your work', 'i am glad with you work'),
+        "tell": ("tell something", "retell the story"),
+        "thanks": ('i made you better', 'you are better than some time ago', 'you are improved now', 'great',
+                    'well done', 'that is great', 'you are smart'),
+        "name":  ('what is your name', 'your name is', 'your name is what'),
+        "howry":  ('how are you', 'how do you do', 'how do you feel'),
+        "wcyd":  ('what can you do', 'what do you can', 'what are your possibilities'),
+        "sorry": ('are you going to work', 'are you going to work today', 'silly machine', 'work', 'work please'),
+        "wmy":  ('who made you', 'who create you', 'who is your creator', 'who was your creator',
+                 'who worked under you'),
+        "ayw": ('are you working', 'are you working now', 'are you hear me', 'working', 'are you ready to work'),
+        "dyw": ('do you work', 'do you work at all', 'do you working', 'do you hear me', 'hear me', 'do you ready to work'),
+        "cyw": ('can you hear me', 'can you hear me now', 'can hear me'),
+
+    },
+    "answ": {
+        "toy": ("summer", "I think summer"),
+        "hmk": ("one thousand", "thousand"),
+        "hmik": ("one million", "million"),
+        "hmc": ("there are actually ten", "ten"),
+   qqq     "hmm": ("one thousand", "thousand"),
+        "hck": ("one hundred thousand","hundred thousand"),
+        "hcm": ("one hundred", "hundred"),
+        "fr": ("yes i have", "yes", "of corse"),
+        "ayw": ('yes, i am', 'i am', 'of course i am', 'yes'),
+        "dyw": ('yes i do', 'of course i do', 'yes', 'i do'),
+        "cyw": ('yes i can', 'yes', 'of course i can', 'i can'),
+        "happy": ('i am happy too', 'i am happy about it'),
+        "welcome": ('You are welcome', 'i am happy you are pleasured'),
+        "tell": ('What should  I tell', 'i can answer any of question', 'hello world'),
+        "thanks": ('thanks', 'thank you', 'thank you very much'),
+        "name":  ('my name is ' + name, 'you should know me as ' + name, name),
+        "sfd": ('It is just reality', 'It is true'),
+        "howry":  ('i am fine', 'i am fine, thanks'),
+        "wcyd":  ('i can not do a lot of things', 'my possibilities are not very big'),
+        "sorry": ('sorry am trying to work', 'slow work may be caused by julius', 'sorry'),
+        "wmy": ('my creator is stepa k', 'stepa k made me', 'stepa k')
+
+
+    },
+}
+
+def get_dictionary():
+    change_main_dictionary()
+   # print(opts)
+
+#    for cmd, items in opts["cmds"].items():
+ #       print(cmd)
+  #      print(items)
+#    print(opts['cmds']['music'])
+    return opts
+
+def get_months():
+    months = []
+    for k, v in MONTH.items():
+        months.append(v)
+#    print(months)
+    return months
+
+def export_dictionary():
+    start_time = datetime.datetime.now()
+    opts = get_dictionary()
+
+    connection = mysql.connector.connect(
+          host="localhost",
+          user="root",
+          passwd="password",
+          database="voice_helper"
+        )
+    cursor = connection.cursor()
+
+    q = "INSERT INTO voice_helper.opts (dict, request) VALUES (\"" + "main" + "\", \""
+
+    for key, cmd in opts["cmds"].items():
+        for r in cmd:
+            q += r + ", "
+            #cursor.execute(q)
+            #connection.commit()
+    q = q[:-2] + "\");"
+    print(q)
+    cursor.execute(q)
+    connection.commit()
+    print("[ log ] export time: " + str(datetime.datetime.now() - start_time))
+
+def export_dictionary_two():
+    start_time = datetime.datetime.now()
+    opts = get_dictionary()
+
+    connection = mysql.connector.connect(
+          host="localhost",
+          user="root",
+          passwd="password",
+          database="voice_helper"
+        )
+    cursor = connection.cursor()
+
+
+    for key, cmd in opts["cmds"].items():
+        q = "INSERT INTO voice_helper.opts (dict, request) VALUES (\"" + key + "\", \""
+        for r in cmd:
+            q += r + ", "
+        q = q[:-2] + "\");"
+        cursor.execute(q)
+        connection.commit()
+
+    print("[ log ] export time: " + str(datetime.datetime.now() - start_time))
+
+def import_dictionary():
+    cmds = {}
+    start_time = datetime.datetime.now()
+    connection = mysql.connector.connect(
+          host="localhost",
+          user="root",
+          passwd="password",
+          database="voice_helper"
+        )
+
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM opts")
+    data = cursor.fetchall()
+    var = data[0][1].split(", ")
+#    print(var)
+    """
+    for row in data:
+        try:
+            cmds[row[0]]
+        except:
+            cmds[row[0]] = []
+        c += 1
+        cmds[row[0]].append(row[1])
+    """
+#   opts["cmds"] = cmds
+    print("[ log ] connection time: " + str(datetime.datetime.now() - start_time))
+    return var
+
+def import_dictionary_two():
+    cmds = {}
+    start_time = datetime.datetime.now()
+    connection = mysql.connector.connect(
+          host="localhost",
+          user="root",
+          passwd="password",
+          database="voice_helper"
+        )
+
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM opts")
+    data = cursor.fetchall()
+    #var = data[0][1].split(", ")
+#    print(var)
+    for row in data:
+        cmds[row[0]] = row[1].split(", ")
+    opts["cmds"] = cmds
+#    print(cmds)
+    print("[ log ] connection time: " + str(datetime.datetime.now() - start_time))
+    return opts
+
+
+def change_main_dictionary():
+    to_change = opts["cmds"]["music"]
+    artists, albums, songs = get_lists()
+    changed = []
+    for req in to_change:
+        if req.find("SONG") != -1:
+            for song in songs:
+                changed.append(req.replace("SONG", song))
+        elif req.find("ALBUM") != -1:
+            for album in albums:
+                changed.append(req.replace("ALBUM", album))
+        elif req.find("ARTIST") != -1:
+            for artist in artists:
+                changed.append(req.replace("ARTIST", artist))
+        else:
+            changed.append(req)
+
+    opts["cmds"]["music"] = changed
+
+    change_city = ["weather_forecast", 'temperature', 'wind', 'pressure', 'sunrise', 'sunset', 'status']
+    cities = get_cities()
+    for part in change_city:
+        to_change = opts["cmds"][part]
+#       print(cities)
+        changed = []
+        for req in to_change:
+            if req.find("CITY") != -1:
+                for city in cities:
+                    changed.append(req.replace("CITY", city))
+                    #print(city)
+            else:
+                changed.append(req)
+    #    for el in changed:
+     #       print(el)
+    #   print(changed)
+        opts["cmds"][part] = changed
+
+
+    change_month = ["weather_forecast"]
+    months = get_months()
+    for part in change_month:
+        to_change = opts["cmds"][part]
+#       print(cities)
+        changed = []
+        for req in to_change:
+            if req.find("MONTH") != -1:
+                for month in months:
+                    changed.append(req.replace("MONTH", month))
+                    #print(city)
+            else:
+                changed.append(req)
+#        for el in changed:
+#            print(el)
+    #   print(changed)
+        opts["cmds"][part] = changed
+
+#get_dictionary()
+#print(get_dates())
+#print(day(0))
+#print(day(1))
+#print(day(2))
+#print(opts['cmds']['weather_forecast'])
+#get_dictionary()
+#export_dictionary_two()
+opts = import_dictionary_two()
+i = 0
+while i < 4:
+    for k, v in opts["cmds"].items():
+        print(k)
+        print(v)
+        i += 1

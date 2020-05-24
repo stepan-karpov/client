@@ -1,0 +1,2988 @@
+request: what day of week today
+answer: today is thursday
+datetime: 2020-04-30 13:00:13.183118
+
+request: what day of week today
+answer: today is thursday
+datetime: 2020-04-30 13:00:16.654962
+
+request: what day of week today
+answer: today is thursday
+datetime: 2020-04-30 13:01:08.478276
+
+request: what day of week today
+answer: today is thursday
+datetime: 2020-04-30 13:01:12.304505
+
+request: what day of week today
+answer: today is thursday
+datetime: 2020-04-29 13:48:16.049431
+
+request: what day of week today
+answer: today is thursday
+datetime: 2020-04-30 12:59:46.124491
+
+request: i haven't seen you for a long time
+answer: last request was processed 1 hour 3 minutes ago
+datetime: 2020-04-30 14:03:40.171961
+
+request: i haven't seen you for a long time
+answer: last request was processed 5 seconds ago
+datetime: 2020-04-30 14:03:45.572335
+
+request: what did you hear
+answer: i haven't seen you for a long time
+datetime: 2020-04-30 14:36:23.961393
+
+request: what did you hear
+answer: what did you hear
+datetime: 2020-04-30 14:36:25.715622
+
+request: turn on please please me
+answer: this should be an album or a song
+datetime: 2020-05-01 23:37:26.243964
+
+request: turn on please please me
+answer: this should be an album or a song
+datetime: 2020-05-02 13:12:22.647260
+
+request: song
+answer: 
+datetime: 2020-05-02 13:12:29.441254
+
+request: turn on please please me
+answer: song or album
+datetime: 2020-05-02 13:12:38.045676
+
+request: album
+answer: 
+datetime: 2020-05-02 13:12:42.719252
+
+request: how many requests have you prepared
+answer: i prepared 1692 requests
+datetime: 2020-05-02 20:23:53.403650
+
+request: how many requests have you prepared
+answer: i prepared 1693 requests
+datetime: 2020-05-02 20:27:08.834427
+
+request: i haven't hear you for a long time
+answer: last request was processed 2 minutes 45 seconds ago
+datetime: 2020-05-02 20:29:53.477336
+
+request: turn on please please me
+answer: this should be an album or a song
+datetime: 2020-05-02 20:38:13.154454
+
+request: album
+answer: 
+datetime: 2020-05-02 20:38:21.373626
+
+request: turn on album please please me
+answer: 
+datetime: 2020-05-02 20:38:38.655837
+
+request: turn on please please me
+answer: this should be an album or a song
+datetime: 2020-05-02 20:38:44.073363
+
+request: song
+answer: 
+datetime: 2020-05-02 20:38:50.109241
+
+request: song
+answer: not recognized answer
+datetime: 2020-05-02 20:40:12.643779
+
+request: hello
+answer: Hi
+datetime: 2020-05-02 23:27:09.576454
+
+request: what time
+answer: Now it is 23 : 27
+datetime: 2020-05-02 23:27:19.623078
+
+request: what day week
+answer: today is saturday
+datetime: 2020-05-02 23:27:26.668883
+
+request: what day of month
+answer: the fifth of may
+datetime: 2020-05-02 23:27:34.902481
+
+request: hello
+answer: Hey
+datetime: 2020-05-02 23:30:30.559652
+
+request: what time
+answer: Now it is 23 : 30
+datetime: 2020-05-02 23:30:35.046277
+
+request: what day of week
+answer: saturday
+datetime: 2020-05-02 23:30:53.692957
+
+request: what day of month
+answer: today is the second of may
+datetime: 2020-05-02 23:31:00.548052
+
+request: what day is it today
+answer: today is the second of may saturday
+datetime: 2020-05-02 23:31:13.239534
+
+request: goobbye
+answer: this is return of "bye"
+datetime: 2020-05-02 23:31:29.377353
+
+request: how many requests were been processed
+answer: i prepared 1711 requests
+datetime: 2020-05-02 23:31:50.087059
+
+request: how many requests were processed
+answer: i prepared 1712 requests
+datetime: 2020-05-02 23:32:34.512703
+
+request: how old are you
+answer: i am surely youger than you
+datetime: 2020-05-02 23:34:03.443644
+
+request: how old are you
+answer: i am younger than my creator on fifteen years
+datetime: 2020-05-02 23:34:08.898316
+
+request: how old are you
+answer: I am 10 months old
+datetime: 2020-05-02 23:34:15.599285
+
+request: how many years you are
+answer: 0 years old
+datetime: 2020-05-02 23:34:33.510311
+
+request: how many month you are
+answer: 10 months old
+datetime: 2020-05-02 23:34:47.191977
+
+request: how many day you are
+answer: 316 days old
+datetime: 2020-05-02 23:35:01.338403
+
+request: i haven't hear you for a long time
+answer: last request was processed 28 seconds ago
+datetime: 2020-05-02 23:35:29.694377
+
+request: what did you hear
+answer: i haven't hear you for a long time
+datetime: 2020-05-02 23:35:41.585778
+
+request: turn on keep yourself alive
+answer: 
+datetime: 2020-05-02 23:36:05.926347
+
+request: turn on please please me
+answer: song or album
+datetime: 2020-05-02 23:36:16.216610
+
+request: song
+answer: 
+datetime: 2020-05-02 23:36:22.826158
+
+request: turn on please please me
+answer: album or song
+datetime: 2020-05-02 23:36:39.367615
+
+request: album
+answer: 
+datetime: 2020-05-02 23:36:44.110744
+
+request: thanks
+answer: 
+datetime: 2020-05-02 23:36:56.188519
+
+request: i am happy to hear
+answer: i am happy too
+datetime: 2020-05-02 23:37:33.034287
+
+request: thanks for works
+answer: You are welcome
+datetime: 2020-05-02 23:37:45.096416
+
+request: tell something
+answer: hello world
+datetime: 2020-05-02 23:37:52.605964
+
+request: tell somnething
+answer: hello world
+datetime: 2020-05-02 23:37:58.774939
+
+request: tell something
+answer: What should  I tell
+datetime: 2020-05-02 23:38:04.620766
+
+request: i made you better
+answer: thank you very much
+datetime: 2020-05-02 23:38:12.516090
+
+request: i download you code on raspberry pi
+answer: 
+datetime: 2020-05-02 23:38:24.904931
+
+request: what is your name
+answer: voicehelper
+datetime: 2020-05-02 23:39:04.739739
+
+request: what is your name
+answer: voicehelper
+datetime: 2020-05-02 23:39:27.362926
+
+request: what is your name
+answer: voicehelper
+datetime: 2020-05-02 23:39:33.671228
+
+request: what is your name
+answer: voicehelper
+datetime: 2020-05-02 23:39:38.674329
+
+request: what is your name
+answer: voicehelper
+datetime: 2020-05-02 23:39:43.305799
+
+request: what is your name
+answer: my name is voicehelper
+datetime: 2020-05-02 23:39:48.567663
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-02 23:41:03.999127
+
+request: what can you do
+answer: my possibilities are not very big
+datetime: 2020-05-02 23:41:15.274103
+
+request: how are you
+answer: i am fine thanks
+datetime: 2020-05-02 23:41:39.909258
+
+request: who made you
+answer: stepa k made me
+datetime: 2020-05-02 23:41:46.770247
+
+request: are you workind
+answer: of course i am
+datetime: 2020-05-02 23:41:55.248645
+
+request: do you work
+answer: of course i do
+datetime: 2020-05-02 23:41:59.337986
+
+request: can you hear me
+answer: yes
+datetime: 2020-05-02 23:42:11.623877
+
+request: exit
+answer: 
+datetime: 2020-05-02 23:42:27.579776
+
+request: stop
+answer: this is return of "bye"
+datetime: 2020-05-02 23:42:29.872636
+
+request: hey
+answer: Hello
+datetime: 2020-05-02 23:43:33.393417
+
+request: hey
+answer: Hello
+datetime: 2020-05-02 23:44:16.894522
+
+request: hey
+answer: Hello
+datetime: 2020-05-02 23:45:12.136134
+
+request: hello
+answer: Hey
+datetime: 2020-05-02 23:52:06.185967
+
+request: i havent hear you for a long time
+answer: last request was processed 19 seconds ago
+datetime: 2020-05-02 23:52:25.102467
+
+request: stop
+answer: this is return of "bye"
+datetime: 2020-05-02 23:52:33.706868
+
+request: hello
+answer: Good day
+datetime: 2020-05-03 16:13:11.360346
+
+request: hello
+answer: Good day
+datetime: 2020-05-03 16:13:17.309362
+
+request: how are you
+answer: good thanks
+datetime: 2020-05-03 16:13:24.498737
+
+request: are you working
+answer: yes i am
+datetime: 2020-05-03 16:13:31.472410
+
+request: i home you re ok
+answer: thank you very much
+datetime: 2020-05-03 16:13:41.456231
+
+request: bye
+answer: this is return of "bye"
+datetime: 2020-05-03 16:13:48.331731
+
+request: hello
+answer: Hey
+datetime: 2020-05-03 16:16:41.369746
+
+request: how are you
+answer: good thanks
+datetime: 2020-05-03 16:16:47.345319
+
+request: are you working
+answer: yes
+datetime: 2020-05-03 16:16:52.908503
+
+request: are you working
+answer: i am
+datetime: 2020-05-03 16:16:59.034805
+
+request: bye
+answer: this is return of "bye"
+datetime: 2020-05-03 16:17:02.611520
+
+request: hello
+answer: Hi
+datetime: 2020-05-03 16:24:35.501611
+
+request: hello
+answer: Hello
+datetime: 2020-05-03 16:24:43.557885
+
+request: hello
+answer: Hey
+datetime: 2020-05-03 17:38:08.195526
+
+request: hello
+answer: Hi
+datetime: 2020-05-03 17:38:14.060123
+
+request: rotate servo on 45
+answer: 4
+datetime: 2020-05-03 17:38:24.099271
+
+request: rotate servo on 123
+answer: 1
+datetime: 2020-05-03 17:38:39.360273
+
+request: hey
+answer: Hi
+datetime: 2020-05-03 17:40:54.904630
+
+request: are you woorkin
+answer: yes i am
+datetime: 2020-05-03 17:41:02.509136
+
+request: how are you
+answer: good thanks
+datetime: 2020-05-03 17:41:07.428419
+
+request: rotate servo on 45
+answer: 45
+datetime: 2020-05-03 17:41:33.901730
+
+request: rotate servo on 123
+answer: 123
+datetime: 2020-05-03 17:41:46.097608
+
+request: rotate servo on 123
+answer: 123
+datetime: 2020-05-03 17:42:09.880462
+
+request: bye
+answer: this is return of "bye"
+datetime: 2020-05-03 17:42:20.150386
+
+request: hello
+answer: Good day
+datetime: 2020-05-03 17:54:48.306734
+
+request: are you ready to work
+answer: sorry
+datetime: 2020-05-03 17:54:58.677667
+
+request: rotate servo on 45
+answer: rotation sucessful
+datetime: 2020-05-03 17:55:25.972423
+
+request: rotate servo on 0
+answer: rotation sucessful
+datetime: 2020-05-03 17:55:41.392070
+
+request: rotate servo on 180
+answer: rotation sucessful
+datetime: 2020-05-03 17:55:51.089658
+
+request: well done
+answer: thank you very much
+datetime: 2020-05-03 17:55:56.819469
+
+request: bye
+answer: this is return of "bye"
+datetime: 2020-05-03 17:56:00.473561
+
+request: hello
+answer: Hi
+datetime: 2020-05-03 17:56:49.402994
+
+request: hello
+answer: Good day
+datetime: 2020-05-03 17:57:56.209335
+
+request: turn on queen
+answer: 
+datetime: 2020-05-03 18:00:12.095914
+
+request: turn on queen 1
+answer: 
+datetime: 2020-05-03 18:00:26.832543
+
+request: are you ready to work
+answer: sorry
+datetime: 2020-05-03 18:01:36.653448
+
+request: hey
+answer: Hello
+datetime: 2020-05-03 18:12:09.362967
+
+request: are you ready to wrk
+answer: i am
+datetime: 2020-05-03 18:12:18.308227
+
+request: hey
+answer: Hi
+datetime: 2020-05-03 18:19:02.174550
+
+request: aare you working
+answer: i am
+datetime: 2020-05-03 18:19:08.318614
+
+request: are you workin
+answer: yes i am
+datetime: 2020-05-03 18:19:13.618858
+
+request: how are you
+answer: good thanks
+datetime: 2020-05-03 18:19:19.208254
+
+request: how old are you
+answer: I am 10 months old
+datetime: 2020-05-03 18:19:24.268918
+
+request: how many day are you
+answer: 317 days old
+datetime: 2020-05-03 18:19:55.293936
+
+request: how many requests have been processed
+answer: i prepared 1799 requests
+datetime: 2020-05-03 18:20:13.214326
+
+request: hpw many requests have been processed
+answer: i prepared 1800 requests
+datetime: 2020-05-03 18:20:31.931367
+
+request: turn on fat bottemed girls
+answer: 
+datetime: 2020-05-03 18:20:49.933328
+
+request: turn on fat battom girls
+answer: 
+datetime: 2020-05-03 18:21:06.504463
+
+request: turn on fat bottomed girls
+answer: 
+datetime: 2020-05-03 18:21:32.816794
+
+request:  hey
+answer: Good evening
+datetime: 2020-05-03 18:21:54.704282
+
+request: turn on please please me
+answer: album or song
+datetime: 2020-05-03 18:22:56.889090
+
+request: album
+answer: 
+datetime: 2020-05-03 18:23:03.644904
+
+request: turn on please please me
+answer: this should be an album or a song
+datetime: 2020-05-03 18:23:15.590007
+
+request: song
+answer: 
+datetime: 2020-05-03 18:23:34.346414
+
+request: hey
+answer: Hi
+datetime: 2020-05-03 18:23:52.414465
+
+request: rotate servo on 0
+answer: rotation sucessful
+datetime: 2020-05-03 18:24:03.557367
+
+request: rotate servo on 180
+answer: rotation sucessful
+datetime: 2020-05-03 18:24:15.291421
+
+request: hello
+answer: Hello
+datetime: 2020-05-03 19:55:35.472526
+
+request: are you working
+answer: i am
+datetime: 2020-05-03 19:55:46.628606
+
+request: tell something
+answer: What should  I tell
+datetime: 2020-05-03 19:55:52.941012
+
+request: how are you
+answer: good thanks
+datetime: 2020-05-03 19:56:03.473366
+
+request: рун
+answer: 
+datetime: 2020-05-03 19:57:06.801366
+
+request: hey
+answer: Hi
+datetime: 2020-05-03 19:57:09.232961
+
+request: are you working
+answer: of course i am
+datetime: 2020-05-03 19:57:13.881904
+
+request: how old are you
+answer: i am younger than my creator on fifteen years
+datetime: 2020-05-03 19:57:31.325186
+
+request: rotate servo on 545
+answer: rotation sucessful
+datetime: 2020-05-03 19:57:45.408329
+
+request: rotate servo on 45
+answer: rotation sucessful
+datetime: 2020-05-03 19:57:58.947879
+
+request: hello
+answer: Hello
+datetime: 2020-05-03 20:00:53.341960
+
+request: are you working
+answer: of course i am
+datetime: 2020-05-03 20:00:58.776057
+
+request: rotate servo on 45
+answer: rotation successful
+datetime: 2020-05-03 20:01:09.936164
+
+request: rotate servo on 0
+answer: rotation successful
+datetime: 2020-05-03 20:01:19.623448
+
+request: rotate servo on 180
+answer: rotation successful
+datetime: 2020-05-03 20:01:27.687920
+
+request: are you working
+answer: i am
+datetime: 2020-05-03 20:01:34.396463
+
+request: how are you
+answer: good thanks
+datetime: 2020-05-03 20:01:39.116193
+
+request: how old are you
+answer: i am surely youger than you
+datetime: 2020-05-03 20:01:53.264701
+
+request: hey
+answer: Hi
+datetime: 2020-05-03 20:02:19.236940
+
+request: are you working
+answer: i am
+datetime: 2020-05-03 20:02:24.476793
+
+request: hey
+answer: Hey
+datetime: 2020-05-03 20:03:18.719823
+
+request: are you working
+answer: of course i am
+datetime: 2020-05-03 20:03:23.851778
+
+request: what about working
+answer: i am
+datetime: 2020-05-03 20:03:31.995669
+
+request: turn on keep yourself alive
+answer: 
+datetime: 2020-05-03 20:03:53.146147
+
+request: rotateservo on 45
+answer: rotation successful
+datetime: 2020-05-03 20:25:11.021775
+
+request: hey
+answer: Hey
+datetime: 2020-05-03 21:05:41.736923
+
+request: hey
+answer: Hi
+datetime: 2020-05-03 21:05:52.429363
+
+request: hey
+answer: Hey
+datetime: 2020-05-03 21:06:13.904390
+
+request: hey
+answer: Hey
+datetime: 2020-05-03 21:06:22.953064
+
+request: how old are you
+answer: I am 10 months old
+datetime: 2020-05-03 21:07:05.339439
+
+request: how many days you are
+answer: 317 days old
+datetime: 2020-05-03 21:07:17.686602
+
+request: turn on servo on 0
+answer: rotation successful
+datetime: 2020-05-03 21:07:57.501353
+
+request: hello
+answer: Hey
+datetime: 2020-05-03 21:51:20.364721
+
+request: hello
+answer: Hey
+datetime: 2020-05-03 21:51:30.632690
+
+request: what time is it now
+answer: Now it is 21 : 52
+datetime: 2020-05-03 21:52:03.604466
+
+request: what
+answer: Now it is 21 : 52
+datetime: 2020-05-03 21:52:32.960276
+
+request: who is on duty today
+answer: today is the third of may sunday
+datetime: 2020-05-03 21:53:01.271599
+
+request: what is the day today
+answer: today is the third of may sunday
+datetime: 2020-05-03 21:53:25.453027
+
+request: whatis the date today
+answer: the third of may sunday
+datetime: 2020-05-03 21:53:53.785414
+
+request: sdfvwdfv/,kmdvf
+answer: 
+datetime: 2020-05-03 21:54:24.120653
+
+request: thunderstorm
+answer: 
+datetime: 2020-05-03 21:54:48.985733
+
+request: moscow
+answer: 
+datetime: 2020-05-03 21:55:10.824226
+
+request: what you cando
+answer: my possibilities are not very big
+datetime: 2020-05-03 21:55:45.370566
+
+request: hmr
+answer: 
+datetime: 2020-05-03 21:56:41.232584
+
+request: how many requests
+answer: i prepared 1856 requests
+datetime: 2020-05-03 21:57:12.700325
+
+request: showmelog
+answer: Good evening
+datetime: 2020-05-03 21:57:30.379447
+
+request: turn on thunderstorm
+answer: 
+datetime: 2020-05-03 21:59:42.968006
+
+request: turn on thunderstruck
+answer: 
+datetime: 2020-05-03 22:00:04.135635
+
+request: turn on billyilish
+answer: 
+datetime: 2020-05-03 22:03:08.379660
+
+request: turn on mr bad guy
+answer: 
+datetime: 2020-05-03 22:03:49.373188
+
+request: turn on the beatles
+answer: 
+datetime: 2020-05-03 22:04:34.744371
+
+request: love me do
+answer: 
+datetime: 2020-05-03 22:05:06.607902
+
+request: turnon love me do
+answer: 
+datetime: 2020-05-03 22:05:23.984566
+
+request: turn on love me do
+answer: 
+datetime: 2020-05-03 22:05:42.608434
+
+request: what time
+answer: Now it is 22 : 6
+datetime: 2020-05-03 22:06:02.508543
+
+request: what time 
+answer: Now it is 22 : 6
+datetime: 2020-05-03 22:06:27.149623
+
+request: what time
+answer: Now it is 22 : 6
+datetime: 2020-05-03 22:06:59.789625
+
+request: what time
+answer: Now it is 22 : 7
+datetime: 2020-05-03 22:07:28.776556
+
+request: what time
+answer: Now it is 22 : 7
+datetime: 2020-05-03 22:07:46.161541
+
+request: what time
+answer: Now it is 22 : 8
+datetime: 2020-05-03 22:08:01.276331
+
+request: tell something
+answer: i can answer any of question
+datetime: 2020-05-03 22:08:24.628051
+
+request: tell something
+answer: i can answer any of question
+datetime: 2020-05-03 22:08:47.006530
+
+request: tell something
+answer: i can answer any of question
+datetime: 2020-05-03 22:09:51.038368
+
+request: what time
+answer: Now it is 22 : 10
+datetime: 2020-05-03 22:10:05.984573
+
+request: what day is today
+answer: the third of may sunday
+datetime: 2020-05-03 22:10:20.814978
+
+request: what time 
+answer: Now it is 22 : 10
+datetime: 2020-05-03 22:10:50.028664
+
+request: tell something
+answer: What should  I tell
+datetime: 2020-05-03 22:11:26.014468
+
+request: tell something
+answer: i can answer any of question
+datetime: 2020-05-03 22:11:44.370631
+
+request: hey
+answer: Good day
+datetime: 2020-05-08 15:29:41.899197
+
+request: are you ready
+answer: yes i am
+datetime: 2020-05-08 15:29:47.712416
+
+request: turn on mister vad guy
+answer: 
+datetime: 2020-05-08 15:30:42.273277
+
+request: turn on mister bad guy
+answer: song or album
+datetime: 2020-05-08 15:30:55.164142
+
+request: song
+answer: 
+datetime: 2020-05-08 15:30:59.939920
+
+request: turn on mister bad guy
+answer: this should be an album or a song
+datetime: 2020-05-08 15:31:09.776978
+
+request: album
+answer: 
+datetime: 2020-05-08 15:31:20.971199
+
+request: sunrise in moscow
+answer: at 04:33 o clock
+datetime: 2020-05-08 15:32:45.755057
+
+request: update database
+answer: 16 degrees and rain
+datetime: 2020-05-08 15:32:55.832300
+
+request: weather
+answer: 16 degrees and rain
+datetime: 2020-05-08 15:33:02.267414
+
+request: turn on man mad paradise
+answer: 
+datetime: 2020-05-08 15:33:24.084966
+
+request: turn on man made paradise
+answer: 
+datetime: 2020-05-08 15:33:44.967432
+
+request: turn there must be more the life than this
+answer: 
+datetime: 2020-05-08 15:44:42.798563
+
+request: hello
+answer: Hello
+datetime: 2020-05-08 16:02:35.049241
+
+request: hello
+answer: Hey
+datetime: 2020-05-08 16:03:59.471060
+
+request: hello
+answer: Hi
+datetime: 2020-05-08 16:04:18.113813
+
+request: hello
+answer: Hey
+datetime: 2020-05-08 16:04:26.838500
+
+request: hello
+answer: Hi
+datetime: 2020-05-08 16:04:31.917125
+
+request: hello
+answer: Good day
+datetime: 2020-05-08 16:04:36.182296
+
+request: gg
+answer: 
+datetime: 2020-05-08 16:05:01.035657
+
+request: hello world
+answer: Hello
+datetime: 2020-05-08 16:25:52.396055
+
+request: hoa are you
+answer: i am fine
+datetime: 2020-05-08 16:25:57.854512
+
+request: how do you do
+answer: good thanks
+datetime: 2020-05-08 16:26:05.271119
+
+request: weather in moscow
+answer: 16 degrees and rain
+datetime: 2020-05-08 16:26:11.799278
+
+request: i made you better
+answer: thank you
+datetime: 2020-05-08 16:26:23.127590
+
+request: turn on queen
+answer: 
+datetime: 2020-05-08 16:26:32.845794
+
+request: turn on fat bottomed girls
+answer: 
+datetime: 2020-05-08 16:26:52.802117
+
+request: how about reading a book
+answer: of course i do
+datetime: 2020-05-08 16:27:05.325748
+
+request: hello world
+answer: Hello
+datetime: 2020-05-10 19:14:27.837793
+
+request: are you working
+answer: yes
+datetime: 2020-05-10 19:14:35.919706
+
+request: how are you
+answer: good thanks
+datetime: 2020-05-10 19:14:42.062852
+
+request: are you ready to work
+answer: yes
+datetime: 2020-05-10 19:14:51.281407
+
+request: weather in Moscow
+answer: 16 degrees and rain
+datetime: 2020-05-10 19:14:59.549146
+
+request: weather forecast for Monday
+answer: sorry i dont have forecast on this day
+datetime: 2020-05-10 19:15:12.419218
+
+request: weather forecast for Monday
+answer: sorry i dont have forecast on this day
+datetime: 2020-05-10 19:15:25.156836
+
+request: weather forecast for Monday
+answer: sorry i dont have forecast on this day
+datetime: 2020-05-10 19:15:37.913774
+
+request: weather forecast Moscow on 11th of May
+answer: 16 degrees and rain
+datetime: 2020-05-10 19:15:53.144737
+
+request: what's your name
+answer: my name is Isinka
+datetime: 2020-05-10 19:16:09.539904
+
+request: how old are you
+answer: i am very young
+datetime: 2020-05-10 19:16:18.373325
+
+request: how many days you are
+answer: 324 days old
+datetime: 2020-05-10 19:16:26.617846
+
+request: what's the language dictionary
+answer: 16 degrees and rain
+datetime: 2020-05-10 19:16:39.529904
+
+request: are you ready to work
+answer: i am
+datetime: 2020-05-10 22:45:18.207396
+
+request: are you ready to work
+answer: yes i am
+datetime: 2020-05-10 22:45:27.879340
+
+request: 1 2 3
+answer: 
+datetime: 2020-05-10 22:46:14.310232
+
+request: difference to work
+answer: i do
+datetime: 2020-05-10 22:46:20.849986
+
+request: to work so slow
+answer: 
+datetime: 2020-05-10 22:46:30.671398
+
+request: to work so slow
+answer: 
+datetime: 2020-05-10 22:46:36.006002
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-10 22:46:44.827078
+
+request: white jokes.
+answer: 
+datetime: 2020-05-10 22:46:57.782670
+
+request: way to work so slowly
+answer: of course i do
+datetime: 2020-05-10 22:47:06.794091
+
+request: way to work so slowly
+answer: yes
+datetime: 2020-05-10 22:47:14.620531
+
+request: hey
+answer: this is answer
+datetime: 2020-05-11 00:19:03.832778
+
+request: are you
+answer: i am fine thanks
+datetime: 2020-05-11 00:19:33.580002
+
+request: how do you feel
+answer: i am fine
+datetime: 2020-05-11 00:19:43.492107
+
+request: are you working
+answer: yes i am
+datetime: 2020-05-11 00:20:06.762367
+
+request: I seen security this is too slow
+answer: at 04:33 o clock
+datetime: 2020-05-11 00:20:19.931826
+
+request: you working
+answer: yes i do
+datetime: 2020-05-11 00:22:26.033654
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-11 00:22:38.879776
+
+request: bye
+answer: goodbye
+datetime: 2020-05-11 00:22:50.313223
+
+request: not a bad
+answer: 
+datetime: 2020-05-11 00:23:00.566921
+
+request: doesn't matter what text is here :)
+answer: 
+datetime: 2020-05-11 11:23:58.693872
+
+request: doesn't matter what text is here :)
+answer: 
+datetime: 2020-05-11 11:24:01.973773
+
+request: doesn't matter what text is here :)
+answer: 
+datetime: 2020-05-11 11:24:04.396518
+
+request: doesn't matter what text is here :)
+answer: 
+datetime: 2020-05-11 11:24:06.745765
+
+request: doesn't matter what text is here :)
+answer: 
+datetime: 2020-05-11 11:24:11.884148
+
+request: doesn't matter what text is here :)
+answer: 
+datetime: 2020-05-11 11:24:15.989044
+
+request: doesn't matter what text is here :)
+answer: 
+datetime: 2020-05-11 11:24:18.349768
+
+request: doesn't matter what text is here :)
+answer: 
+datetime: 2020-05-11 11:24:20.708323
+
+request: doesn't matter what text is here :)
+answer: 
+datetime: 2020-05-11 11:24:28.228843
+
+request: doesn't matter what text is here :)
+answer: 
+datetime: 2020-05-11 11:24:30.597028
+
+request: doesn't matter what text is here :)
+answer: 
+datetime: 2020-05-11 11:24:33.010557
+
+request: hello
+answer: Hey
+datetime: 2020-05-12 22:31:13.322842
+
+request: are you ready to work
+answer: yes
+datetime: 2020-05-12 22:31:26.655244
+
+request: cake
+answer: 
+datetime: 2020-05-12 22:33:17.485440
+
+request: are you
+answer: i am fine thanks
+datetime: 2020-05-12 22:34:31.388007
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-12 22:34:40.372235
+
+request: working
+answer: i am
+datetime: 2020-05-12 22:37:27.938786
+
+request: have a good day
+answer: goodbye
+datetime: 2020-05-12 22:37:36.910541
+
+request: why can't you download files
+answer: my possibilities are not very big
+datetime: 2020-05-12 22:37:49.660647
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-12 22:38:17.235082
+
+request: how are you
+answer: i am fine thanks
+datetime: 2020-05-12 23:07:56.981090
+
+request: how are you
+answer: good thanks
+datetime: 2020-05-12 23:16:58.634275
+
+request: how are you
+answer: good thanks
+datetime: 2020-05-12 23:17:07.798114
+
+request: are you
+answer: i am fine thanks
+datetime: 2020-05-12 23:17:16.854748
+
+request: how are you
+answer: good thanks
+datetime: 2020-05-12 23:17:29.728017
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-12 23:18:10.926394
+
+request: how are you
+answer: good thanks
+datetime: 2020-05-12 23:19:25.001999
+
+request: are you
+answer: i am fine thanks
+datetime: 2020-05-12 23:19:37.740636
+
+request: hello
+answer: Hey
+datetime: 2020-05-12 23:26:01.739190
+
+request: are you working
+answer: i am
+datetime: 2020-05-12 23:26:10.910662
+
+request: are you working
+answer: yes i am
+datetime: 2020-05-12 23:26:51.244138
+
+request: are you working
+answer: yes
+datetime: 2020-05-12 23:27:01.267389
+
+request: are you working
+answer: i am
+datetime: 2020-05-12 23:27:13.911259
+
+request: how are you
+answer: good thanks
+datetime: 2020-05-12 23:27:47.676530
+
+request: Ki working
+answer: i am
+datetime: 2020-05-12 23:28:10.285873
+
+request: are you
+answer: good thanks
+datetime: 2020-05-12 23:28:19.380879
+
+request: weather in Moscow
+answer: 16 degrees and rain
+datetime: 2020-05-12 23:28:29.121004
+
+request: weather in Moscow
+answer: 16 degrees and rain
+datetime: 2020-05-12 23:28:48.715418
+
+request: you're in Moscow
+answer: 100 kilopascales
+datetime: 2020-05-12 23:28:56.466144
+
+request: weather in Moscow
+answer: 16 degrees and rain
+datetime: 2020-05-12 23:29:11.758976
+
+request: weather in Moscow
+answer: 16 degrees and rain
+datetime: 2020-05-12 23:29:21.914026
+
+request: weather in New York
+answer: 9 degrees and clear
+datetime: 2020-05-12 23:29:30.173846
+
+request: weather in Moscow
+answer: 16 degrees and rain
+datetime: 2020-05-12 23:29:42.882459
+
+request: working
+answer: of course i am
+datetime: 2020-05-12 23:29:50.101838
+
+request: working
+answer: yes
+datetime: 2020-05-12 23:30:02.922069
+
+request: how are you
+answer: i am fine thanks
+datetime: 2020-05-12 23:30:58.688804
+
+request: tell me something
+answer: What should  I tell
+datetime: 2020-05-12 23:31:06.124893
+
+request: tell me something
+answer: hello world
+datetime: 2020-05-12 23:31:15.878949
+
+request: tell me something
+answer: i can answer any of question
+datetime: 2020-05-12 23:31:32.871080
+
+request: weather forecast in Moscow
+answer: 16 degrees and rain
+datetime: 2020-05-12 23:31:45.986451
+
+request: you
+answer: 
+datetime: 2020-05-12 23:32:10.451437
+
+request: how are you
+answer: i am fine thanks
+datetime: 2020-05-12 23:32:15.827754
+
+request: how are you
+answer: i am fine thanks
+datetime: 2020-05-12 23:32:23.296050
+
+request: how are you
+answer: good thanks
+datetime: 2020-05-12 23:32:34.312836
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-12 23:32:49.487481
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-12 23:34:30.062516
+
+request: erase to work
+answer: of course i am
+datetime: 2020-05-12 23:34:45.285971
+
+request: Straight Talk
+answer: 
+datetime: 2020-05-12 23:34:55.992210
+
+request: Irish work
+answer: 
+datetime: 2020-05-12 23:35:03.351372
+
+request: crazy to work
+answer: 
+datetime: 2020-05-12 23:35:10.087519
+
+request: are you ready to work
+answer: of course i am
+datetime: 2020-05-12 23:35:16.011401
+
+request: are you
+answer: i am fine
+datetime: 2020-05-12 23:35:22.022209
+
+request: tell me something
+answer: i can answer any of question
+datetime: 2020-05-12 23:35:29.418480
+
+request: what are you
+answer: i am fine
+datetime: 2020-05-12 23:35:42.597387
+
+request: how are you
+answer: good thanks
+datetime: 2020-05-12 23:35:49.310750
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-12 23:36:02.364988
+
+request: Ariat work
+answer: 
+datetime: 2020-05-12 23:36:12.070653
+
+request: you ready to work
+answer: of course i do
+datetime: 2020-05-12 23:36:17.566407
+
+request: Drake tour
+answer: 
+datetime: 2020-05-12 23:36:28.196843
+
+request: are you ready to work
+answer: yes i am
+datetime: 2020-05-12 23:36:34.681857
+
+request: how are you
+answer: i am fine thanks
+datetime: 2020-05-12 23:36:46.545540
+
+request: how are you
+answer: i am fine thanks
+datetime: 2020-05-12 23:36:56.491071
+
+request: rur
+answer: 100 kilopascales
+datetime: 2020-05-12 23:37:42.156634
+
+request: mos ru
+answer: goodbye
+datetime: 2020-05-12 23:38:00.997258
+
+request: how are you
+answer: good thanks
+datetime: 2020-05-12 23:38:08.787367
+
+request: why can't you download file completely
+answer: hundred thousand
+datetime: 2020-05-12 23:38:48.525186
+
+request: how are you
+answer: i am fine thanks
+datetime: 2020-05-12 23:39:02.240115
+
+request: how are you
+answer: good thanks
+datetime: 2020-05-12 23:39:13.124077
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-12 23:39:27.188370
+
+request: how are you
+answer: good thanks
+datetime: 2020-05-12 23:39:35.346602
+
+request: hello
+answer: Good day
+datetime: 2020-05-15 13:30:55.528025
+
+request: hello
+answer: Hi
+datetime: 2020-05-15 13:31:45.221928
+
+request: mos ru
+answer: goodbye
+datetime: 2020-05-15 13:34:59.155773
+
+request: rur
+answer: 100 kilopascales
+datetime: 2020-05-15 13:35:15.154408
+
+request: how are you
+answer: i am fine thanks
+datetime: 2020-05-15 13:35:27.417034
+
+request: are you
+answer: i am fine thanks
+datetime: 2020-05-15 13:35:43.432970
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-15 13:35:53.711010
+
+request: how are you
+answer: i am fine thanks
+datetime: 2020-05-15 13:36:31.021483
+
+request: take me to work
+answer: i am happy you are pleasured
+datetime: 2020-05-15 13:36:41.476881
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-15 13:37:34.192137
+
+request: how are you
+answer: i am fine thanks
+datetime: 2020-05-15 13:37:41.938116
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-15 13:37:59.878474
+
+request: how are you
+answer: good thanks
+datetime: 2020-05-15 13:39:04.446450
+
+request: hello world
+answer: Hi
+datetime: 2020-05-16 16:32:44.442696
+
+request: how are you
+answer: i am fine thanks
+datetime: 2020-05-16 16:33:05.250237
+
+request: how do you feel
+answer: i am fine thanks
+datetime: 2020-05-16 16:33:15.818774
+
+request: are you
+answer: i am fine
+datetime: 2020-05-16 16:34:10.934135
+
+request: how do you feel
+answer: i am fine thanks
+datetime: 2020-05-16 16:34:20.976930
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-16 16:34:31.140363
+
+request: hello world
+answer: Hi
+datetime: 2020-05-16 16:50:28.017720
+
+request: rur
+answer: 100 kilopascales
+datetime: 2020-05-16 16:50:37.367030
+
+request: how are you
+answer: good thanks
+datetime: 2020-05-16 16:50:48.152969
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-16 16:51:03.868881
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-16 16:54:42.407028
+
+request: hello world
+answer: Hello
+datetime: 2020-05-16 16:54:49.334861
+
+request: mos ru
+answer: goodbye
+datetime: 2020-05-16 16:54:58.466933
+
+request: how are you
+answer: good thanks
+datetime: 2020-05-16 16:55:05.859097
+
+request: how are you
+answer: good thanks
+datetime: 2020-05-16 16:55:15.710212
+
+request: how are you
+answer: i am fine thanks
+datetime: 2020-05-16 16:55:40.247708
+
+request: how do you feel
+answer: i am fine thanks
+datetime: 2020-05-16 16:55:50.224667
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-16 16:56:09.308543
+
+request: hello
+answer: Hello
+datetime: 2020-05-16 17:32:10.645037
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-16 17:32:20.245986
+
+request: are you
+answer: i am fine
+datetime: 2020-05-16 17:32:30.795789
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-16 17:33:04.290804
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-16 17:33:14.304860
+
+request: how do you feel
+answer: i am fine
+datetime: 2020-05-16 17:33:23.606642
+
+request: hey goodbye
+answer: goodbye
+datetime: 2020-05-16 17:33:43.381237
+
+request: are you
+answer: i am fine
+datetime: 2020-05-16 18:24:13.302616
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-16 18:24:21.719179
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-16 18:24:29.985867
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-16 18:24:36.338288
+
+request: hey how are you
+answer: i am fine, thanks
+datetime: 2020-05-16 18:24:49.108168
+
+request: Rufio
+answer: 
+datetime: 2020-05-16 18:24:57.171674
+
+request: how do you feel
+answer: i am fine, thanks
+datetime: 2020-05-16 18:25:03.302759
+
+request: how do you feel
+answer: i am fine, thanks
+datetime: 2020-05-16 18:25:17.194204
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-16 18:25:38.594226
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-16 18:25:50.038119
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-16 18:26:15.462132
+
+request: hello world
+answer: Good evening
+datetime: 2020-05-16 18:26:57.048892
+
+request: hello world
+answer: Good night
+datetime: 2020-05-16 23:41:27.495063
+
+request: hello world
+answer: Hey
+datetime: 2020-05-16 23:41:55.341516
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-16 23:42:17.377754
+
+request: one two free
+answer: 
+datetime: 2020-05-16 23:42:24.212416
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-16 23:42:33.697372
+
+request: one two free
+answer: 
+datetime: 2020-05-16 23:44:12.100716
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-16 23:44:17.258919
+
+request: one two free
+answer: 
+datetime: 2020-05-16 23:44:27.981698
+
+request: hello world
+answer: Hello
+datetime: 2020-05-16 23:44:44.991196
+
+request: one two free
+answer: 
+datetime: 2020-05-16 23:45:07.146175
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-16 23:45:15.936547
+
+request: how do you feel
+answer: i am fine, thanks
+datetime: 2020-05-16 23:45:31.875637
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-16 23:45:43.482513
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-16 23:45:53.006823
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-16 23:46:00.757114
+
+request: hello world
+answer: Hello
+datetime: 2020-05-17 20:34:04.660483
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-17 20:43:08.983954
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-17 20:43:36.508211
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-17 20:44:32.673772
+
+request: cover you
+answer: 
+datetime: 2020-05-17 20:45:43.804363
+
+request: mos ru
+answer: goodbye
+datetime: 2020-05-17 20:46:02.346148
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-17 20:46:24.821603
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-17 20:47:10.213771
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-17 20:47:47.871189
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-17 20:49:20.564574
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-17 20:49:43.916389
+
+request: mos ru
+answer: goodbye
+datetime: 2020-05-17 20:50:31.895619
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-17 20:50:39.742567
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-17 20:50:53.186641
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-17 20:51:30.288204
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-17 20:52:26.412618
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-17 20:53:30.403170
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-17 20:53:51.441451
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-17 20:54:51.273300
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-17 20:55:36.260741
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-17 20:55:45.442400
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-17 20:57:07.445083
+
+request: are you ready to work
+answer: yes
+datetime: 2020-05-17 20:57:14.975744
+
+request: Qatar fuel
+answer: 16 degrees and rain
+datetime: 2020-05-17 20:57:21.655601
+
+request: weather in Moscow
+answer: 16 degrees and rain
+datetime: 2020-05-17 20:57:29.955709
+
+request: was it
+answer: 
+datetime: 2020-05-17 20:57:43.518063
+
+request: weather forecast in Moscow on Saturday
+answer: sorry i dont have forecast on this day
+datetime: 2020-05-17 20:57:50.887631
+
+request: weather forecast on Monday
+answer: sorry i dont have forecast on this day
+datetime: 2020-05-17 20:58:04.129325
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-17 20:58:13.544997
+
+request: trying of your text Preparation model
+answer: 
+datetime: 2020-05-17 20:58:23.888033
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-17 20:58:29.527604
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-17 20:59:40.967775
+
+request: how do you feel
+answer: i am fine, thanks
+datetime: 2020-05-17 20:59:47.767215
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-17 20:59:54.787244
+
+request: I don't like your work
+answer: i do
+datetime: 2020-05-17 21:00:02.753004
+
+request: do you work
+answer: of course i do
+datetime: 2020-05-17 21:00:09.144348
+
+request: do homework
+answer: yes i do
+datetime: 2020-05-17 21:00:16.471471
+
+request: how do you feel
+answer: i am fine
+datetime: 2020-05-17 21:00:22.777524
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-17 21:00:29.381820
+
+request: one two free
+answer: 
+datetime: 2020-05-17 21:00:44.544463
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-17 21:00:56.863496
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-17 21:03:05.594406
+
+request: hello
+answer: Hello
+datetime: 2020-05-17 21:04:58.427961
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-17 21:05:04.064961
+
+request: hello world
+answer: Hey
+datetime: 2020-05-17 21:08:10.497452
+
+request: hello world
+answer: Hello
+datetime: 2020-05-17 21:09:05.637568
+
+request: hello world
+answer: Good evening
+datetime: 2020-05-17 21:19:16.946733
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-17 21:19:24.699381
+
+request: hello world
+answer: Hey
+datetime: 2020-05-17 21:22:49.161799
+
+request: hello world
+answer: Hello
+datetime: 2020-05-17 21:42:34.315957
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-17 21:42:40.609802
+
+request: goodbye world
+answer: goodbye
+datetime: 2020-05-17 21:42:47.617093
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-17 21:43:05.388938
+
+request: how do you feel
+answer: i am fine
+datetime: 2020-05-17 21:43:12.043553
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-17 21:43:44.010184
+
+request: how do you feel
+answer: i am fine, thanks
+datetime: 2020-05-17 21:43:50.677833
+
+request: how do you feel
+answer: i am fine, thanks
+datetime: 2020-05-17 21:43:58.055410
+
+request: how do you feel
+answer: i am fine
+datetime: 2020-05-17 21:44:04.699265
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-17 21:44:12.788439
+
+request: hello world
+answer: Hi
+datetime: 2020-05-17 21:45:34.463065
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-17 21:46:37.214885
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-17 21:47:45.369202
+
+request: pottery wheel
+answer: 16 degrees and rain
+datetime: 2020-05-17 21:47:53.087809
+
+request: how do you feel
+answer: i am fine
+datetime: 2020-05-17 21:48:00.539280
+
+request: do you work
+answer: yes
+datetime: 2020-05-17 21:48:10.531188
+
+request: just work
+answer: 
+datetime: 2020-05-17 21:48:17.417624
+
+request: do you work
+answer: yes i do
+datetime: 2020-05-17 21:48:22.483373
+
+request: hydrocele
+answer: 
+datetime: 2020-05-17 21:48:29.846442
+
+request: how do you feel
+answer: i am fine
+datetime: 2020-05-17 21:48:35.975310
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-17 21:48:42.665381
+
+request: hello
+answer: Hello
+datetime: 2020-05-17 21:50:06.733211
+
+request: how do you feel
+answer: i am fine
+datetime: 2020-05-17 21:50:12.284772
+
+request: how do you feel
+answer: i am fine
+datetime: 2020-05-17 21:50:18.540231
+
+request: how do you feel
+answer: i am fine, thanks
+datetime: 2020-05-17 21:50:24.821770
+
+request: weather in Moscow
+answer: 16 degrees and rain
+datetime: 2020-05-17 21:50:32.732046
+
+request: to hear me
+answer: yes i do
+datetime: 2020-05-17 21:50:40.669659
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-17 21:50:56.974987
+
+request: hello world
+answer: this is answer
+datetime: 2020-05-17 21:51:28.821907
+
+request: 
+answer: this is answer
+datetime: 2020-05-17 21:51:32.890639
+
+request: goodbye
+answer: this is answer
+datetime: 2020-05-17 21:51:36.297421
+
+request: goodbye
+answer: this is answer
+datetime: 2020-05-17 21:51:39.778565
+
+request: 
+answer: this is answer
+datetime: 2020-05-17 21:51:43.336293
+
+request: 
+answer: this is answer
+datetime: 2020-05-17 21:51:46.646133
+
+request: goodbye goodbye
+answer: this is answer
+datetime: 2020-05-17 21:51:51.464320
+
+request: 
+answer: this is answer
+datetime: 2020-05-17 21:51:55.995438
+
+request: hello world
+answer: this is answer
+datetime: 2020-05-17 21:58:26.174570
+
+request: hello world
+answer: this is answer
+datetime: 2020-05-17 21:58:30.941218
+
+request: how do you
+answer: this is answer
+datetime: 2020-05-17 21:58:35.385346
+
+request: weather forecast in Moscow
+answer: this is answer
+datetime: 2020-05-17 21:58:41.047188
+
+request: Butterfield
+answer: this is answer
+datetime: 2020-05-17 21:58:46.076916
+
+request: one two free
+answer: this is answer
+datetime: 2020-05-17 21:58:50.365779
+
+request: microphone check
+answer: this is answer
+datetime: 2020-05-17 21:58:55.565578
+
+request: goodbye
+answer: this is answer
+datetime: 2020-05-17 21:59:01.473779
+
+request: how do you feel
+answer: i am fine, thanks
+datetime: 2020-05-17 21:59:32.137140
+
+request: what about your layoff your princesses
+answer: summer
+datetime: 2020-05-17 21:59:42.349364
+
+request: how many requests have been protest
+answer: i prepared 2180 requests
+datetime: 2020-05-17 21:59:50.411036
+
+request: that's very much
+answer: You are welcome
+datetime: 2020-05-17 21:59:59.913133
+
+request: turn on please please me
+answer: this should be an album or a song
+datetime: 2020-05-17 22:00:08.879616
+
+request: this should be an album
+answer: 
+datetime: 2020-05-17 22:00:18.549962
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-17 22:00:23.973603
+
+request: unsatisfactory to work
+answer: You are welcome
+datetime: 2020-05-17 22:00:39.643044
+
+request: do you have too much delay
+answer: i do
+datetime: 2020-05-17 22:00:47.511477
+
+request: so goodbye
+answer: goodbye
+datetime: 2020-05-17 22:00:53.577210
+
+request: hello world
+answer: Hi
+datetime: 2020-05-17 22:04:49.579886
+
+request: how do you feel
+answer: i am fine, thanks
+datetime: 2020-05-17 22:04:55.515520
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-17 22:05:02.130302
+
+request: hello world
+answer: Hi
+datetime: 2020-05-18 12:27:39.085735
+
+request: I reached work
+answer: 
+datetime: 2020-05-18 12:27:50.340186
+
+request: Heritage work
+answer: 
+datetime: 2020-05-18 12:27:57.200576
+
+request: are you ready to work
+answer: of course i am
+datetime: 2020-05-18 12:28:08.133827
+
+request: Qatar View
+answer: Now it is 12 : 28
+datetime: 2020-05-18 12:28:15.479060
+
+request: cut a few
+answer: 
+datetime: 2020-05-18 12:28:24.373275
+
+request: how to feel
+answer: i am fine
+datetime: 2020-05-18 12:28:30.241957
+
+request: how do you feel
+answer: i am fine
+datetime: 2020-05-18 12:28:37.878059
+
+request: weather forecast in Moscow
+answer: 16 degrees and rain
+datetime: 2020-05-18 12:28:46.281436
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-18 12:28:54.095783
+
+request: hello world
+answer: Hey
+datetime: 2020-05-19 22:42:58.024234
+
+request: hello Bordeaux
+answer: Hi
+datetime: 2020-05-19 22:43:25.020847
+
+request: squeezable. Roboto
+answer: goodbye
+datetime: 2020-05-19 22:43:55.435163
+
+request: how many requests have been processed
+answer: i prepared 2204 requests
+datetime: 2020-05-19 22:44:14.913753
+
+request: can people go to stay up no listen
+answer: 
+datetime: 2020-05-19 22:44:41.504446
+
+request: what do humans look like to be
+answer: I think summer
+datetime: 2020-05-19 22:44:58.163250
+
+request: weather forecast Moscow
+answer: 16 degrees and rain
+datetime: 2020-05-19 22:45:31.300144
+
+request: Dakota
+answer: 
+datetime: 2020-05-19 22:46:26.100354
+
+request: weather forecast on Saturday
+answer: 15 degrees possible light rain overnight and clear-day
+datetime: 2020-05-19 22:46:37.605583
+
+request: weather forecast in New York in Saturday
+answer: 10 degrees drizzle in the afternoon and evening and rain
+datetime: 2020-05-19 22:47:01.053863
+
+request: pressure in New York
+answer: 101 kilopascales
+datetime: 2020-05-19 22:47:18.613433
+
+request: what's the time now
+answer: It is true
+datetime: 2020-05-19 22:47:51.213074
+
+request: who's on The View today
+answer: 
+datetime: 2020-05-19 22:48:14.140945
+
+request: are you ready to work
+answer: i am
+datetime: 2020-05-19 22:50:02.500653
+
+request: what's the time now
+answer: It is true
+datetime: 2020-05-19 22:50:14.417511
+
+request: what's the time now
+answer: Now it is 22 : 50
+datetime: 2020-05-19 22:50:45.506350
+
+request: what's your favorite season
+answer: my creator is stepa k
+datetime: 2020-05-19 22:51:19.735139
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-19 22:51:41.096026
+
+request: hello world
+answer: Good evening
+datetime: 2020-05-19 22:54:55.021687
+
+request: turn on please please me
+answer: album or song
+datetime: 2020-05-19 22:59:55.792543
+
+request: album
+answer: 
+datetime: 2020-05-19 23:00:02.397634
+
+request: hello world
+answer: Hi
+datetime: 2020-05-20 21:46:52.699269
+
+request: hello world
+answer: Good evening
+datetime: 2020-05-20 21:46:56.940740
+
+request: hello world
+answer: Hello
+datetime: 2020-05-20 21:47:04.209826
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-20 21:47:09.603981
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-20 21:47:15.276782
+
+request: hello world
+answer: Hello
+datetime: 2020-05-20 21:59:36.790507
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-20 21:59:42.027386
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-20 21:59:48.533980
+
+request: hello world
+answer: Hello
+datetime: 2020-05-20 22:01:01.959265
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-20 22:01:11.345612
+
+request: hello world
+answer: Good evening
+datetime: 2020-05-20 22:01:51.530520
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-20 22:01:56.945387
+
+request: I'm satisfied firework
+answer: You are welcome
+datetime: 2020-05-20 22:03:14.234008
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-20 22:12:01.628381
+
+request: good night
+answer: Hi
+datetime: 2020-05-20 22:12:08.510845
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-20 22:12:14.953280
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-21 15:39:18.497812
+
+request: curfew
+answer: 
+datetime: 2020-05-21 15:39:29.567961
+
+request: how to view
+answer: I am 11 months old
+datetime: 2020-05-21 15:39:47.630387
+
+request: proud of you
+answer: i am fine, thanks
+datetime: 2020-05-21 15:39:55.493999
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-21 15:40:01.802156
+
+request: how to view
+answer: I am 11 months old
+datetime: 2020-05-21 15:40:07.755446
+
+request: how do you feel
+answer: i am fine, thanks
+datetime: 2020-05-21 15:40:14.031375
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-21 15:40:20.292587
+
+request: can you hear me
+answer: i can
+datetime: 2020-05-21 15:47:32.692231
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-21 15:47:37.643919
+
+request: weather in New York
+answer: 9 degrees and clear
+datetime: 2020-05-21 15:47:44.150320
+
+request: weather in Moscow
+answer: 16 degrees and rain
+datetime: 2020-05-21 15:47:51.574057
+
+request: can you hear me
+answer: of course i can
+datetime: 2020-05-21 15:48:04.782055
+
+request: can you hear me
+answer: i can
+datetime: 2020-05-21 15:48:13.675662
+
+request: how to feel
+answer: i am fine
+datetime: 2020-05-21 15:48:19.472818
+
+request: how do you feel
+answer: i am fine
+datetime: 2020-05-21 15:48:30.176174
+
+request: good night
+answer: Hello
+datetime: 2020-05-21 15:48:35.060185
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-21 15:48:40.008797
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-21 20:29:44.775733
+
+request: how do you feel
+answer: i am fine, thanks
+datetime: 2020-05-21 20:29:51.535216
+
+request: how do you feel
+answer: i am fine, thanks
+datetime: 2020-05-21 20:30:07.554259
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-21 22:29:58.473145
+
+request: proud of you
+answer: i am fine
+datetime: 2020-05-21 22:30:06.123793
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-21 22:30:12.360428
+
+request: how do you view
+answer: i am fine
+datetime: 2020-05-21 22:30:19.428752
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-21 22:30:25.005124
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-21 22:30:30.399704
+
+request: how do you feel
+answer: i am fine
+datetime: 2020-05-21 22:30:36.182946
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-21 22:30:41.186585
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-21 22:30:46.092656
+
+request: turn on please please me
+answer: album or song
+datetime: 2020-05-21 22:31:00.266026
+
+request: album
+answer: 
+datetime: 2020-05-21 22:31:07.280030
+
+request: turn on please please me
+answer: song or album
+datetime: 2020-05-21 22:31:13.339333
+
+request: song
+answer: 
+datetime: 2020-05-21 22:31:19.565866
+
+request: turn on please please me
+answer: this should be an album or a song
+datetime: 2020-05-21 22:31:25.790247
+
+request: good night
+answer: Hello
+datetime: 2020-05-21 22:31:32.856218
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-21 22:31:37.770946
+
+request: how many requests have been processed
+answer: i prepared 2275 requests
+datetime: 2020-05-21 22:31:49.727753
+
+request: coming into the quest have been protest
+answer: i prepared 2276 requests
+datetime: 2020-05-21 22:32:00.767535
+
+request: what's time
+answer: now it is 22 : 32
+datetime: 2020-05-21 22:32:11.079167
+
+request: what's time
+answer: now it is 22 : 32
+datetime: 2020-05-21 22:32:18.180671
+
+request: what can you do
+answer: i can not do a lot of things
+datetime: 2020-05-21 22:32:30.457584
+
+request: is it Thursday today
+answer: yes, you are right
+datetime: 2020-05-21 22:32:40.204287
+
+request: is it Monday today
+answer: no, it is not monday, it is thursday
+datetime: 2020-05-21 22:32:47.144657
+
+request: what day is 21st of July
+answer: i think that it is thursday
+datetime: 2020-05-21 22:33:03.607832
+
+request: what day is 23rd of July
+answer: i think that it is thursday
+datetime: 2020-05-21 22:33:15.673727
+
+request: what day is 25th of July
+answer: i think that it is thursday
+datetime: 2020-05-21 22:33:25.142007
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-21 22:33:31.272088
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:55:15.825764
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:55:20.358972
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:55:23.898275
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:55:27.264332
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:55:30.079461
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:55:40.928416
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:55:44.230494
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:55:47.509746
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:55:57.814692
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:56:01.441671
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:56:04.900158
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:56:08.283150
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:56:24.609893
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:56:28.028481
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:56:31.933133
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:56:35.303435
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:56:38.641958
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:58:22.392045
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:58:26.465440
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:58:29.834060
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:58:33.179817
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:58:36.482883
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:58:39.821183
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:59:16.524350
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:59:24.754101
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:59:28.174793
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:59:31.556453
+
+request: none
+answer: not recognized answer
+datetime: 2020-05-21 22:59:34.891158
+
+request: bunch of free
+answer: 
+datetime: 2020-05-21 23:00:38.782285
+
+request: are you
+answer: i am fine, thanks
+datetime: 2020-05-21 23:00:47.334889
+
+request: how to view
+answer: i am younger than my creator on fifteen years
+datetime: 2020-05-21 23:00:55.000136
+
+request: what day is 23rd of july
+answer: i think that it is thursday
+datetime: 2020-05-21 23:01:14.506124
+
+request: what day is 21st of july
+answer: i think that it is tuesday
+datetime: 2020-05-21 23:01:22.950654
+
+request: what day is 20th of december
+answer: sunday
+datetime: 2020-05-21 23:01:31.948395
+
+request: what day is 19th of december
+answer: saturday
+datetime: 2020-05-21 23:01:39.614454
+
+request: what day is 18th of december
+answer: friday
+datetime: 2020-05-21 23:01:47.066497
+
+request: what day is 17th of december
+answer: i think that it is thursday
+datetime: 2020-05-21 23:01:55.790833
+
+request: what day is 29th of march
+answer: i think that it is sunday
+datetime: 2020-05-21 23:02:04.859514
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-21 23:02:10.958344
+
+request: i haven't heard you for a long time
+answer: last request was processed 38 minutes 12 seconds ago
+datetime: 2020-05-21 23:40:22.647567
+
+request: parents here for a long time
+answer: last request was processed 13 hours 51 minutes ago
+datetime: 2020-05-22 13:31:32.014158
+
+request: haven't seen you for a long time
+answer: last request was processed 13 seconds ago
+datetime: 2020-05-22 13:31:45.186481
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-22 13:32:23.026636
+
+request: proud of you
+answer: i am fine
+datetime: 2020-05-22 13:32:29.261441
+
+request: how do you
+answer: i am fine, thanks
+datetime: 2020-05-22 13:32:41.323427
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-22 13:32:47.799112
+
+request: how are you how are you
+answer: i am surely younger than you
+datetime: 2020-05-22 14:34:36.048104
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-22 14:34:43.198956
+
+request: hello
+answer: Hi
+datetime: 2020-05-22 14:34:49.097978
+
+request: and i'm here for a long time
+answer: last request was processed 5 seconds ago
+datetime: 2020-05-22 14:34:54.957273
+
+request: weather in moscow
+answer: 16 degrees and rain
+datetime: 2020-05-22 14:35:03.532398
+
+request: weather
+answer: 16 degrees and rain
+datetime: 2020-05-22 14:35:12.308068
+
+request: butter so slow
+answer: 
+datetime: 2020-05-22 14:35:24.029439
+
+request: good night
+answer: Hello
+datetime: 2020-05-22 14:35:34.184654
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-22 14:35:39.362498
+
+request: how many centimeters in one meter
+answer: hundred
+datetime: 2020-05-22 17:32:29.344788
+
+request: how many meters millimeters in one meter
+answer: thousand
+datetime: 2020-05-22 17:32:47.032895
+
+request: how many decimeters in one meter
+answer: one hundred
+datetime: 2020-05-22 17:36:23.635208
+
+request: how many millimeters in one meter
+answer: one thousand
+datetime: 2020-05-22 17:53:25.896551
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-22 17:53:29.733509
+
+request: how many decimeters in one meter
+answer: one hundred
+datetime: 2020-05-22 17:53:43.667378
+
+request: how many millimeters in one meter
+answer: one thousand
+datetime: 2020-05-22 17:53:51.904745
+
+request: how many millimeters in one meter
+answer: thousand
+datetime: 2020-05-22 17:55:07.287753
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-22 17:55:13.581520
+
+request: how many millimeters are in one meter
+answer: thousand
+datetime: 2020-05-22 17:55:20.615175
+
+request: how many decimeters in a meter
+answer: one thousand
+datetime: 2020-05-22 17:55:29.059710
+
+request: how many decimeters in one meter
+answer: thousand
+datetime: 2020-05-22 17:55:40.790384
+
+request: how to make a request to our protest
+answer: i prepared 2353 requests
+datetime: 2020-05-22 18:05:16.242275
+
+request: how many requests for birthday
+answer: i prepared 2354 requests
+datetime: 2020-05-22 18:05:26.865628
+
+request: how many requests were processed
+answer: i prepared 2355 requests
+datetime: 2020-05-22 18:05:37.801847
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-22 18:05:45.694948
+
+request: 1 bit to bytes
+answer: 1.0
+datetime: 2020-05-22 21:53:34.884659
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-22 21:54:51.860485
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-22 21:54:59.299628
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-22 21:55:04.286436
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-22 21:55:08.966690
+
+request: how many gigabytes in one megabyte
+answer: 0.001
+datetime: 2020-05-22 22:12:52.075122
+
+request: how many gigabytes in one megabyte
+answer: 0.001
+datetime: 2020-05-22 22:13:01.274629
+
+request: how many gigabytes in one petabyte
+answer: 1000000.0
+datetime: 2020-05-22 22:13:10.655194
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-22 22:13:18.341086
+
+request: how do you feel
+answer: i am fine, thanks
+datetime: 2020-05-22 22:13:24.527885
+
+request: how many gigabytes in one petabyte
+answer: 1000000.0
+datetime: 2020-05-22 22:13:34.712659
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-22 22:13:49.605702
+
+request: how many gigabytes in one petabyte
+answer: there are 1000000.0 gigabytes in one petabyte
+datetime: 2020-05-22 22:16:32.237282
+
+request: how many tesla in 1 million left
+answer: there are 1.0 tesla in one 
+datetime: 2020-05-22 22:16:46.684018
+
+request: how many milliliters are in one tesla
+answer: there are 1.0 tesla in one 
+datetime: 2020-05-22 22:17:04.904947
+
+request: how many milliliters are in one tesla
+answer: there are 1.0 tesla in one 
+datetime: 2020-05-22 22:17:17.150357
+
+request: how many millimeters in one meter
+answer: there are 1000.0 millimeters in one meter
+datetime: 2020-05-22 22:17:25.312358
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-22 22:17:33.521626
+
+request: how many gigabytes in a petabyte
+answer: there are 1000000 gigabytes in one petabyte
+datetime: 2020-05-22 22:18:47.948810
+
+request: how many gigabytes in a month with a beat
+answer: there are 1e-09 gigabytes in one 
+datetime: 2020-05-22 22:18:59.757004
+
+request: how many gigabytes in one betta beat
+answer: there are 1e-09 gigabytes in one 
+datetime: 2020-05-22 22:19:12.125227
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-22 22:19:18.520374
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-22 22:20:29.853791
+
+request: how do you feel
+answer: i am fine, thanks
+datetime: 2020-05-22 22:20:35.933941
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-22 22:20:41.180668
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-22 22:23:44.297407
+
+request: how many bits in one byte
+answer: i am surely younger than you
+datetime: 2020-05-22 22:26:07.340700
+
+request: how many bits in one byte
+answer: there are 1 byte in one 
+datetime: 2020-05-22 22:26:52.682572
+
+request: how many bits in one byte
+answer: there are 1 byte in one 
+datetime: 2020-05-22 22:27:00.631417
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-22 22:27:13.235841
+
+request: how many bits in a byte
+answer: there are 1 byte in one 
+datetime: 2020-05-22 22:27:41.151162
+
+request: how many bits in a byte
+answer: there are 1 byte in one 
+datetime: 2020-05-22 22:27:48.596435
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-22 22:27:53.669513
+
+request: how many bits in one byte
+answer: there are 1 byte in one 
+datetime: 2020-05-22 22:29:05.419353
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-22 22:29:19.071720
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-22 22:33:02.016257
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-22 22:34:51.790143
+
+request: how many bits in a byte
+answer: there are 8 bits in one byte
+datetime: 2020-05-22 22:36:30.227004
+
+request: how many bits in one byte
+answer: there are 8 bits in one byte
+datetime: 2020-05-22 22:36:38.464011
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-22 22:36:44.414117
+
+request: how to do
+answer: i am fine, thanks
+datetime: 2020-05-22 22:36:51.189860
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-22 22:36:56.256255
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-22 23:01:21.998752
+
+request: how to view
+answer: i am very young
+datetime: 2020-05-22 23:01:27.834754
+
+request: tell me something
+answer: i can answer any of question
+datetime: 2020-05-22 23:01:33.433270
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-22 23:01:45.136652
+
+request: common requests have been protest
+answer: i prepared 2403 requests
+datetime: 2020-05-22 23:01:56.462905
+
+request: come here, stroking protest
+answer: 
+datetime: 2020-05-22 23:02:07.952529
+
+request: how many requests have been processed
+answer: i prepared 2405 requests
+datetime: 2020-05-22 23:02:18.079745
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-22 23:02:25.372113
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-22 23:02:30.661452
+
+request: hello world
+answer: Hello
+datetime: 2020-05-23 13:41:43.941240
+
+request: god of war
+answer: goodbye
+datetime: 2020-05-23 13:41:55.951755
+
+request: hello world
+answer: Good day
+datetime: 2020-05-23 13:42:03.683109
+
+request: have you here
+answer: i am
+datetime: 2020-05-23 13:42:09.879397
+
+request: what have you here
+answer: have you here
+datetime: 2020-05-23 13:42:16.561339
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-23 13:42:21.885198
+
+request: what have you here
+answer: how are you
+datetime: 2020-05-23 13:42:28.686990
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-23 13:42:34.329076
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-23 13:42:39.300472
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-23 16:52:10.906512
+
+request: yours bestway scarborough
+answer: thank you
+datetime: 2020-05-23 16:52:19.308043
+
+request: you are the best voice helper
+answer: thanks
+datetime: 2020-05-23 16:52:26.541120
+
+request: goodbye
+answer: goodbye
+datetime: 2020-05-23 16:52:30.696436
+
+request: hello world
+answer: Good evening
+datetime: 2020-05-24 19:00:10.167724
+
+request: hello world
+answer: Hey
+datetime: 2020-05-24 19:00:50.144735
+
+request: hello world
+answer: Good evening
+datetime: 2020-05-24 19:01:26.059768
+

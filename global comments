@@ -1,0 +1,9 @@
+to expand vocabulary of VoiceHelper:
+
+change main dictionary
+change execute_cmds dictionary
+change music dictionary (about 40th line)
+
+before working:
+update database on server
+update dictionary
