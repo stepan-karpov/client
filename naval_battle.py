@@ -200,6 +200,7 @@ while 1:
     x = int(input())
     y = int(input())
     print(get_shot((x, y)))
+    #print("hw")
     fields = get_fields()
     for field in fields:
         for row in field:
