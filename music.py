@@ -1,4 +1,5 @@
 import os
+import getpass
 import subprocess
 import random
 
@@ -164,7 +165,10 @@ def make_list(album, album_to_speak):
 
 #function to get artists, albums and songs dictionaries :)
 def get_songs():
-	music_dir = "/home/pi/Music"
+	music_dirs = {"pi": "/home/pi/Music",
+		      "stepa": "home/stepa/Music",
+		      "username": "path/to/music"}
+	music_dir = music_dirs[getpass.getuser()]
 	cmd = "grep \".mp\" " + music_dir + "/* -R"
 	answer = subprocess.check_output(cmd, shell=True).decode("utf-8").split('\n')[1:-1]
 	request = []
