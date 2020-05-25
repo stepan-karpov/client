@@ -191,6 +191,40 @@ def start_game():
     print(ships)
     write_fields(fields, ships)
 
+def ship_killed(field, ship, cell_no_check):
+    for cell in ship:
+        if field[cell[1] - 1][cell[0] - 1] != "**":
+            return False
+    return True
+
+def mark_around(field, ship):
+    to_mark = []
+    for cell in ship:
+        ar = free_around_cell(cell, field, "01")
+        for a in ar:
+            to_mark.append(a)
+    to_mark = list(set(to_mark))
+
+    for cell in to_mark:
+        field[cell[1] - 1][cell[0] - 1] = "11"
+
+    for cell in ship:
+        field[cell[1] - 1][cell[0] - 1] = "**"
+    return field
+
+def no_other_ships(field):
+    c = 0
+    for row in field:
+        for cell in row:
+            if cell == "**":
+                c += 1
+    print("c is: " + str(c))
+    if c == 20:
+        return True
+    else:
+        return False
+
+
 def get_shot(cell):
     fields, ships_to_correct = get_fields()
     ships = []
@@ -215,8 +249,22 @@ def get_shot(cell):
             if ship.count(list(cell)) != 0:
                 marked_ship = ship
         print(marked_ship)
-        # this comment is very important
         print("^ marked ship")
+        fields[0][cell[1] - 1][cell[0] - 1] = "**"
+        write_fields(fields, ships_to_correct)
+        if not ship_killed(fields[0], marked_ship, cell):
+            fields[0][cell[1] - 1][cell[0] - 1] = "**"
+            write_fields(fields, ships_to_correct)
+            return "hit"
+        else:
+            if not no_other_ships(fields[0]):
+                fields[0] = mark_around(fields[0], marked_ship)
+                write_fields(fields, ships_to_correct)
+                return "you just killed a ship now"
+            else:
+                return "you win"
+    elif status == "**" or status == "11":
+        return "sorry, you can not shot there"
         """
         around = free_around_cell(cell, fields[0], "01")
         print(around)
