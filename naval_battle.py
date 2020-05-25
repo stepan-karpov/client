@@ -22,27 +22,30 @@ def initialize_field(empty=False, i=0, not_empty=False):
 
     field = []
     field_row = []
-
-    for i in range(0, 100):
-        if not empty and not not_empty:
-            cell = field_line[i*2] + field_line[i*2+1]
-        elif not_empty:
-            cell = "10"
-        elif empty:
-            cell = "00"
-        field_row.append(cell)
-        if (i - 9) % 10 == 0:
-            field.append(field_row)
-            field_row = []
-
-
+    if i != 2:
+        for i in range(0, 100):
+            if not empty and not not_empty:
+                cell = field_line[i*2] + field_line[i*2+1]
+            elif not_empty:
+                cell = "10"
+            elif empty:
+                cell = "00"
+            field_row.append(cell)
+            if (i - 9) % 10 == 0:
+                field.append(field_row)
+                field_row = []
+    else:
+        ships = field_line.split(";")[:-1]
+        for i in range(0, len(ships)):
+            ships[i] = ships[i].split(":")[:-1]
+        field = ships
 #    for row in field:
 #        print(row)
 
     return field
 
 def get_fields():
-    return [initialize_field(i=0), initialize_field(i=1)]
+    return [initialize_field(i=0), initialize_field(i=1)], initialize_field(i=2)
 
 
 def free_around_cell(cell, field, pattern="00"):
@@ -124,11 +127,11 @@ def stay_up_ship(pos, direction, deck, field):
         coords.append(( pos[0] + dir[direction - 1][0] * i, pos[1] + dir[direction - 1][1] * i))
     for cell in coords:
         field[cell[0] - 1][cell[1] - 1] = "01"
-    return field
+    return field, coords
 
 def set_up_ships():
     field = initialize_field(True)
-
+    ships = []
     for i in range(1, 5):
 #        print(i, ' ', 5 - i)
         for j in range(1, 6 - i):
@@ -138,16 +141,16 @@ def set_up_ships():
                 direction = randint(1, 4)
                 possible = possible_to_set_up_ship(pos, direction, i, field)
             #print(possible)
-            field = stay_up_ship(pos, direction, i, field)
-#            print("new ship: ")
+            field, ship = stay_up_ship(pos, direction, i, field)
+            ships.append(ship)
     """
     for row in field:
         print(row)
         print()
     """
-    return field
+    return field, ships
 
-def write_fields(fields):
+def write_fields(fields, ships):
     connection = mysql.connector.connect(
       host="localhost",
       user="root",
@@ -167,24 +170,64 @@ def write_fields(fields):
         cursor.execute(q)
         connection.commit()
         f = ""
+    q = "INSERT INTO naval_battle (field) VALUES ('"
+    for ship in ships:
+        for cell in ship:
+            q += str(cell) + ":"
+        q += ";"
+    q += "');"
+    cursor.execute(q)
+    connection.commit()
 
 
 def start_game():
-    fields = [set_up_ships(), initialize_field(not_empty=True)]
+    ships_field, ships = set_up_ships()
+    fields = [ships_field, initialize_field(not_empty=True)]
 
     for field in fields:
         for row in field:
             print(row)
         print("==========")
-    write_fields(fields)
+    print(ships)
+    write_fields(fields, ships)
 
 def get_shot(cell):
-    fields = get_fields()
+    fields, ships_to_correct = get_fields()
+    ships = []
+    for ship in ships_to_correct:
+        ship_to_add = []
+        for ship_cell in ship:
+            ship_cell_mod = ship_cell[1:-1].split(", ")
+            ship_cell_mod.reverse()
+            ship_cell_mod[0] = int(ship_cell_mod[0])
+            ship_cell_mod[1] = int(ship_cell_mod[1])
+            ship_to_add.append(ship_cell_mod)
+        ships.append(ship_to_add)
+    print(ships)
     status = fields[0][cell[1] - 1][cell[0] - 1]
     if status == "00":
-        fields[0][cell[1] - 1][cell[0] - 1 = "11"
+        fields[0][cell[1] - 1][cell[0] - 1] = "11"
+        write_fields(fields, ships_to_correct)
         return "in water"
-
+    elif status == "01":
+        marked_ship = []
+        for ship in ships:
+            if ship.count(list(cell)) != 0:
+                marked_ship = ship
+        print(marked_ship)
+        print("^ marked ship")
+        """
+        around = free_around_cell(cell, fields[0], "01")
+        print(around)
+        not_killed = True
+        for cell_around in around:
+            cell_around_status = fields[0][cell_around[1] - 1][cell_around[0] - 1]
+            if cell_around_status == "01":
+                not_killed = False
+        if not_killed:
+            fields[0][cell[1] - 1][cell[0] - 1] = "**"
+        """
+        return "status was 01"
 
 
 #initialize_field(True)
@@ -201,9 +244,9 @@ while 1:
     y = int(input())
     print(get_shot((x, y)))
     #print("hw")
-    fields = get_fields()
+    fields, ships = get_fields()
     for field in fields:
         for row in field:
             print(row)
         print("===")
-
+#    print(ships)
