@@ -2,6 +2,7 @@ import os
 import time
 from random import randint
 import datetime
+from functions import *
 from music import *
 from fuzzywuzzy import fuzz
 from weather import *
@@ -29,6 +30,7 @@ def change_request(Text):
 	return Text
 
 def prepare_answer(Text):
+    print(hello_s())
     start_time = datetime.datetime.now()
     print("[ log ] text preparation module starts ============")
     global opts
