@@ -1,5 +1,5 @@
 import mysql.connector
-from random import randint
+from random import randint, shuffle
 
 def initialize_field(empty=False, i=0, not_empty=False):
     connection = mysql.connector.connect(
@@ -278,16 +278,69 @@ def get_shot(cell):
         """
         return "status was 01"
 
+def situation(field):
+    cell_to_search = []
+    destination = 0
+    for i in range(1, 11):
+        for j in range(1, 11):
+            cell = (j, i)
+            if field[i - 1][j - 1] == "**":
+                # this values shouldn't be negative
+                cells_around_preparing = {(i - 2, j - 1): 1, (i - 1, j): 2, (i, j - 1): 3, (i - 1, j - 2): 4}
+                cells_around = {}
+                for k, v in cells_around_preparing.items():
+                    if -1 < k[0] < 10 and -1 < k[1] < 10:
+                        cells_around[field[k[0]][k[1]] = v
+                for k, v in cell_around.items():
+                    if k == "**":
+                        destination = v
+                        print("found two **, destination " + str(v) + " from " + str(cell))
+                cell_to_search = cell
+    return cell_to_search, destination
+
+def detect_destination(cell, field):
+    destinations = [1, 2, 3, 4]
+    shuffle(destinations)
+    nearest_cell = "00"
+    destinations_accord = {1: (0, -1), 2: (1, 0), 3: (0, 1), 4: (-1, 0)}
+    for u in range(0, 4):
+        i, j = destinations_accord[destinations[0]]
+        coords = (cell[0] + i, cell[1] + j)
+        if 0 < coords[0] < 11 and 0 < coords[1] < 11:
+            if field[coords[1] - 1][coords[0] - 1] != "11":
+                return destinations[0]
+            else:
+                destinations.pop(0)
+        else:
+            destinations.pop(0)
+
+
+
+def make_shot():
+    fields, ships = get_fields()
+
+    cell_to_search, destination = situation(fields[1])
+    if len(cell_to_search) == 0 and destination == 0:
+        return (randint(1, 10), randint(1, 10))
+    else:
+        if destination == 0:
+            destination = detect_destination(cell_to_search, field)
+        else:
+            # i can't code more, i want to sleep
+            # this "if" is when direction (destination) and first cell of ship (cell_to_search) are defined
+        found, cell = is_there_alone_cell(field[1])
 
 #initialize_field(True)
 #set_up_ships()
 #print(free_around_cell((10, 9), initialize_field(True)))
 #print(possible_to_set_up_ship([10, 10], 1, 3, initialize_field(True)))
-start_game()
+#start_game()
 #get_shot((3, 3))
 #print(get_shot((2, 3)))
 #print(get_shot((4, 3)))
 
+
+"""
 while 1:
     x = int(input())
     y = int(input())
@@ -299,3 +352,4 @@ while 1:
             print(row)
         print("===")
 #    print(ships)
+"""
