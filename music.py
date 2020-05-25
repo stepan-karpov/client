@@ -169,6 +169,7 @@ def get_songs():
 		      "stepa": "home/stepa/Music",
 		      "username": "path/to/music"}
 	#this comment is very important
+	#this comment is very important
 	music_dir = music_dirs[getpass.getuser()]
 	cmd = "grep \".mp\" " + music_dir + "/* -R"
 	answer = subprocess.check_output(cmd, shell=True).decode("utf-8").split('\n')[1:-1]
