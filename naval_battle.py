@@ -215,6 +215,7 @@ def get_shot(cell):
             if ship.count(list(cell)) != 0:
                 marked_ship = ship
         print(marked_ship)
+        # this comment is very important
         print("^ marked ship")
         """
         around = free_around_cell(cell, fields[0], "01")
