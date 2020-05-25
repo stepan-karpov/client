@@ -166,8 +166,8 @@ def make_list(album, album_to_speak):
 #function to get artists, albums and songs dictionaries :)
 def get_songs():
 	music_dirs = {"pi": "/home/pi/Music",
-		      "stepa": "home/stepa/Music",
-		      "username": "path/to/music"}
+		      "stepa": "/home/stepa/Music",
+		      "anoshin": "/home/anoshin/Music"}
 	#this comment is very important
 	#this comment is very important
 	music_dir = music_dirs[getpass.getuser()]
@@ -287,9 +287,9 @@ def get_lists():
 	for album, songs in songs.items():
 		for song in songs:
 			songs_to_return.append(song)
-
+	print(artist_to_return, albums_to_return, songs_to_return)
 	return artist_to_return, albums_to_return, songs_to_return
 
 
 if __name__ == "__main__":
-	print(recognize_song("turn on mister bad guy"))
+	print(recognize_song("turn on seek and destroy"))
