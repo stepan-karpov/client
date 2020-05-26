@@ -92,7 +92,7 @@ def recognize_cmd(cmd):
 
 		cells = get_cells()
 		for cell in cells:
-			if Text.split(" ").count()
+			if Text.split(" ").count():
 				return {'cmd': 'naval_battle', 'percent': 100}
 # was it all worth it
 		units_list = ["meter", "gram", "bit", "newton", "tesla", "byt", "piko", "nano", "micro", 
