@@ -241,6 +241,7 @@ def get_shot(cell):
         ships.append(ship_to_add)
 #    print(ships)
     status = fields[0][cell[1] - 1][cell[0] - 1]
+    print("status: " + status)
     if status == "00":
         fields[0][cell[1] - 1][cell[0] - 1] = "11"
         write_fields(fields, ships_to_correct)
@@ -457,10 +458,12 @@ if __name__ == "__main__":
         write_fields(fields, ships)
         """
         #print(cell, ' ', ' : cell and destination')
-        while answer.find("hit") == -1 and answer.find("kill") == -1:
-        x = int(input())
-        y = int(input())
-        print(get_shot((x, y)))
+        answer = "hit"
+        while not (answer.find("hit") == -1 and answer.find("kill") == -1):
+            x = int(input())
+            y = int(input())
+            answer = get_shot((x, y))
+            print(answer)
         
         cell = make_shot()
 

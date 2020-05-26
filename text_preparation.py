@@ -87,7 +87,8 @@ def recognize_cmd(cmd):
 		except:
 			pass
 	else:
-		units_list = ["meter", "gram", "bit", "newton", "tesla", "byt", "piko", "nano", "micro", "milli", "centi", "deci", "kilo", "mega", "giga", "tera", "peta"]
+		units_list = ["meter", "gram", "bit", "newton", "tesla", "byt", "piko", "nano", "micro", 
+					  "milli", "centi", "deci", "kilo", "mega", "giga", "tera", "peta"]
 
 		for word in cmd.split(" "):
 			for unit in units_list:
@@ -127,6 +128,11 @@ def write_request(request, answer):
 	file.close()
 	return "writing succesfull"
 
+# so let let them know when they stare, 
+# it's just a private affaire 
+# they'll have us hung in the air 
+# and tell me what do they care
+
 def execute_cmd(cmd, Text):
 	#print(cmd)
 	dir = subprocess.check_output("ls FILES/requests/", shell=True).decode("utf-8")
@@ -159,6 +165,7 @@ def execute_cmd(cmd, Text):
 		"status": weather_forecast,
 		"fests": fests,
 		"units": units,
+		"naval_battle": naval_battle,
 	}
 
 	keys = {"temperature": " KEY: 000", "wind": " KEY: 001", "pressure": " KEY: 010", "sunrise": " KEY: 011", "sunset": " KEY: 100", "status": " KEY: 101"}

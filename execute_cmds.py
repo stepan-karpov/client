@@ -263,6 +263,10 @@ def what_heard(Text):
 	cut = cut[9:-1]
 	return cut
 
+# you found success and recognition
+# but into every life a little
+# rain must fall
+
 def what_day_of_month(Text):
 	res = what_day_today(Text)
 	return res[:res.find(",")]
@@ -335,6 +339,9 @@ def wolframalpha_answer(Text):
 			answer = "WolframAlpha Error"
 	#os.system("./speech.sh " + answer.replace('(', "\(").replace(")", "\)"))
 	return answer
+
+def naval_battle(Text):
+	pass
 
 def servo(Text):
 	for word in Text.split(" "):
