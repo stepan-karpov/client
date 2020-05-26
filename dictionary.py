@@ -69,8 +69,8 @@ opts = {
     "cmds": {
         "time": ("what time", "when", "what time is it", "time", "give me time", "give time",
                  "share time", "share me time", "what is the time now", "what time is it now", "time", "what is time"),
-	#NEAREST_DAYS are [today, tomorrow, day after tomorrow, day after today]
-	"whatdaytoday": ('what day is it NEAREST_DAYS', 'what day is NEAREST_DAYS', 'what day is it now', 'what day is now',
+	   #NEAREST_DAYS are [today, tomorrow, day after tomorrow, day after today]
+	   "whatdaytoday": ('what day is it NEAREST_DAYS', 'what day is NEAREST_DAYS', 'what day is it now', 'what day is now',
 			 'do you know what day is it NEAREST_DAYS', 'do you know what day is NEAREST_DAYS',
 			 'do you know what day is it now', 'do you know what day is now'
 			 'which day is it NEAREST_DAYS', 'which day is NEAREST_DAYS', 'which day is it now', 'which day is now',
@@ -162,7 +162,7 @@ opts = {
        "sunrise": ('when is sunrise in CITY', 'when is sunrise on the street', 'sunrise'),
        "sunset": ('when is sunset in CITY', 'when is sunset on the street', 'sunset'),
        "status": ('weather status in CITY', 'weather status on the street', 'weather status'),
-
+       "abc": ("abc1", "abc2"),
 
 
     },
@@ -188,7 +188,7 @@ opts = {
         "wcyd":  ('i can not do a lot of things', 'my possibilities are not very big'),
         "sorry": ('sorry am trying to work', 'slow work may be caused by julius', 'sorry'),
         "wmy": ('my creator is stepa k', 'stepa k made me', 'stepa k')
-
+        "abc": ('answr for abc', 'answer for abc'),
 
     },
 }
