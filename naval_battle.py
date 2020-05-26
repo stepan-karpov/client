@@ -362,20 +362,29 @@ def make_shot():
             c = fields[1][i - 1][j - 1]
         return (j, i)
     elif len(where_to_shot) == 1:
+        print("single cell found")
+
+
         main_cell = where_to_shot[0][0]
-        print("cell alone: " + str(main_cell))
-        around = cells_around(main_cell, False, False)
-        c = "00"
-        while c != "10":
-            c = fields[1][around[0][1] - 1][around[0][0] - 1]
-            around.pop(0)
-        return around[0]
+        directions = {1: (0, -1), 2: (1, 0), 3: (0, 1), 4: (-1, 0)}
+        all_around = cells_around(main_cell, False, False)
+        dir = [1, 2, 3, 4]
+        shuffle(dir)
+        for d in dir:
+            cell_to_s = (main_cell[0] + directions[d][0], main_cell[1] + directions[d][1])
+            try:
+                if fields[1][cell_to_s[1] - 1][cell_to_s[0] - 1] == "10" and all_around.count(cell_to_s) != 0:
+                    return cell_to_s
+            except:
+                pass
+        return "is there single deck in " + str(main_cell)
     else:
         shuffle(where_to_shot)
         print("shuffled: " +str(where_to_shot))
         for cell_to_shot in where_to_shot:
-            main_cell, direction = where_to_shot[0][0], where_to_shot[0][1]
-            direction = where_to_shot[0][1]
+            main_cell = cell_to_shot[0]
+            print(main_cell)
+            direction = cell_to_shot[1]
             directions = {1: (0, -1), 2: (1, 0), 3: (0, 1), 4: (-1, 0)}
             cell_to_s = (main_cell[0] + directions[direction][0], main_cell[1] + directions[direction][1])
             print("cell to start: " + str(main_cell))
@@ -399,6 +408,14 @@ def mark_shot(Text, cell):
         ship.append(list(cell))
         fields[1][cell[1] - 1][cell[0] - 1] = "KK"
         fields[1] = mark_around_killed(fields[1], ship)
+        k = 0
+        for i in range(1, 11):
+            for j in range(1, 11):
+                if fields[1][i - 1][j - 1] == "KK":
+                    k += 1
+        if k == 20:
+            return "I win"
+
     elif Text.find("hit") != -1:
         fields[1][cell[1] - 1][cell[0] - 1] = "**"
     elif Text.find("water") != -1:
