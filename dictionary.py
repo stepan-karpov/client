@@ -1,6 +1,7 @@
 import mysql.connector
 from music import *
 from dictionary_extended import get_cmds, get_answ
+from naval_battle import get_cells
 import datetime
 from cities import get_cities
 
@@ -132,6 +133,8 @@ opts = {
 		    'you are the best WHO', 'you are best WHO', 'you are greatest WHO', 'you are the greates WHO'
  		    'you are the best',
 		    'you are best', 'you are the greatest'),
+        "start_naval_battle": ("let's play NAVAL_BATTLE", "let play NAVAL_BATTLE"),
+        "naval_battle": ('CELL', 'STATUS CELL'),
         "name":  ('what is your name', 'your name is', 'your name is what', 'tell me what is your name',
 		  'how can i call you', 'how can i contact you', 'how should i call you',
 		  'how should i contact you'),
@@ -370,7 +373,7 @@ def change_main_dictionary():
     to_change_keys = [
 	["weather_forecast", 'temperature', 'wind', 'pressure', 'sunrise', 'sunset', 'status'],	["whatdaytoday", "whatdayweek", "whatdom"],
 	["weather_forecast"], ['whatdayweek'], ["whatdayweek"], ["answer"], ["fs"], ["fs"], ["wdyh"], ["wdyh"], ["ago", "happy", "welcome"], ["ago"], ["ago"], ["hmr"],
-	["hmr"], ["hmr"], ["happy"], ["welcome"], ["tell"], ["thanks"]
+	["hmr"], ["hmr"], ["happy"], ["welcome"], ["tell"], ["thanks"], ["naval_battle"], ["start_naval_battle"]
 	]
     to_change_items = [
 	get_cities(), ["today", "tomorrow", "day after tomorrow", "day after today", "yesterday"], get_months(),
@@ -379,11 +382,11 @@ def change_main_dictionary():
 	["hear", "heard"], ['', "i ", "i am "],
 	["n't", " not"], ["hear", "heard", "see", "seen"], ["answer", "answers", "request", "requests"],
 	["prepared", "processed", "were in process", "protest"], ["much", "many"], ["hear", "to_hear"], ["your work", "work"], ["tell", "say"],
-	["girl", "woman", "voice helper", "helper", name]
+	["girl", "woman", "voice helper", "helper", name], get_cells(), ["killed", "hit", "in water"]
 	]
     to_change_key_words = [
 	"CITY", "NEAREST_DAYS", "MONTH", "DAY_OF_WEEK", "DATES", "ALBUM_SONG", "SEASON", "IS", "TELL", "HEAR", "I", "NOT", "HEAR_SEE", "ANSW_REQ",
-	"PREPARED", "MUCH_MANY", "HEAR_TO_HEAR", "YOUR_WORK", "SAY_TELL", "WHO"
+	"PREPARED", "MUCH_MANY", "HEAR_TO_HEAR", "YOUR_WORK", "SAY_TELL", "WHO", "CELL", "STATUS"
 	]
 
     for el in b:

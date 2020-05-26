@@ -275,7 +275,7 @@ def fests(Text):
 	dates = {"independence of united states": "4 of july 1776",
 		 "first space trip": "12 april 1961",}
 	for k, v in dates.items():
-		if Text.find(k):
+		if Text.find(k) != -1:
 			return v
 	return "1 of july"
 
