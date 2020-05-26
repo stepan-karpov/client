@@ -19,6 +19,12 @@
 	]
 """
 
+# before adding new key to cmds be sure that there's no the same key in main dictionary
+# write as many variant's as you can
+# ! "what is" and "what's" are different requests
+# try not to change dictionary.py
+# good luck!
+
 to_change_keys = [
 	["who"]
 ]
@@ -35,13 +41,12 @@ cmds = {
 	"who": ('do you know AUTHORS', 'who do you know')
 }
 
-
-# ! answers won't be imported
-# just write here and copy them to dictionary.py
-# this happends becose there's no import of answers, only question
 answers = {
 	"who": ('of course i know')
 }
 
 def get_cmds():
 	return cmds, to_change_keys, to_change_items, to_change_key_words
+
+def get_answ():
+	return answers

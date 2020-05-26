@@ -1,6 +1,6 @@
 import mysql.connector
 from music import *
-from dictionary_extended import get_cmds
+from dictionary_extended import get_cmds, get_answ
 import datetime
 from cities import get_cities
 
@@ -193,6 +193,9 @@ opts = {
 
 def get_dictionary():
     change_main_dictionary()
+    x = get_answ()
+    for k, v in x.items():
+        opts["answ"][k] = v
    # print(opts)
 
 #    for cmd, items in opts["cmds"].items():
