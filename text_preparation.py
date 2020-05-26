@@ -22,11 +22,13 @@ def change_request(Text):
 		try:
 			int(word)
 		except:
+			cells = get_cells()
 			if not word.isalpha() and word.find("'") == -1:
 				to_change = ""
 				for letter in word:
 					if not letter.isalpha():
 						to_change += letter
+
 				if cells.count(Text) == 0:
 					Text = Text.replace(word, to_change)
 					print("[ log ] Warning! " + word + " changed on " + to_change)
@@ -92,7 +94,7 @@ def recognize_cmd(cmd):
 
 		cells = get_cells()
 		for cell in cells:
-			if Text.split(" ").count():
+			if cmd.split(" ").count(cell):
 				return {'cmd': 'naval_battle', 'percent': 100}
 # was it all worth it
 		units_list = ["meter", "gram", "bit", "newton", "tesla", "byt", "piko", "nano", "micro", 
