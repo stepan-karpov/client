@@ -1,5 +1,6 @@
 import mysql.connector
 from music import *
+from dictionary_extended import get_cmds
 import datetime
 from cities import get_cities
 
@@ -343,6 +344,11 @@ def change_items(to_change, items, key_word):
 
 
 def change_main_dictionary():
+    a, b, c, d = get_cmds()
+    for k, v in a.items():
+        opts["cmds"][k] = v
+
+
     to_change = opts["cmds"]["music"]
     artists, albums, songs = get_lists()
     changed = []
@@ -364,7 +370,7 @@ def change_main_dictionary():
     to_change_keys = [
 	["weather_forecast", 'temperature', 'wind', 'pressure', 'sunrise', 'sunset', 'status'],	["whatdaytoday", "whatdayweek", "whatdom"],
 	["weather_forecast"], ['whatdayweek'], ["whatdayweek"], ["answer"], ["fs"], ["fs"], ["wdyh"], ["wdyh"], ["ago", "happy", "welcome"], ["ago"], ["ago"], ["hmr"],
-	["hmr"], ["hmr"], ["happy"], ["welcome"], ["tell"], ["thanks"], ["abc"]
+	["hmr"], ["hmr"], ["happy"], ["welcome"], ["tell"], ["thanks"]
 	]
     to_change_items = [
 	get_cities(), ["today", "tomorrow", "day after tomorrow", "day after today", "yesterday"], get_months(),
@@ -373,12 +379,21 @@ def change_main_dictionary():
 	["hear", "heard"], ['', "i ", "i am "],
 	["n't", " not"], ["hear", "heard", "see", "seen"], ["answer", "answers", "request", "requests"],
 	["prepared", "processed", "were in process", "protest"], ["much", "many"], ["hear", "to_hear"], ["your work", "work"], ["tell", "say"],
-	["girl", "woman", "voice helper", "helper", name], ["Stepa", "Matvei"]
+	["girl", "woman", "voice helper", "helper", name]
 	]
     to_change_key_words = [
 	"CITY", "NEAREST_DAYS", "MONTH", "DAY_OF_WEEK", "DATES", "ALBUM_SONG", "SEASON", "IS", "TELL", "HEAR", "I", "NOT", "HEAR_SEE", "ANSW_REQ",
-	"PREPARED", "MUCH_MANY", "HEAR_TO_HEAR", "YOUR_WORK", "SAY_TELL", "WHO", "AUTHORS"
+	"PREPARED", "MUCH_MANY", "HEAR_TO_HEAR", "YOUR_WORK", "SAY_TELL", "WHO"
 	]
+
+    for el in b:
+        to_change_keys.append(el)
+    for el in c:
+        to_change_items.append(el)
+    for el in d:
+        to_change_key_words.append(d)
+
+
 
     for i in range(0, len(to_change_keys)):
         """
