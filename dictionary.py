@@ -163,8 +163,6 @@ opts = {
        "sunrise": ('when is sunrise in CITY', 'when is sunrise on the street', 'sunrise'),
        "sunset": ('when is sunset in CITY', 'when is sunset on the street', 'sunset'),
        "status": ('weather status in CITY', 'weather status on the street', 'weather status'),
-       "abc": ("abc1", "abc2", "AUTHORS"),
-
 
     },
     "answ": {
@@ -189,7 +187,6 @@ opts = {
         "wcyd":  ('i can not do a lot of things', 'my possibilities are not very big'),
         "sorry": ('sorry am trying to work', 'slow work may be caused by julius', 'sorry'),
         "wmy": ('my creator is stepa k', 'stepa k made me', 'stepa k'),
-        "abc": ('answr for abc', 'answer for abc'),
 
     },
 }
@@ -391,7 +388,7 @@ def change_main_dictionary():
     for el in c:
         to_change_items.append(el)
     for el in d:
-        to_change_key_words.append(d)
+        to_change_key_words.append(el)
 
 
 

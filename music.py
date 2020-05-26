@@ -287,7 +287,7 @@ def get_lists():
 	for album, songs in songs.items():
 		for song in songs:
 			songs_to_return.append(song)
-	print(artist_to_return, albums_to_return, songs_to_return)
+#	print(artist_to_return, albums_to_return, songs_to_return)
 	return artist_to_return, albums_to_return, songs_to_return
 
 

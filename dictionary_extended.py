@@ -19,7 +19,7 @@
 	]
 """
 
-to_change_keys = [ 
+to_change_keys = [
 	["who"]
 ]
 
@@ -33,7 +33,7 @@ to_change_key_words = [
 
 cmds = {
 	"who": ('do you know AUTHORS', 'who do you know')
-} 
+}
 
 
 # ! answers won't be imported
