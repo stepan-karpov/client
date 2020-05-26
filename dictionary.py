@@ -134,7 +134,7 @@ opts = {
  		    'you are the best',
 		    'you are best', 'you are the greatest'),
         "start_naval_battle": ("let's play NAVAL_BATTLE", "let play NAVAL_BATTLE"),
-        "naval_battle": ('CELL', 'STATUS CELL'),
+        "naval_battle": ('CELL', 'STATUS CELL', 'STATUS, CELL', 'STATUS'),
         "name":  ('what is your name', 'your name is', 'your name is what', 'tell me what is your name',
 		  'how can i call you', 'how can i contact you', 'how should i call you',
 		  'how should i contact you'),

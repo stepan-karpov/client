@@ -175,8 +175,12 @@ def execute_cmd(cmd, Text):
 		"status": weather_forecast,
 		"fests": fests,
 		"units": units,
+<<<<<<< HEAD
 		"naval_battle": naval_battle,
 #		"start_nava;_battle": start_naval_battle
+=======
+		"start_naval_battle": start_naval_battle,
+>>>>>>> f404a5300912a52000ae46d418f6dabbdcaae20a
 	}
 
 	keys = {"temperature": " KEY: 000", "wind": " KEY: 001", "pressure": " KEY: 010", "sunrise": " KEY: 011", "sunset": " KEY: 100", "status": " KEY: 101"}
