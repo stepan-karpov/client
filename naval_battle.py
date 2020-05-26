@@ -397,7 +397,7 @@ def make_shot():
 
 # just walking down the street
 # one cloudless sunny day
-# just minding my bussines 
+# just minding my bussines
 # thinking my thoughts - nothing much to say
 # when suddenly i got hit - imagine my surprise
 
@@ -475,7 +475,7 @@ if __name__ == "__main__":
             y = int(input())
             answer = get_shot((x, y))
             print(answer)
-        
+
         cell = make_shot()
 
         Text = str(raw_input("What is about cell " + str(cell) + "?: "))

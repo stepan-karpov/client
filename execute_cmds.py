@@ -2,6 +2,7 @@ import datetime
 import mysql.connector
 from dictionary import get_dates, day
 from weather import find_date
+from naval_battle import start_game
 from music import *
 import wolframalpha
 #from servo import rotate
@@ -201,36 +202,54 @@ def how_many_requests(Text):
 
 
 def start_naval_battle(Text):
-	start_game() # starts naval battle
-	connection = mysql.connector.connect(
+    start_game() # starts naval battle
+    connection = mysql.connector.connect(
       host="localhost",
       user="root",
       passwd="password",
       database="voice_helper"
     )
     cursor = connection.cursor()
-    cursor.execute("INSERT INTO voice_helper.naval_battle (field) VALUES (1);")
+    cursor.execute("INSERT INTO voice_helper.naval_battle (field) VALUES (101);")
     connection.commit()
- 
-	return "i am happy we are playing. i have already build my field. you starts. it is better to use words kill, in water and hit while playing. i am waiting for your variant"
+
+    return "i am happy we are playing. i have already build my field. you starts. it is better to use words kill, in water and hit while playing. i am waiting for your variant"
 
 def detect_cell_status(Text):
 	statuses = {
 		"hit": ["hit", "touched"],
 		"kill": ["kill"],
-		"in water": ["water"]
+		"water": ["water"]
 	}
+	status = []
 
-	#for k, v in statuses.items():
-	#	fo
+	for k, v in statuses.items():
+		for u in v:
+			if Text.find(u) != -1:
+				status.append[k]
+	if len(status) != 1:
+		return "you should say only one cell status", (0, 0)
+	cells = get_cells()
+	cell = ()
+	cells_accord = {"a": 1, "b": 2, "c": 3, "d": 4, "e": 5, "f": 6, "g": 7, "h": 8, "i": 9, "j": 10}
+	for word in Text.split(" "):
+		if cells.count(word) != -1:
+			try:
+				cell = (cells_accord[word[:1]], int(word[2:]))
+			except:
+				return status, "sorry, i do not understand cell"
+	if cell == ():
+		return status, "what cell have you chosen"
+
+	return cell, status
 
 # stealin'
 # i gave you the key to my home
-# i left you alone 
+# i left you alone
 # in charge of my heart, hey, stealin'
 
 def naval_battle(Text):
-	connection = mysql.connector.connect(
+    connection = mysql.connector.connect(
       host="localhost",
       user="root",
       passwd="password",
@@ -239,15 +258,44 @@ def naval_battle(Text):
     cursor = connection.cursor()
     data = cursor.fetchall()
 
-    cursor.execute("DELETE FROM voice_helper.naval_battle WHERE field == \"1\"")
-    cursor.execute("INSERT INTO voice_helper.naval_battle (field) VALUES (1);")
-    connection.commit()
+    #cursor.execute("DELETE FROM voice_helper.naval_battle WHERE field == \"" + str(data[3] + "\";")
+    #cursor.execute("INSERT INTO voice_helper.naval_battle (field) VALUES (10);")
+    #connection.commit()
 
-    start = int(data[3])
+    start = data[3]
 
-    cell, status = detect_cell_status(Text)
+    detect = detect_cell_status(Text)
 
-
+    if start == "00":
+        try:
+            if (detect[0] == "kill" or detect[0] == "hit" or detect[0] == "water") and detect[1][0] != 0:
+                cell, status = detect[0], detect[1]
+            else:
+                return detect[0] + ". repeat status and cell please"
+        except ValueError:
+            status = detect[0]
+            cursor.execute("INSERT INTO voice_helper.naval_battle (field) VALUES ('10');")
+            connection.commit()
+            cursor.execute("INSERT INTO voice_helper.naval_battle (field) VALUES ('" + str(status) "');")
+            connection.commit()
+            return detect[1]
+    elif status == "10":
+        if not detect[0].startswith("you should"):
+            try:
+                if detect[1][0] != 0:
+                    cell, status = detect[1], data[4]
+                    
+            except ValueError:
+                return detect[1]
+    elif status == "101":
+        try:
+            if detect[1] != 0:
+                
+                return get_shot(detect[1])
+            else:
+                
+        except:
+            return "i have not found any cells in your sentence"
 
 
 def last_call(Text):
