@@ -438,7 +438,7 @@ def get_cells():
     for i in range(1, 11):
         for char in chars:
             cells.append(char + str(i))
-    print(cells)
+#    print(cells)
     return cells
 
 
