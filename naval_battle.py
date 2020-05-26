@@ -198,6 +198,7 @@ def ship_killed(field, ship, cell_no_check):
     return True
 
 def mark_around(field, ship):
+    print("ship to mark: " + str(ship))
     to_mark = []
     for cell in ship:
         ar = free_around_cell(cell, field, "01")
@@ -207,6 +208,7 @@ def mark_around(field, ship):
 
     for cell in to_mark:
         field[cell[1] - 1][cell[0] - 1] = "11"
+
 
     for cell in ship:
         field[cell[1] - 1][cell[0] - 1] = "**"
@@ -290,11 +292,12 @@ def situation(field):
                 cells_around = {}
                 for k, v in cells_around_preparing.items():
                     if -1 < k[0] < 10 and -1 < k[1] < 10:
-                        cells_around[field[k[0]][k[1]] = v
-                for k, v in cell_around.items():
+                        cells_around[field[ k[0] ][ k[1] ]] = v
+                for k, v in cells_around.items():
                     if k == "**":
                         destination = v
                         print("found two **, destination " + str(v) + " from " + str(cell))
+                        return cell, destination
                 cell_to_search = cell
     return cell_to_search, destination
 
@@ -321,35 +324,102 @@ def make_shot():
 
     cell_to_search, destination = situation(fields[1])
     if len(cell_to_search) == 0 and destination == 0:
-        return (randint(1, 10), randint(1, 10))
+        return (randint(1, 10), randint(1, 10)), 0
     else:
+        destinations_accord = {1: (0, -1), 2: (1, 0), 3: (0, 1), 4: (-1, 0)}
+        if len(cell_to_search) != 0 and destination != 0:
+            nearest_cell = "**"
+            cell_to_search = list(cell_to_search)
+            back_up = cell_to_search
+            while nearest_cell == "**":
+                cell_to_search[0] += destinations_accord[destination][0]
+                cell_to_search[1] += destinations_accord[destination][1]
+                nearest_cell = fields[1][cell_to_search[1] - 1][cell_to_search[0] - 1]
+                if fields[1][cell_to_search[1] - 1][cell_to_search[0] - 1] == "00":
+                    reverse_destinations = {3: 1, 2: 4}
+                    print("cell to search (" + str(cell_to_search) + ") is 00, we need to reverse it")
+                    destination = reverse_destinations[destination]
+            print("destination reversed to " + str(destination))
+            print("now it is: ")
+            print("nearest cell: " + str(nearest_cell))
+            print("cell_to_search: " + str(back_up))
+            return back_up, destination
+            cell_to_search = back_up
         if destination == 0:
             destination = detect_destination(cell_to_search, field)
-        else:
-            # i can't code more, i want to sleep
-            # this "if" is when direction (destination) and first cell of ship (cell_to_search) are defined
-        found, cell = is_there_alone_cell(field[1])
+        nearest_cell = "**"
+        cell_to_search = list(cell_to_search)
+        while nearest_cell == "**":
+            cell_to_search[0] += destinations_accord[destination][0]
+            cell_to_search[1] += destinations_accord[destination][1]
+            nearest_cell = fields[1][cell_to_search[1] - 1][cell_to_search[0] - 1]
+        print("nearest cell: " + str(nearest_cell))
+        return cell_to_search, destination
+        # i can't code more, i want to sleep
+        # this "if" is when direction (destination) and first cell of ship (cell_to_search) are defined
+        #found, cell = is_there_alone_cell(field[1])
+
+def mark_around_killed(field, ship):
+    for i in range(1, 11):
+        for j in range(1, 11):
+            if ship.count([j, i]) != 0:
+                print("ship cell: " + str((j, i)))
+                cells_around = [(i - 2, j - 1), (i - 1, j), (i, j - 1), (i - 1, j - 2), (i - 2, j - 2), (i - 2, j), (i - 2, j - 2),
+                                (i, j - 2), (i, j)]
+                for k in cells_around:
+                    if -1 < k[0] < 10 and -1 < k[1] < 10:
+                        if field[k[0]][k[1]] != "KK":
+                            field[k[0]][k[1]] = "00"
+    return field
+
+
+def mark_shot(Text, cell):
+    fields, ships = get_fields()
+    ship = []
+    if Text.find("kill") != -1:
+        for i in range(1, 11):
+            for j in range(1, 11):
+                if fields[1][i - 1][j - 1] == "**":
+                    fields[1][i - 1][j - 1] = "KK"
+                    ship.append([j, i])
+        ship.append(list(cell))
+        fields[1][cell[1] - 1][cell[0] - 1] = "KK"
+        fields[1] = mark_around_killed(fields[1], ship)
+    elif Text.find("hit") != -1:
+        fields[1][cell[1] - 1][cell[0] - 1] = "**"
+    elif Text.find("water") != -1:
+        fields[1][cell[1] - 1][cell[0] - 1] = "00"
+    else:
+        return "sorry, i do not understand"
+    write_fields(fields, ships)
+    return "got it"
 
 #initialize_field(True)
 #set_up_ships()
 #print(free_around_cell((10, 9), initialize_field(True)))
 #print(possible_to_set_up_ship([10, 10], 1, 3, initialize_field(True)))
-#start_game()
+start_game()
 #get_shot((3, 3))
 #print(get_shot((2, 3)))
 #print(get_shot((4, 3)))
 
 
-"""
+
 while 1:
+    """
     x = int(input())
     y = int(input())
     print(get_shot((x, y)))
+    """
     #print("hw")
+    cell, destination = make_shot()
+    print(cell, ' ', destination, ' : cell and destination')
+    Text = str(raw_input("Status of your cell: "))
+    print(mark_shot(Text, cell))
     fields, ships = get_fields()
     for field in fields:
         for row in field:
             print(row)
         print("===")
 #    print(ships)
-"""
+
