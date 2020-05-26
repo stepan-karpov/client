@@ -198,7 +198,7 @@ def ship_killed(field, ship, cell_no_check):
     return True
 
 def mark_around(field, ship):
-    print("ship to mark: " + str(ship))
+#    print("ship to mark: " + str(ship))
     to_mark = []
     for cell in ship:
         ar = free_around_cell(cell, field, "01")
@@ -220,7 +220,7 @@ def no_other_ships(field):
         for cell in row:
             if cell == "**":
                 c += 1
-    print("c is: " + str(c))
+#    print("c is: " + str(c))
     if c == 20:
         return True
     else:
@@ -239,7 +239,7 @@ def get_shot(cell):
             ship_cell_mod[1] = int(ship_cell_mod[1])
             ship_to_add.append(ship_cell_mod)
         ships.append(ship_to_add)
-    print(ships)
+#    print(ships)
     status = fields[0][cell[1] - 1][cell[0] - 1]
     if status == "00":
         fields[0][cell[1] - 1][cell[0] - 1] = "11"
@@ -250,8 +250,8 @@ def get_shot(cell):
         for ship in ships:
             if ship.count(list(cell)) != 0:
                 marked_ship = ship
-        print(marked_ship)
-        print("^ marked ship")
+#        print(marked_ship)
+#        print("^ marked ship")
         fields[0][cell[1] - 1][cell[0] - 1] = "**"
         write_fields(fields, ships_to_correct)
         if not ship_killed(fields[0], marked_ship, cell):
@@ -288,7 +288,7 @@ def mark_around_killed(field, ship):
     for i in range(1, 11):
         for j in range(1, 11):
             if ship.count([j, i]) != 0:
-                print("ship cell: " + str((j, i)))
+#                print("ship cell: " + str((j, i)))
                 cells_around = [(i - 2, j - 1), (i - 1, j), (i, j - 1), (i - 1, j - 2), (i - 2, j - 2), (i - 2, j), (i - 1, j - 1),
                                 (i, j - 2), (i, j)]
                 for k in cells_around:
@@ -320,10 +320,10 @@ def situation(field):
     for i in range(1, 11):
         for j in range(1, 11):
             if field[i - 1][j - 1] == "**":
-                print("** found in " + str((j, i)))
+ #               print("** found in " + str((j, i)))
                 statuses_around = []
                 all_around = cells_around((j, i), False, False)
-                print("cells : " + str(all_around) + " around cell: " + str((j, i)))
+ #               print("cells : " + str(all_around) + " around cell: " + str((j, i)))
                 for cell_around in all_around:
                     statuses_around.append(field[cell_around[1] - 1][cell_around[0] - 1])
                 if statuses_around.count("**") == 0:
@@ -333,7 +333,7 @@ def situation(field):
                     directions_accord_delta = {(0, -1): 1, (1, 0): 2, (0, 1): 3, (-1, 0): 4}
                     directions_accord_delta_rev = {1: (0, -1), 2: (1, 0), 3: (0, 1), 4: (-1, 0)}
                     destination_reverse = {1: 3, 2: 4, 3: 1, 4: 2}
-                    print("should check where is the nearest cell")
+ #                   print("should check where is the nearest cell")
                     destinations = []
                     for cell_around in all_around:
                         if field[cell_around[1] - 1][cell_around[0] - 1] == "**":
@@ -341,8 +341,8 @@ def situation(field):
                     if len(destinations) == 1:
                         dest = destination_reverse[destinations[0]]
                         cell_to_check = (j + directions_accord_delta_rev[dest][0], i + directions_accord_delta_rev[dest][1])
-                        print(cell_to_check)
-                        print("^ cell_to_check")
+#                        print(cell_to_check)
+#                        print("^ cell_to_check")
                         if all_around.count(cell_to_check) == 1:
                             variants.append([(j, i), dest])
     return variants
@@ -362,7 +362,7 @@ def make_shot():
             c = fields[1][i - 1][j - 1]
         return (j, i)
     elif len(where_to_shot) == 1:
-        print("single cell found")
+#        print("single cell found")
 
 
         main_cell = where_to_shot[0][0]
@@ -380,21 +380,25 @@ def make_shot():
         return "is there single deck in " + str(main_cell)
     else:
         shuffle(where_to_shot)
-        print("shuffled: " +str(where_to_shot))
+#        print("shuffled: " +str(where_to_shot))
         for cell_to_shot in where_to_shot:
             main_cell = cell_to_shot[0]
             print(main_cell)
             direction = cell_to_shot[1]
             directions = {1: (0, -1), 2: (1, 0), 3: (0, 1), 4: (-1, 0)}
             cell_to_s = (main_cell[0] + directions[direction][0], main_cell[1] + directions[direction][1])
-            print("cell to start: " + str(main_cell))
-            print("cell to shot: " + str(cell_to_s))
-            print("direction: " + str(direction))
+#            print("cell to start: " + str(main_cell))
+#            print("cell to shot: " + str(cell_to_s))
+#            print("direction: " + str(direction))
             if fields[1][cell_to_s[1] - 1][cell_to_s[0] - 1] == "10":
                 return cell_to_s
         return "You lie to me"
 
-    
+# just walking down the street
+# one cloudless sunny day
+# just minding my bussines 
+# thinking my thoughts - nothing much to say
+# when suddenly i got hit - imagine my surprise
 
 def mark_shot(Text, cell):
     fields, ships = get_fields()
@@ -425,41 +429,45 @@ def mark_shot(Text, cell):
     write_fields(fields, ships)
     return "got it"
 
-#initialize_field(True)
-#set_up_ships()
-#print(free_around_cell((10, 9), initialize_field(True)))
-#print(possible_to_set_up_ship([10, 10], 1, 3, initialize_field(True)))
-start_game()
-#get_shot((3, 3))
-#print(get_shot((2, 3)))
-#print(get_shot((4, 3)))
 
+if __name__ == "__main__":
+    #initialize_field(True)
+    #set_up_ships()
+    #print(free_around_cell((10, 9), initialize_field(True)))
+    #print(possible_to_set_up_ship([10, 10], 1, 3, initialize_field(True)))
+    start_game()
+    #get_shot((3, 3))
+    #print(get_shot((2, 3)))
+    #print(get_shot((4, 3)))
 
+    while 1:
+        """
+        x = int(input())
+        y = int(input())
+        print(get_shot((x, y)))
+        """
+        #print("hw")
+        """
+        fields, ships = get_fields()
+        x = int(input())
+        y = int(input())
+        status = raw_input()
+        fields[1][y - 1][x - 1] = status
+        write_fields(fields, ships)
+        """
+        #print(cell, ' ', ' : cell and destination')
+        x = int(input())
+        y = int(input())
+        print(get_shot((x, y)))
+        
+        cell = make_shot()
 
-while 1:
-    """
-    x = int(input())
-    y = int(input())
-    print(get_shot((x, y)))
-    """
-    #print("hw")
-    cell = make_shot()
-    print("cell totally: " + str(cell))
-    """
-    fields, ships = get_fields()
-    x = int(input())
-    y = int(input())
-    status = raw_input()
-    fields[1][y - 1][x - 1] = status
-    write_fields(fields, ships)
-    """
-    #print(cell, ' ', ' : cell and destination')
-    Text = str(raw_input("Status of your cell: "))
-    print(mark_shot(Text, cell))
-    fields, ships = get_fields()
-    for field in fields:
-        for row in field:
-            print(row)
-        print("===")
-#    print(ships)
+        Text = str(raw_input("What is about cell " + str(cell) + "?: "))
+        print(mark_shot(Text, cell))
+        fields, ships = get_fields()
+        for field in fields:
+            for row in field:
+                print(row)
+            print("===")
+    #    print(ships)
 
