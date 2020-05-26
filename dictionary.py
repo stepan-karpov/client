@@ -162,7 +162,7 @@ opts = {
        "sunrise": ('when is sunrise in CITY', 'when is sunrise on the street', 'sunrise'),
        "sunset": ('when is sunset in CITY', 'when is sunset on the street', 'sunset'),
        "status": ('weather status in CITY', 'weather status on the street', 'weather status'),
-       "abc": ("abc1", "abc2"),
+       "abc": ("abc1", "abc2", "AUTHORS"),
 
 
     },
@@ -187,7 +187,7 @@ opts = {
         "howry":  ('i am fine', 'i am fine, thanks'),
         "wcyd":  ('i can not do a lot of things', 'my possibilities are not very big'),
         "sorry": ('sorry am trying to work', 'slow work may be caused by julius', 'sorry'),
-        "wmy": ('my creator is stepa k', 'stepa k made me', 'stepa k')
+        "wmy": ('my creator is stepa k', 'stepa k made me', 'stepa k'),
         "abc": ('answr for abc', 'answer for abc'),
 
     },
@@ -364,7 +364,7 @@ def change_main_dictionary():
     to_change_keys = [
 	["weather_forecast", 'temperature', 'wind', 'pressure', 'sunrise', 'sunset', 'status'],	["whatdaytoday", "whatdayweek", "whatdom"],
 	["weather_forecast"], ['whatdayweek'], ["whatdayweek"], ["answer"], ["fs"], ["fs"], ["wdyh"], ["wdyh"], ["ago", "happy", "welcome"], ["ago"], ["ago"], ["hmr"],
-	["hmr"], ["hmr"], ["happy"], ["welcome"], ["tell"], ["thanks"]
+	["hmr"], ["hmr"], ["happy"], ["welcome"], ["tell"], ["thanks"], ["abc"]
 	]
     to_change_items = [
 	get_cities(), ["today", "tomorrow", "day after tomorrow", "day after today", "yesterday"], get_months(),
@@ -373,11 +373,11 @@ def change_main_dictionary():
 	["hear", "heard"], ['', "i ", "i am "],
 	["n't", " not"], ["hear", "heard", "see", "seen"], ["answer", "answers", "request", "requests"],
 	["prepared", "processed", "were in process", "protest"], ["much", "many"], ["hear", "to_hear"], ["your work", "work"], ["tell", "say"],
-	["girl", "woman", "voice helper", "helper", name]
+	["girl", "woman", "voice helper", "helper", name], ["Stepa", "Matvei"]
 	]
     to_change_key_words = [
 	"CITY", "NEAREST_DAYS", "MONTH", "DAY_OF_WEEK", "DATES", "ALBUM_SONG", "SEASON", "IS", "TELL", "HEAR", "I", "NOT", "HEAR_SEE", "ANSW_REQ",
-	"PREPARED", "MUCH_MANY", "HEAR_TO_HEAR", "YOUR_WORK", "SAY_TELL", "WHO"
+	"PREPARED", "MUCH_MANY", "HEAR_TO_HEAR", "YOUR_WORK", "SAY_TELL", "WHO", "AUTHORS"
 	]
 
     for i in range(0, len(to_change_keys)):
