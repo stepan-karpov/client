@@ -431,6 +431,17 @@ def mark_shot(Text, cell):
     return "got it"
 
 
+def get_cells():
+    chars = "abcdefghij"
+    cells = []
+
+    for i in range(1, 11):
+        for char in chars:
+            cells.append(char + str(i))
+    print(cells)
+    return cells
+
+
 if __name__ == "__main__":
     #initialize_field(True)
     #set_up_ships()

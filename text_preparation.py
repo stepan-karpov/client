@@ -5,6 +5,7 @@ import datetime
 from functions import *
 from music import *
 from fuzzywuzzy import fuzz
+from naval_battle import get_cells
 from weather import *
 from execute_cmds import *
 from dictionary import *
@@ -16,6 +17,7 @@ def change_request(Text):
 			Text = opts["change_request"][to_be_changed]
 	nums = "0123456789"
 	letters = "abcdefghijklmnopqrstuvwxyz"
+
 	for word in Text.split(" "):
 		try:
 			int(word)
@@ -25,12 +27,12 @@ def change_request(Text):
 				for letter in word:
 					if not letter.isalpha():
 						to_change += letter
-				Text = Text.replace(word, to_change)
-				print("[ log ] Warning! " + word + " changed on " + to_change)
+				if cells.count(Text) == 0:
+					Text = Text.replace(word, to_change)
+					print("[ log ] Warning! " + word + " changed on " + to_change)
 	return Text
 
 def prepare_answer(Text):
-    print(hello_s())
     start_time = datetime.datetime.now()
     print("[ log ] text preparation module starts ============")
     global opts
@@ -87,6 +89,12 @@ def recognize_cmd(cmd):
 		except:
 			pass
 	else:
+
+		cells = get_cells()
+		for cell in cells:
+			if Text.split(" ").count()
+				return {'cmd': 'naval_battle', 'percent': 100}
+# was it all worth it
 		units_list = ["meter", "gram", "bit", "newton", "tesla", "byt", "piko", "nano", "micro", 
 					  "milli", "centi", "deci", "kilo", "mega", "giga", "tera", "peta"]
 
