@@ -280,81 +280,6 @@ def get_shot(cell):
         """
         return "status was 01"
 
-def situation(field):
-    cell_to_search = []
-    destination = 0
-    for i in range(1, 11):
-        for j in range(1, 11):
-            cell = (j, i)
-            if field[i - 1][j - 1] == "**":
-                # this values shouldn't be negative
-                cells_around_preparing = {(i - 2, j - 1): 1, (i - 1, j): 2, (i, j - 1): 3, (i - 1, j - 2): 4}
-                cells_around = {}
-                for k, v in cells_around_preparing.items():
-                    if -1 < k[0] < 10 and -1 < k[1] < 10:
-                        cells_around[field[ k[0] ][ k[1] ]] = v
-                for k, v in cells_around.items():
-                    if k == "**":
-                        destination = v
-                        print("found two **, destination " + str(v) + " from " + str(cell))
-                        return cell, destination
-                cell_to_search = cell
-    return cell_to_search, destination
-
-def detect_destination(cell, field):
-    destinations = [1, 2, 3, 4]
-    shuffle(destinations)
-    nearest_cell = "00"
-    destinations_accord = {1: (0, -1), 2: (1, 0), 3: (0, 1), 4: (-1, 0)}
-    for u in range(0, 4):
-        i, j = destinations_accord[destinations[0]]
-        coords = (cell[0] + i, cell[1] + j)
-        if 0 < coords[0] < 11 and 0 < coords[1] < 11:
-            if field[coords[1] - 1][coords[0] - 1] != "11":
-                return destinations[0]
-            else:
-                destinations.pop(0)
-        else:
-            destinations.pop(0)
-
-
-
-def make_shot():
-    fields, ships = get_fields()
-
-    cell_to_search, destination = situation(fields[1])
-    if len(cell_to_search) == 0 and destination == 0:
-        return (randint(1, 10), randint(1, 10)), 0
-    else:
-        destinations_accord = {1: (0, -1), 2: (1, 0), 3: (0, 1), 4: (-1, 0)}
-        if len(cell_to_search) != 0 and destination != 0:
-            nearest_cell = "**"
-            cell_to_search = list(cell_to_search)
-            back_up = cell_to_search
-            while nearest_cell == "**":
-                cell_to_search[0] += destinations_accord[destination][0]
-                cell_to_search[1] += destinations_accord[destination][1]
-                nearest_cell = fields[1][cell_to_search[1] - 1][cell_to_search[0] - 1]
-                if fields[1][cell_to_search[1] - 1][cell_to_search[0] - 1] == "00":
-                    reverse_destinations = {3: 1, 2: 4}
-                    print("cell to search (" + str(cell_to_search) + ") is 00, we need to reverse it")
-                    destination = reverse_destinations[destination]
-            print("destination reversed to " + str(destination))
-            print("now it is: ")
-            print("nearest cell: " + str(nearest_cell))
-            print("cell_to_search: " + str(back_up))
-            return back_up, destination
-            cell_to_search = back_up
-        if destination == 0:
-            destination = detect_destination(cell_to_search, field)
-        nearest_cell = "**"
-        cell_to_search = list(cell_to_search)
-        while nearest_cell == "**":
-            cell_to_search[0] += destinations_accord[destination][0]
-            cell_to_search[1] += destinations_accord[destination][1]
-            nearest_cell = fields[1][cell_to_search[1] - 1][cell_to_search[0] - 1]
-        print("nearest cell: " + str(nearest_cell))
-        return cell_to_search, destination
         # i can't code more, i want to sleep
         # this "if" is when direction (destination) and first cell of ship (cell_to_search) are defined
         #found, cell = is_there_alone_cell(field[1])
@@ -364,7 +289,7 @@ def mark_around_killed(field, ship):
         for j in range(1, 11):
             if ship.count([j, i]) != 0:
                 print("ship cell: " + str((j, i)))
-                cells_around = [(i - 2, j - 1), (i - 1, j), (i, j - 1), (i - 1, j - 2), (i - 2, j - 2), (i - 2, j), (i - 2, j - 2),
+                cells_around = [(i - 2, j - 1), (i - 1, j), (i, j - 1), (i - 1, j - 2), (i - 2, j - 2), (i - 2, j), (i - 1, j - 1),
                                 (i, j - 2), (i, j)]
                 for k in cells_around:
                     if -1 < k[0] < 10 and -1 < k[1] < 10:
@@ -372,6 +297,95 @@ def mark_around_killed(field, ship):
                             field[k[0]][k[1]] = "00"
     return field
 
+def cells_around(cell, diagonal=True, include_cell=True):
+    cells = []
+    j, i = cell[0], cell[1]
+
+    cells_around = [(j, i - 1), (j, i + 1), (j - 1, i), (j + 1, i)]
+    diag = [(j - 1, i - 1), (j + 1, i - 1), (j - 1, i + 1), (j + 1, i + 1)]
+    
+    if diagonal:
+        for d in diag:
+            cells_around.append()
+    if include_cell:
+        cell_around.append((j, i))
+
+    for k in cells_around:
+        if 0 < k[0] < 11 and 0 < k[1] < 11:
+            cells.append(k)
+    return cells
+
+def situation(field):
+    variants = []
+    for i in range(1, 11):
+        for j in range(1, 11):
+            if field[i - 1][j - 1] == "**":
+                print("** found in " + str((j, i)))
+                statuses_around = []
+                all_around = cells_around((j, i), False, False)
+                print("cells : " + str(all_around) + " around cell: " + str((j, i)))
+                for cell_around in all_around:
+                    statuses_around.append(field[cell_around[1] - 1][cell_around[0] - 1])
+                if statuses_around.count("**") == 0:
+                    return [[(j, i), 0]]
+                else:
+                    directions_accord = {(j, i - 1): 1, (j + 1, i): 2, (j, i + 1): 3, (j - 1, i): 4}
+                    directions_accord_delta = {(0, -1): 1, (1, 0): 2, (0, 1): 3, (-1, 0): 4}
+                    directions_accord_delta_rev = {1: (0, -1), 2: (1, 0), 3: (0, 1), 4: (-1, 0)}
+                    destination_reverse = {1: 3, 2: 4, 3: 1, 4: 2}
+                    print("should check where is the nearest cell")
+                    destinations = []
+                    for cell_around in all_around:
+                        if field[cell_around[1] - 1][cell_around[0] - 1] == "**":
+                            destinations.append(directions_accord_delta[(cell_around[0] - j, cell_around[1] - i)])
+                    if len(destinations) == 1:
+                        dest = destination_reverse[destinations[0]]
+                        cell_to_check = (j + directions_accord_delta_rev[dest][0], i + directions_accord_delta_rev[dest][1])
+                        print(cell_to_check)
+                        print("^ cell_to_check")
+                        if all_around.count(cell_to_check) == 1:
+                            variants.append([(j, i), dest])
+    return variants
+
+def make_shot():
+    fields, ships = get_fields()
+    where_to_shot = situation(fields[1])
+    print("=====where_to_shot========")
+    print(where_to_shot)
+    print("=====where_to_shot========")
+
+    if len(where_to_shot) == 0:
+        c = "00"
+        while c != "10":
+            i = randint(1, 10)
+            j = randint(1, 10)
+            c = fields[1][i - 1][j - 1]
+        return (j, i)
+    elif len(where_to_shot) == 1:
+        main_cell = where_to_shot[0][0]
+        print("cell alone: " + str(main_cell))
+        around = cells_around(main_cell, False, False)
+        c = "00"
+        while c != "10":
+            c = fields[1][around[0][1] - 1][around[0][0] - 1]
+            around.pop(0)
+        return around[0]
+    else:
+        shuffle(where_to_shot)
+        print("shuffled: " +str(where_to_shot))
+        for cell_to_shot in where_to_shot:
+            main_cell, direction = where_to_shot[0][0], where_to_shot[0][1]
+            direction = where_to_shot[0][1]
+            directions = {1: (0, -1), 2: (1, 0), 3: (0, 1), 4: (-1, 0)}
+            cell_to_s = (main_cell[0] + directions[direction][0], main_cell[1] + directions[direction][1])
+            print("cell to start: " + str(main_cell))
+            print("cell to shot: " + str(cell_to_s))
+            print("direction: " + str(direction))
+            if fields[1][cell_to_s[1] - 1][cell_to_s[0] - 1] == "10":
+                return cell_to_s
+        return "You lie to me"
+
+    
 
 def mark_shot(Text, cell):
     fields, ships = get_fields()
@@ -412,8 +426,17 @@ while 1:
     print(get_shot((x, y)))
     """
     #print("hw")
-    cell, destination = make_shot()
-    print(cell, ' ', destination, ' : cell and destination')
+    cell = make_shot()
+    print("cell totally: " + str(cell))
+    """
+    fields, ships = get_fields()
+    x = int(input())
+    y = int(input())
+    status = raw_input()
+    fields[1][y - 1][x - 1] = status
+    write_fields(fields, ships)
+    """
+    #print(cell, ' ', ' : cell and destination')
     Text = str(raw_input("Status of your cell: "))
     print(mark_shot(Text, cell))
     fields, ships = get_fields()
