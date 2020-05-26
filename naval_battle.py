@@ -447,6 +447,7 @@ if __name__ == "__main__":
         print(get_shot((x, y)))
         """
         #print("hw")
+	#sfgsfgdfgfdg
         """
         fields, ships = get_fields()
         x = int(input())
@@ -456,6 +457,7 @@ if __name__ == "__main__":
         write_fields(fields, ships)
         """
         #print(cell, ' ', ' : cell and destination')
+        while answer.find("hit") == -1 and answer.find("kill") == -1:
         x = int(input())
         y = int(input())
         print(get_shot((x, y)))
