@@ -196,10 +196,8 @@ opts = {
 
 def get_dictionary():
     change_main_dictionary()
-    x = get_answ()
-    for k, v in x.items():
-        opts["answ"][k] = v
-   # print(opts)
+
+#    print(opts["answ"])
 
 #    for cmd, items in opts["cmds"].items():
  #       print(cmd)
@@ -301,7 +299,16 @@ def import_dictionary():
         cmds[row[0]] = tuple(row[1].split(":"))
     opts["cmds"] = cmds
 #    print(cmds)
+
+    x = get_answ()
+
+    for k, v in x.items():
+        opts["answ"][k] = v
+
+
     print("[ log ] connection time: " + str(datetime.datetime.now() - start_time))
+
+
     return opts
 
 def import_variants():
@@ -373,7 +380,7 @@ def change_main_dictionary():
     to_change_keys = [
 	["weather_forecast", 'temperature', 'wind', 'pressure', 'sunrise', 'sunset', 'status'],	["whatdaytoday", "whatdayweek", "whatdom"],
 	["weather_forecast"], ['whatdayweek'], ["whatdayweek"], ["answer"], ["fs"], ["fs"], ["wdyh"], ["wdyh"], ["ago", "happy", "welcome"], ["ago"], ["ago"], ["hmr"],
-	["hmr"], ["hmr"], ["happy"], ["welcome"], ["tell"], ["thanks"], ["naval_battle"], ["start_naval_battle"]
+	["hmr"], ["hmr"], ["happy"], ["welcome"], ["tell"], ["thanks"], ["naval_battle"], ["start_naval_battle"], ["start_naval_battle"]
 	]
     to_change_items = [
 	get_cities(), ["today", "tomorrow", "day after tomorrow", "day after today", "yesterday"], get_months(),
@@ -382,11 +389,11 @@ def change_main_dictionary():
 	["hear", "heard"], ['', "i ", "i am "],
 	["n't", " not"], ["hear", "heard", "see", "seen"], ["answer", "answers", "request", "requests"],
 	["prepared", "processed", "were in process", "protest"], ["much", "many"], ["hear", "to_hear"], ["your work", "work"], ["tell", "say"],
-	["girl", "woman", "voice helper", "helper", name], get_cells(), ["killed", "hit", "in water"]
+	["girl", "woman", "voice helper", "helper", name], get_cells(), ["killed", "hit", "in water"], ["sea battle", "naval battle"]
 	]
     to_change_key_words = [
 	"CITY", "NEAREST_DAYS", "MONTH", "DAY_OF_WEEK", "DATES", "ALBUM_SONG", "SEASON", "IS", "TELL", "HEAR", "I", "NOT", "HEAR_SEE", "ANSW_REQ",
-	"PREPARED", "MUCH_MANY", "HEAR_TO_HEAR", "YOUR_WORK", "SAY_TELL", "WHO", "CELL", "STATUS"
+	"PREPARED", "MUCH_MANY", "HEAR_TO_HEAR", "YOUR_WORK", "SAY_TELL", "WHO", "CELL", "STATUS", "NAVAL_BATTLE"
 	]
 
     for el in b:

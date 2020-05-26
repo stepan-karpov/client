@@ -42,7 +42,7 @@ cmds = {
 }
 
 answers = {
-	"who": ('of course i know')
+	"who": ('of course i know', 'yes')
 }
 
 def get_cmds():

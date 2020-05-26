@@ -138,9 +138,9 @@ def write_request(request, answer):
 	file.close()
 	return "writing succesfull"
 
-# so let let them know when they stare, 
-# it's just a private affaire 
-# they'll have us hung in the air 
+# so let let them know when they stare,
+# it's just a private affaire
+# they'll have us hung in the air
 # and tell me what do they care
 
 def execute_cmd(cmd, Text):
@@ -176,6 +176,7 @@ def execute_cmd(cmd, Text):
 		"fests": fests,
 		"units": units,
 		"naval_battle": naval_battle,
+#		"start_nava;_battle": start_naval_battle
 	}
 
 	keys = {"temperature": " KEY: 000", "wind": " KEY: 001", "pressure": " KEY: 010", "sunrise": " KEY: 011", "sunset": " KEY: 100", "status": " KEY: 101"}
