@@ -1,4 +1,5 @@
 import datetime
+import mysql.connector
 from dictionary import get_dates, day
 from weather import find_date
 from music import *
@@ -197,6 +198,56 @@ def how_many_requests(Text):
 		before_writting_this_function = 1677
 		kolvo = int(len(open('FILES/DialogStory.txt', mode="r").readlines()) / 4) + before_writting_this_function
 		return "i prepared " + str(kolvo) + " requests"
+
+
+def start_naval_battle(Text):
+	start_game() # starts naval battle
+	connection = mysql.connector.connect(
+      host="localhost",
+      user="root",
+      passwd="password",
+      database="voice_helper"
+    )
+    cursor = connection.cursor()
+    cursor.execute("INSERT INTO voice_helper.naval_battle (field) VALUES (1);")
+    connection.commit()
+ 
+	return "i am happy we are playing. i have already build my field. you starts. it is better to use words kill, in water and hit while playing. i am waiting for your variant"
+
+def detect_cell_status(Text):
+	statuses = {
+		"hit": ["hit", "touched"],
+		"kill": ["kill"],
+		"in water": ["water"]
+	}
+
+	#for k, v in statuses.items():
+	#	fo
+
+# stealin'
+# i gave you the key to my home
+# i left you alone 
+# in charge of my heart, hey, stealin'
+
+def naval_battle(Text):
+	connection = mysql.connector.connect(
+      host="localhost",
+      user="root",
+      passwd="password",
+      database="voice_helper"
+    )
+    cursor = connection.cursor()
+    data = cursor.fetchall()
+
+    cursor.execute("DELETE FROM voice_helper.naval_battle WHERE field == \"1\"")
+    cursor.execute("INSERT INTO voice_helper.naval_battle (field) VALUES (1);")
+    connection.commit()
+
+    start = int(data[3])
+
+    cell, status = detect_cell_status(Text)
+
+
 
 
 def last_call(Text):
