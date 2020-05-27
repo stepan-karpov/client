@@ -2,7 +2,7 @@ import datetime
 import mysql.connector
 from dictionary import get_dates, day
 from weather import find_date
-from naval_battle import start_game
+from naval_battle import *
 from music import *
 import wolframalpha
 #from servo import rotate
@@ -203,7 +203,7 @@ def how_many_requests(Text):
 
 def start_naval_battle(Text):
     start_game() # starts naval battle
-    write_file("start", "start.txt")
+    write_file("start", "status.txt")
     write_file("start", "cell.txt")
     return "i am happy we are playing. i have already build my field. you starts. it is better to use words kill, in water and hit while playing. i am waiting for your variant"
 
@@ -242,12 +242,15 @@ def detect_status(Text):
 		"water": ["water"]
 	}
 	status = []
-
+#	print(Text)
 	for k, v in statuses.items():
 		for u in v:
+#			print(u)
+#			print(Text.find(u))
 			if Text.find(u) != -1:
-				status.append[k]
-	if len(status) != 1:
+				status.append(k)
+	print("[ log ] statuses list: " + str(status))
+	if len(status) > 1:
 		return "you should say only one cell status"
 	elif len(status) == 0:
 		return "please, repeat status"
@@ -255,12 +258,15 @@ def detect_status(Text):
 		return status[0]
 
 def detect_cell(Text):
-	cell= (0, 0)
+	cell = (0, 0)
 	cells = get_cells()
 	cells_accord = {"a": 1, "b": 2, "c": 3, "d": 4, "e": 5, "f": 6, "g": 7, "h": 8, "i": 9, "j": 10}
 	for word in Text.split(" "):
 		if cells.count(word) != 0:
-			cell = (cells_accord[word[:1]], int(word[2:])
+#			print("[ log] word to cell: " + str(word))
+#			print("[ log] letter in word: " + str(word[:1]))
+#			print("[ log ] int in word: " + str(word[1:]))
+			cell = (cells_accord[word[:1]], int(word[1:]))
 	return cell
 
 # stealin'
@@ -275,24 +281,115 @@ def write_file(item, file):
 
 def get_line(file):
     file = open("FILES/naval_battle/" + file, mode="r")
-    return str(file.readlines[0])
+    return str(file.readlines()[0])
 
-def get_naval_battle_request(start=False)
+def get_naval_battle_request(start=False):
     cell = get_line("cell.txt")[1:-1]
-    cell = cell.strip(", ")
+    cell = cell.split(", ")
     print("[ log ] cell to say status: " + str(cell))
+    print(type(cell))
     status = get_line("status.txt")
     print("[ log ] status of my past cell: " + status)
 
-    cell_to_shot = make_shot()
-
-    if start:
-        write_file(cell_to_shot, "beaten_cell.txt")
-        return get_shot((cell[0], cell[1])) + ". " + str(cell_to_shot)
+    if status != "hit" and status != "kill":
+        try:
+            get = get_shot((int(cell[0]), int(cell[1])))
+        except ValueError:
+            print("[ log ] first 'water' after series of hits of computer")
+            if status == "hit" or status == "kill" or status == "water":
+                write_file(status, "status.txt")
+                write_file("None", "cell.txt")
+            return "please, say correct cell"
     else:
-        beaten_cell = get_line("beaten_cell.txt")
-        mark_cell(status, beaten_cell)
-        return get_shot((cell[0], cell[1])) + ". " + str(cell_to_shot)
+        get = "in water" #very big crutch
+
+
+    print("[ log ] get_shot return is: " + get)
+
+    if get.find("in water") == -1:
+        print("[ log ] looks like a hit or kill :)")
+        if get.startswith("sorry"):
+            print("[ log ] impossible to shot here")
+            if start:
+                print("[ log ] impossible to shot at the start")
+                write_file("start", "cell.txt")
+            else:
+                write_file("None", "cell.txt")
+            write_file(status, "status.txt")
+            draw_fields()
+            return get + ". please repeat cell"
+        elif get.find("win") != -1:
+            print("[ log ] someone win")
+            write_file("stop", "cell.txt")
+            write_file("stop", "status.txt")
+            write_file("None", "beaten_cell.txt")
+            draw_fields()
+            return get
+        else:
+            if status != "hit or kill":
+                print("[ log ] hit for the first time")
+                if not start:
+                    beaten_cell = get_line("beaten_cell.txt")[1:-1]
+                    if beaten_cell == "None":
+                        raise AlgorithmError
+                    beaten_cell = beaten_cell.split(", ")
+                    mark_shot(status, (int(beaten_cell[0]), int(beaten_cell[1])))
+                write_file("hit or kill", "status.txt")
+                write_file("None", "cell.txt")
+                write_file("None", "beaten_cell.txt")
+                draw_fields()
+                return get
+            else:
+                print("[ log ] hit NOT for the first time")
+                write_file("None", "cell.txt")
+                draw_fields()
+                return get
+    else:
+        if status != "kill" and status != "hit":
+            print("[ log ] my shot was in water")
+            if status == "hit or kill":
+                print("[ log ] it is first 'water' after hit or kill")
+                write_file("None", "status.txt")
+                write_file("None", "cell.txt")
+                cell_to_shot = make_shot()
+                write_file(str(cell_to_shot), "beaten_cell.txt")
+                draw_fields()
+                return get + ". " + str(cell_to_shot)
+            if start:
+                print("[ log ] start and not kill")
+                write_file("None", "status.txt")
+                write_file("None", "cell.txt")
+                cell_to_shot = make_shot()
+                write_file(str(cell_to_shot), "beaten_cell.txt")
+                draw_fields()
+                return get + ". " + str(cell_to_shot)
+            else:
+                print("[ log ] not start and not kill")
+                beaten_cell = get_line("beaten_cell.txt")[1:-1]
+                if beaten_cell == "None":
+                    raise AlgorithmError
+                beaten_cell = beaten_cell.split(", ")
+                mark_shot(status, (int(beaten_cell[0]), int(beaten_cell[1])))
+                cell_to_shot = make_shot()
+                write_file(str(cell_to_shot), "beaten_cell.txt")
+                write_file("None", "cell.txt")
+                write_file("None", "status.txt")
+                draw_fields()
+                return get + ". " + str(cell_to_shot)
+        else:
+            print("[ log ] my shot was hit or kill")
+            print("[ log ] now my task is not to permit to know cell status you said")
+            write_file("i hit or kill", "cell.txt")
+            write_file("None", "status.txt")
+            beaten_cell = get_line("beaten_cell.txt")[1:-1]
+            if beaten_cell == "None":
+                raise AlgorithmError
+            beaten_cell = beaten_cell.split(", ")
+            mark_shot(status, (int(beaten_cell[0]), int(beaten_cell[1])))
+            cell_to_shot = make_shot()
+            write_file(str(cell_to_shot), "beaten_cell.txt")
+            draw_fields()
+            return str(cell_to_shot)
 
 # hold on,
 # baby tell me
@@ -300,35 +397,52 @@ def get_naval_battle_request(start=False)
 
 
 def naval_battle(Text):
+#    print(Text)
     cell = get_line("cell.txt")
     status = get_line("status.txt")
-
     if cell != "None":
         c = "1"
     else:
         c = "0"
-    if status == "hit" or status == "water" or status == "kill":
+
+    if cell == "i hit or kill" or Text.find("hit") != -1:
+        c = "1"
+
+    if status == "hit" or status == "water" or status == "kill" or status == "hit or kill":
         s = "1"
     else:
         s = "0"
 
     start = s + c
-    if cell == "start" and status == "start":
+    if status == "start":
         start = "101"
+
+    if status == "stop" or cell == "stop":
+        start = "111"
+
+    print("[ log ] cell: " + str(cell))
+    print("[ log ] status: " + str(status))
+    print("[ log ] start: " + start)
+
 
     if start == "101":
         print("[ log ] first request of naval battle")
         cell = detect_cell(Text)
         if cell[0] != 0:
-            print(get_shot(cell))
+            write_file(cell, "cell.txt")
+            return get_naval_battle_request(True)
+        else:
+            return "please say cell you want to know"
     elif start == "00":
         print("[ log ] know nothing")
         cell = detect_cell(Text)
         status = detect_status(Text)
+        print("[ log ] cell is: " + str(cell))
+        print("[ log ] status is: " + str(status))
         if cell[1] != 0 and (status == "hit" or status == "water" or status == "kill"):
             write_file(cell, "cell.txt")
             write_file(status, "status.txt")
-            return get_naval_battle_request(True)
+            return get_naval_battle_request()
 #            return "all success"
         else:
             if status == "hit" or status == "water" or status == "kill":
@@ -353,7 +467,8 @@ def naval_battle(Text):
             return get_naval_battle_request()
         else:
             return "please repeat cell status"
-
+    elif start == "111":
+       return "the game is over. if you want to start a new one just tell me"
 
     #cursor.execute("DELETE FROM voice_helper.naval_battle WHERE field == \"" + str(data[3] + "\";")
     #cursor.execute("INSERT INTO voice_helper.naval_battle (field) VALUES (10);")
@@ -537,9 +652,6 @@ def wolframalpha_answer(Text):
 			answer = "WolframAlpha Error"
 	#os.system("./speech.sh " + answer.replace('(', "\(").replace(")", "\)"))
 	return answer
-
-def naval_battle(Text):
-	pass
 
 def servo(Text):
 	for word in Text.split(" "):

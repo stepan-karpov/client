@@ -29,9 +29,10 @@ def change_request(Text):
 					if not letter.isalpha():
 						to_change += letter
 
-				if cells.count(Text) == 0:
+				if cells.count(word) == 0 and word.find(',') == -1:
+					print(cells)
 					Text = Text.replace(word, to_change)
-					print("[ log ] Warning! " + word + " changed on " + to_change)
+					print("[ log ] Warning! '" + word + "' changed on '" + to_change + "'")
 	return Text
 
 def prepare_answer(Text):
@@ -41,7 +42,9 @@ def prepare_answer(Text):
     opts = import_dictionary()
     print("[ log ] import_dictionary() time: " + str(datetime.datetime.now() - start_time))
     Text = Text.lower()
+    print("[ log ] Text variable before change_request(): " + Text)
     Text = change_request(Text)
+    print("[ log ] Text variable after change_request(): " + Text)
     start_time = datetime.datetime.now()
     Answer = callback(Text)
     print("[ log ] callback time: " + str(datetime.datetime.now() - start_time))
@@ -51,13 +54,16 @@ def prepare_answer(Text):
 def callback(Text):
     cmd = Text
 #    print(Text)
-    for x in opts['tbr']:
-        cmd = cmd.replace(x, "").strip()
+#    print(Text)
+#    for x in opts['tbr']:
+#        print(x)
+#        cmd = cmd.replace(x, "").strip()
 #    for k, v in opts['tbc'].items():
 #        cmd = cmd.replace(k, v).strip()
     Text = cmd
 #    print(Text)
     start_time = datetime.datetime.now()
+#    print(Text)
     cmd = recognize_cmd(cmd)
     print("[ log ] recognize_cmd() time: " + str(datetime.datetime.now() - start_time))
     return execute_cmd(cmd['cmd'], Text)
@@ -145,6 +151,7 @@ def write_request(request, answer):
 
 def execute_cmd(cmd, Text):
 	#print(cmd)
+#	print("Text in execute_cmd: " + Text)
 	dir = subprocess.check_output("ls FILES/requests/", shell=True).decode("utf-8")
 	for filename in "FILES/requests":
 		if Text == filename:
@@ -192,16 +199,19 @@ def execute_cmd(cmd, Text):
 		variat = opts['answ'][cmd]
 		return variat[randint(0, len(variat) - 1)]
 	except KeyError:
+		print("[ log ] KeyError")
 		return cmd
 
 
 
 
 if __name__ == "__main__":
-	req = str(input("Request: "))
-	#req = "current weather in moscow on today"
-	answ = str(prepare_answer(req)).lower()
-	print("")
-	print("Request: " + req)
-	print("Answer: " + answ)
-	#write_request(req, answ)
+	req = "doesn't matter what text is here :)"
+	while req != "stop":
+		req = str(input("Request: "))
+		#req = "current weather in moscow on today"
+		answ = str(prepare_answer(req)).lower()
+		print("")
+		print("Request: " + req)
+		print("Answer: " + answ)
+		#write_request(req, answ)

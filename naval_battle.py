@@ -304,7 +304,7 @@ def cells_around(cell, diagonal=True, include_cell=True):
 
     cells_around = [(j, i - 1), (j, i + 1), (j - 1, i), (j + 1, i)]
     diag = [(j - 1, i - 1), (j + 1, i - 1), (j - 1, i + 1), (j + 1, i + 1)]
-    
+
     if diagonal:
         for d in diag:
             cells_around.append()
@@ -441,6 +441,12 @@ def get_cells():
 #    print(cells)
     return cells
 
+def draw_fields():
+    fields, ships = get_fields()
+    for field in fields:
+        for row in field:
+            print(row)
+        print("===")
 
 if __name__ == "__main__":
     #initialize_field(True)
@@ -480,10 +486,6 @@ if __name__ == "__main__":
 
         Text = str(raw_input("What is about cell " + str(cell) + "?: "))
         print(mark_shot(Text, cell))
-        fields, ships = get_fields()
-        for field in fields:
-            for row in field:
-                print(row)
-            print("===")
+    
     #    print(ships)
 
