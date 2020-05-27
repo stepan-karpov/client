@@ -203,7 +203,12 @@ def how_many_requests(Text):
 
 def start_naval_battle(Text):
     start_game() # starts naval battle
-    connection = mysql.connector.connect(
+    write_file("start", "start.txt")
+    write_file("start", "cell.txt")
+    return "i am happy we are playing. i have already build my field. you starts. it is better to use words kill, in water and hit while playing. i am waiting for your variant"
+
+    """
+     connection = mysql.connector.connect(
       host="localhost",
       user="root",
       passwd="password",
@@ -213,9 +218,24 @@ def start_naval_battle(Text):
     cursor.execute("INSERT INTO voice_helper.naval_battle (field) VALUES (101);")
     connection.commit()
 
-    return "i am happy we are playing. i have already build my field. you starts. it is better to use words kill, in water and hit while playing. i am waiting for your variant"
+    """
 
+"""
 def detect_cell_status(Text):
+	cells = get_cells()
+	cell = ()
+	for word in Text.split(" "):
+		if cells.count(word) != -1:
+			try:
+				cell = (cells_accord[word[:1]], int(word[2:]))
+			except:
+				return status, "sorry, i do not understand cell"
+	if cell == ():
+		return status, "what cell have you chosen"
+
+	return cell, status
+"""
+def detect_status(Text):
 	statuses = {
 		"hit": ["hit", "touched"],
 		"kill": ["kill"],
@@ -228,42 +248,121 @@ def detect_cell_status(Text):
 			if Text.find(u) != -1:
 				status.append[k]
 	if len(status) != 1:
-		return "you should say only one cell status", (0, 0)
+		return "you should say only one cell status"
+	elif len(status) == 0:
+		return "please, repeat status"
+	else:
+		return status[0]
+
+def detect_cell(Text):
+	cell= (0, 0)
 	cells = get_cells()
-	cell = ()
 	cells_accord = {"a": 1, "b": 2, "c": 3, "d": 4, "e": 5, "f": 6, "g": 7, "h": 8, "i": 9, "j": 10}
 	for word in Text.split(" "):
-		if cells.count(word) != -1:
-			try:
-				cell = (cells_accord[word[:1]], int(word[2:]))
-			except:
-				return status, "sorry, i do not understand cell"
-	if cell == ():
-		return status, "what cell have you chosen"
-
-	return cell, status
+		if cells.count(word) != 0:
+			cell = (cells_accord[word[:1]], int(word[2:])
+	return cell
 
 # stealin'
 # i gave you the key to my home
 # i left you alone
 # in charge of my heart, hey, stealin'
 
+def write_file(item, file):
+    file = open("FILES/naval_battle/" + file, mode="w")
+    file.write(str(item))
+    file.close()
+
+def get_line(file):
+    file = open("FILES/naval_battle/" + file, mode="r")
+    return str(file.readlines[0])
+
+def get_naval_battle_request(start=False)
+    cell = get_line("cell.txt")[1:-1]
+    cell = cell.strip(", ")
+    print("[ log ] cell to say status: " + str(cell))
+    status = get_line("status.txt")
+    print("[ log ] status of my past cell: " + status)
+
+    cell_to_shot = make_shot()
+
+    if start:
+        write_file(cell_to_shot, "beaten_cell.txt")
+        return get_shot((cell[0], cell[1])) + ". " + str(cell_to_shot)
+    else:
+        beaten_cell = get_line("beaten_cell.txt")
+        mark_cell(status, beaten_cell)
+        return get_shot((cell[0], cell[1])) + ". " + str(cell_to_shot)
+
+# hold on,
+# baby tell me
+# it's all right
+
+
 def naval_battle(Text):
-    connection = mysql.connector.connect(
-      host="localhost",
-      user="root",
-      passwd="password",
-      database="voice_helper"
-    )
-    cursor = connection.cursor()
-    data = cursor.fetchall()
+    cell = get_line("cell.txt")
+    status = get_line("status.txt")
+
+    if cell != "None":
+        c = "1"
+    else:
+        c = "0"
+    if status == "hit" or status == "water" or status == "kill":
+        s = "1"
+    else:
+        s = "0"
+
+    start = s + c
+    if cell == "start" and status == "start":
+        start = "101"
+
+    if start == "101":
+        print("[ log ] first request of naval battle")
+        cell = detect_cell(Text)
+        if cell[0] != 0:
+            print(get_shot(cell))
+    elif start == "00":
+        print("[ log ] know nothing")
+        cell = detect_cell(Text)
+        status = detect_status(Text)
+        if cell[1] != 0 and (status == "hit" or status == "water" or status == "kill"):
+            write_file(cell, "cell.txt")
+            write_file(status, "status.txt")
+            return get_naval_battle_request(True)
+#            return "all success"
+        else:
+            if status == "hit" or status == "water" or status == "kill":
+                write_file(status, "status.txt")
+                return "please repeat cell"
+            else:
+                write_file(cell, "cell.txt")
+                return "please repeat status"
+    elif start == "10":
+        print("[ log ] know only status")
+        cell = detect_cell(Text)
+        if cell[0] != 0:
+            write_file(cell, "cell.txt")
+            return get_naval_battle_request()
+        else:
+            return "please repeat cell you want to shot"
+    elif start == "01":
+        print("[ log ] know only cell")
+        status = detect_status(Text)
+        if status == "hit" or status == "water" or status == "kill":
+            write_file(status, "status.txt")
+            return get_naval_battle_request()
+        else:
+            return "please repeat cell status"
+
 
     #cursor.execute("DELETE FROM voice_helper.naval_battle WHERE field == \"" + str(data[3] + "\";")
     #cursor.execute("INSERT INTO voice_helper.naval_battle (field) VALUES (10);")
     #connection.commit()
-
+"""
     start = data[3]
 
+    cell = detect_cell(Text)
+    status = detect_status(Text)
     detect = detect_cell_status(Text)
 
     if start == "00":
@@ -284,19 +383,19 @@ def naval_battle(Text):
             try:
                 if detect[1][0] != 0:
                     cell, status = detect[1], data[4]
-                    
+
             except ValueError:
                 return detect[1]
     elif status == "101":
         try:
             if detect[1] != 0:
-                
-                return get_shot(detect[1])
+
+               return get_shot(detect[1])
             else:
-                
+
         except:
             return "i have not found any cells in your sentence"
-
+"""
 
 def last_call(Text):
 		# may be "govno-code"
