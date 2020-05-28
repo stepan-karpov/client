@@ -16,7 +16,7 @@ answers = {
 digits = {1: "first", 2: "second", 3: "third", 4: "fourth", 5: "fifth", 6: "sixth",
 	  7: "seventh", 8: "eighth", 9: "ninth", 10: "tenth", 11: "eleventh", 12: "twelfth",
 	  13: "thirteenth", 14: "fourteenth", 15: "fifteenth", 16: "sixteenth", 17: "seventeenth",
-	  18: "eightteenth", 19: "nineteenth", 20: "twentieth", 21: "twenty first",
+	  18: "eighteenth", 19: "nineteenth", 20: "twentieth", 21: "twenty first",
 	  22: "twenty second", 23: "twenty third", 24: "twenty fourth", 25: "twenty fifth",
 	  26: "twenty sixth", 27: "twenty seventh", 28: "twenty eighth", 29: "twenty ninth",
 	  30: "thirtieth", 31: "thirty first"}
@@ -291,6 +291,8 @@ def get_naval_battle_request(start=False):
     status = get_line("status.txt")
     print("[ log ] status of my past cell: " + status)
 
+    cells = {1: "a", 2: "b", 3: "c", 4: "d", 5: "e", 6: "f", 7: "g", 8: "h", 9: "i", 10: "j"}
+
     if status != "hit" and status != "kill":
         try:
             get = get_shot((int(cell[0]), int(cell[1])))
@@ -303,6 +305,9 @@ def get_naval_battle_request(start=False):
     else:
         get = "in water" #very big crutch
 
+    if status == "kill" or status == "hit":
+        if count_killed() == 20:
+            get = "i win"
 
     print("[ log ] get_shot return is: " + get)
 
@@ -325,6 +330,11 @@ def get_naval_battle_request(start=False):
             write_file("None", "beaten_cell.txt")
             draw_fields()
             return get
+        elif get.find("lie") != -1:
+           print("[ log ] looks like 'you lie to me'")
+           write_file("None", "cell.txt")
+           draw_fields()
+           return get
         else:
             if status != "hit or kill":
                 print("[ log ] hit for the first time")
@@ -354,7 +364,7 @@ def get_naval_battle_request(start=False):
                 cell_to_shot = make_shot()
                 write_file(str(cell_to_shot), "beaten_cell.txt")
                 draw_fields()
-                return get + ". " + str(cell_to_shot)
+                return get + ". " + str(cells[cell_to_shot[0]]) + str(cell_to_shot[1])
             if start:
                 print("[ log ] start and not kill")
                 write_file("None", "status.txt")
@@ -362,7 +372,7 @@ def get_naval_battle_request(start=False):
                 cell_to_shot = make_shot()
                 write_file(str(cell_to_shot), "beaten_cell.txt")
                 draw_fields()
-                return get + ". " + str(cell_to_shot)
+                return get + ". " + str(cells[cell_to_shot[0]]) + str(cell_to_shot[1])
             else:
                 print("[ log ] not start and not kill")
                 beaten_cell = get_line("beaten_cell.txt")[1:-1]
@@ -375,7 +385,7 @@ def get_naval_battle_request(start=False):
                 write_file("None", "cell.txt")
                 write_file("None", "status.txt")
                 draw_fields()
-                return get + ". " + str(cell_to_shot)
+                return get + ". " + str(cells[cell_to_shot[0]]) + str(cell_to_shot[1])
         else:
             print("[ log ] my shot was hit or kill")
             print("[ log ] now my task is not to permit to know cell status you said")
@@ -389,7 +399,7 @@ def get_naval_battle_request(start=False):
             cell_to_shot = make_shot()
             write_file(str(cell_to_shot), "beaten_cell.txt")
             draw_fields()
-            return str(cell_to_shot)
+            return str(cells[cell_to_shot[0]]) + str(cell_to_shot[1])
 
 # hold on,
 # baby tell me
@@ -405,8 +415,14 @@ def naval_battle(Text):
     else:
         c = "0"
 
-    if cell == "i hit or kill" or Text.find("hit") != -1:
+    if cell == "i hit or kill" or Text.find("hit") != -1 or Text.find("kill") != -1:
         c = "1"
+
+    if cell == "i hit or kill" and Text.find("water") != -1:
+       c = "0"
+
+    if cell == "i hit or kill" and status == "water":
+      c = "0"
 
     if status == "hit" or status == "water" or status == "kill" or status == "hit or kill":
         s = "1"

@@ -226,10 +226,21 @@ def no_other_ships(field):
     else:
         return False
 
+def count_killed():
+    fields, ships = get_fields()
+    c = 0
+    for row in fields[1]:
+        for cell_to_count in row:
+            if cell_to_count == "KK" or cell_to_count == "**":
+                c += 1
+    print("[ log ] killed cells: " + str(c))
+    return c
+
 
 def get_shot(cell):
     fields, ships_to_correct = get_fields()
     ships = []
+
     for ship in ships_to_correct:
         ship_to_add = []
         for ship_cell in ship:
@@ -350,10 +361,22 @@ def situation(field):
 
 def make_shot():
     fields, ships = get_fields()
+
+    """
+    c = 0
+    for row in fields[1]:
+        for cell in row:
+            if cell == "KK":
+                c += 1
+    print("[ log ] killed cells: " + str(c))
+    if c == 20:
+        return "I win"
+    """
+
     where_to_shot = situation(fields[1])
-    print("=====where_to_shot========")
+    print("[ log ] =====where_to_shot========")
     print(where_to_shot)
-    print("=====where_to_shot========")
+    print("[ log ] =====where_to_shot========")
 
     if len(where_to_shot) == 0:
         c = "00"
@@ -486,6 +509,6 @@ if __name__ == "__main__":
 
         Text = str(raw_input("What is about cell " + str(cell) + "?: "))
         print(mark_shot(Text, cell))
-    
+
     #    print(ships)
 

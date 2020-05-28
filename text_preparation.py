@@ -30,7 +30,7 @@ def change_request(Text):
 						to_change += letter
 
 				if cells.count(word) == 0 and word.find(',') == -1:
-					print(cells)
+#					print(cells)
 					Text = Text.replace(word, to_change)
 					print("[ log ] Warning! '" + word + "' changed on '" + to_change + "'")
 	return Text
