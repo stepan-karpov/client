@@ -1,0 +1,48 @@
+don't forget to run dictionary.py to update dictionary
+
+this is instruction to test naval battle
+
+it's better to always read log in every query and look for it's true
+
+also you have his fields in logs
+first field is his field. There:
+    01 - cell of his ship
+    11 - cell you can't shot
+    ** - killed cell
+second cell is your field. There:
+    10 - cell AI don't know position
+    ** - your damaged (not killed) ships
+    00 - cell where it's surely water in your field
+
+watch for AI mark around every ship you kill and every ship it kill
+(cells around killed ship)
+
+also don't lie to AI. It won't notice if you say that it killed 5 one-cell ships
+
+first, to start a new game you should ask Isinka to start a new game
+- let's play sea battle
+
+use next statuses:
+-water
+-hit
+-kill
+
+i recommend you to test first time without any mistakes
+this mean you should always say answer like "in water a6"
+don't try to cell status after AI make hit or kill
+(AI - a6
+ MAN - hit a9 - don't use first time)
+don't try to say fake information to AI first time
+
+if you said wrong information to AI it's impossible to correct it, should start new game
+
+after you test first time try to find errors in it
+
+for example, say cell when he hits your cell
+try to say only cell or only status, AI should ask you to complete your answer
+like
+AI - water a6
+M - a9
+AI - what is status? (he needs status of cell a6 he asked)
+
+Hope you understand. If not, ask me. Sorry for writing this file in English, I just start it in Eng and then forgot to change language

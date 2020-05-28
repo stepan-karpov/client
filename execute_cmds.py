@@ -239,7 +239,7 @@ def detect_status(Text):
 	statuses = {
 		"hit": ["hit", "touched"],
 		"kill": ["kill"],
-		"water": ["water"]
+		"water": ["water", "clear"]
 	}
 	status = []
 #	print(Text)
@@ -250,6 +250,8 @@ def detect_status(Text):
 			if Text.find(u) != -1:
 				status.append(k)
 	print("[ log ] statuses list: " + str(status))
+	if len(status) == 0 and Text.find("no") != -1:
+		return "water"
 	if len(status) > 1:
 		return "you should say only one cell status"
 	elif len(status) == 0:
@@ -311,7 +313,8 @@ def get_naval_battle_request(start=False):
 
     print("[ log ] get_shot return is: " + get)
 
-    if get.find("in water") == -1:
+    answ = ["in water", "it is water there", "clear there", "there is no any ships"]
+    if answ.count(get) == 0:
         print("[ log ] looks like a hit or kill :)")
         if get.startswith("sorry"):
             print("[ log ] impossible to shot here")
@@ -329,7 +332,7 @@ def get_naval_battle_request(start=False):
             write_file("stop", "status.txt")
             write_file("None", "beaten_cell.txt")
             draw_fields()
-            return get
+            return get + ". do you want to start new game"
         elif get.find("lie") != -1:
            print("[ log ] looks like 'you lie to me'")
            write_file("None", "cell.txt")
@@ -414,8 +417,7 @@ def naval_battle(Text):
         c = "1"
     else:
         c = "0"
-
-    if cell == "i hit or kill" or Text.find("hit") != -1 or Text.find("kill") != -1:
+    if cell == "i hit or kill" or Text.find("hit") != -1  or Text.find("kill") != -1:
         c = "1"
 
     if cell == "i hit or kill" and Text.find("water") != -1:

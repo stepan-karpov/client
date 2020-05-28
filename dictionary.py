@@ -133,8 +133,9 @@ opts = {
 		    'you are the best WHO', 'you are best WHO', 'you are greatest WHO', 'you are the greates WHO'
  		    'you are the best',
 		    'you are best', 'you are the greatest'),
-        "start_naval_battle": ("let's play NAVAL_BATTLE", "let play NAVAL_BATTLE"),
-        "naval_battle": ('CELL', 'STATUS CELL', 'STATUS, CELL', 'STATUS'),
+        "start_naval_battle": ("let's play NAVAL_BATTLE", "let play NAVAL_BATTLE", "play NAVAL_BATTLE with me",
+                               "play NAVAL_BATTLE", "how about NAVAL_BATTLE", "lets play NAVAL_BATTLE", "NAVAL_BATTLE"),
+        "naval_battle": ('CELL', 'STATUS CELL', 'STATUS'),
         "name":  ('what is your name', 'your name is', 'your name is what', 'tell me what is your name',
 		  'how can i call you', 'how can i contact you', 'how should i call you',
 		  'how should i contact you'),
@@ -392,7 +393,8 @@ def change_main_dictionary():
 	["n't", " not"], ["hear", "heard", "see", "seen"], ["answer", "answers", "request", "requests"],
 	["prepared", "processed", "were in process", "protest"], ["much", "many"], ["hear", "to_hear"], ["your work", "work"], ["tell", "say"],
 	# 19 variants upper ^
-	["girl", "woman", "voice helper", "helper", name], get_cells(), ["killed", "hit", "in water", "water"], ["sea battle", "naval battle"]
+	["girl", "woman", "voice helper", "helper", name], get_cells(), ["killed", "hit", "in water", "water", "kill"], 
+        ["sea battle", "naval battle", "seabattle"],
 	]
     to_change_key_words = [
 	"CITY", "NEAREST_DAYS", "MONTH", "DAY_OF_WEEK", "DATES", "ALBUM_SONG", "SEASON", "IS", "TELL", "HEAR", "I", "NOT", "HEAR_SEE", "ANSW_REQ",

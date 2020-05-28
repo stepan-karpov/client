@@ -256,6 +256,7 @@ def get_shot(cell):
     if status == "00":
         fields[0][cell[1] - 1][cell[0] - 1] = "11"
         write_fields(fields, ships_to_correct)
+#        answ = ["in water", "it is water there", "clear there", "there is no any ships"]
         return "in water"
     elif status == "01":
         marked_ship = []
@@ -269,12 +270,14 @@ def get_shot(cell):
         if not ship_killed(fields[0], marked_ship, cell):
             fields[0][cell[1] - 1][cell[0] - 1] = "**"
             write_fields(fields, ships_to_correct)
+#            answ = ["you hit my ship", "hit", "there is my ship. hit"]
             return "hit"
         else:
             if not no_other_ships(fields[0]):
                 fields[0] = mark_around(fields[0], marked_ship)
                 write_fields(fields, ships_to_correct)
-                return "you just killed a ship now"
+#                answ = ["killed", "you just killed a ship now", "there was my ship. killed", "oh no. killed"]
+                return "killed"
             else:
                 return "you win"
     elif status == "**" or status == "11":
