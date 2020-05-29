@@ -37,6 +37,7 @@ def change_request(Text):
 
 def prepare_answer(Text):
     start_time = datetime.datetime.now()
+    print("here")
     print("[ log ] text preparation module starts ============")
     global opts
     opts = import_dictionary()
