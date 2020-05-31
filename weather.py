@@ -113,31 +113,34 @@ def weather_forecast(Text):
 	if not -1 < forecast_day < 8:
 		return "sorry i dont have forecast on this day"
 	else:
-		weather = []
-		data = get_weather(str(forecast_day) + "_day_forecast")
-		for city in data:
-			if city[1].lower() == found_city.lower():
-				weather = city
-				break
-		params_answers = [weather[2] + " degrees ", weather[3] + " meters per second ", str(int(round(float(weather[4]) / 10))) + " kilopascales ",
+		try:
+			weather = []
+			data = get_weather(str(forecast_day) + "_day_forecast")
+			for city in data:
+				if city[1].lower() == found_city.lower():
+					weather = city
+					break
+			params_answers = [weather[2] + " degrees ", weather[3] + " meters per second ", str(int(round(float(weather[4]) / 10))) + " kilopascales ",
 				" at " + weather[5] + " o clock ", " at " + weather[6] + " o clock ", weather[7]]
 
-		if len(weather) == 0:
-			return "sorry i have no information about city " + found_city
-		else:
-			if params.count(True) != 0:
-				answer = ""
-				for i in range(len(params)):
-					if params[i]:
-						answer += params_answers[i]
-				answer = answer.replace("  ", " ").strip()
-				return answer
+			if len(weather) == 0:
+				return "sorry i have no information about city " + found_city
 			else:
-				try:
-					return weather[2] + " degrees " + weather[7].lower().strip(".") + " and " + weather[8]
-				except:
-					return weather[2] + " degrees and " + weather[7].lower().strip(".")
-	return "forecast error"
+				if params.count(True) != 0:
+					answer = ""
+					for i in range(len(params)):
+						if params[i]:
+							answer += params_answers[i]
+					answer = answer.replace("  ", " ").strip()
+					return answer
+				else:
+					try:
+						return weather[2] + " degrees " + weather[7].lower().strip(".") + " and " + weather[8]
+					except:
+						return weather[2] + " degrees and " + weather[7].lower().strip(".")
+		except:
+			return "sorry, i have some problems with my weather module"
+		return "forecast error"
 
 #   0   1    2    3
 #   6   7    8    9

@@ -57,6 +57,26 @@ Instruction how to add new item to dictionary:
 """
 
 
+"""
+"weather_forecast": ('tell me weather forecast in CITY', 'weather forecast in CITY', 'weather forecast in CITY on 15 of MONTH',
+'weather forecast on 15 of MONTH', 'weather forecast in CITY on today',
+'weather forecast in CITY on day after tomorrow', 'weather forecast on today', 'weather forecast on tomorrow'
+'weather forecast on day after tommorow', 'what is the weather in CITY', 'weather in CITY',
+"what is the weather in CITY", "CITY weather", "current weather in CITY", 'weather forecast',
+'weather forecast on the street', 'weather forecat outside', 'what is the weather outside',
+'the weather on the street','weather outside', 'weather', 'what is the weather now'),
+"""
+
+"""
+"temperature": ('what temperature in CITY', 'which temperature in CITY now', 'what temperature in CITY is now', 'which temperature in CITY is now',
+'what temperature in CITY '+ day(0), 'temperature in CITY', 'temperature on the street'),
+"wind": ('wind speed on the street', 'wind speed in CITY', 'wind speed', 'wind'),
+"pressure": ('pressure on the street', 'pressure in CITY', 'pressure'),
+"sunrise": ('when is sunrise in CITY', 'when is sunrise on the street', 'sunrise'),
+"sunset": ('when is sunset in CITY', 'when is sunset on the street', 'sunset'),
+"status": ('weather status in CITY', 'weather status on the street', 'weather status'),
+"""
+
 
 
 
@@ -153,22 +173,6 @@ opts = {
                   'turn on an ALBUM', 'turn on ALBUM', 'switch on ALBUM', 'switch on the ALBUM',
                   'turn on an ARTIST', 'turn on ARTIST', 'switch on ARTIST', 'switch on the ARTIST',
                   'SONG', 'ALBUM', 'ARTIST', 'turn on something'],
-
-        "weather_forecast": ('tell me weather forecast in CITY', 'weather forecast in CITY', 'weather forecast in CITY on 15 of MONTH',
-			     'weather forecast on 15 of MONTH', 'weather forecast in CITY on today',
-			     'weather forecast in CITY on day after tomorrow', 'weather forecast on today', 'weather forecast on tomorrow'
-			     'weather forecast on day after tommorow', 'what is the weather in CITY', 'weather in CITY',
-			     "what is the weather in CITY", "CITY weather", "current weather in CITY", 'weather forecast',
-			     'weather forecast on the street', 'weather forecat outside', 'what is the weather outside',
-			     'the weather on the street','weather outside', 'weather', 'what is the weather now'),
-
-       "temperature": ('what temperature in CITY', 'which temperature in CITY now', 'what temperature in CITY is now', 'which temperature in CITY is now',
-		       'what temperature in CITY '+ day(0), 'temperature in CITY', 'temperature on the street'),
-       "wind": ('wind speed on the street', 'wind speed in CITY', 'wind speed', 'wind'),
-       "pressure": ('pressure on the street', 'pressure in CITY', 'pressure'),
-       "sunrise": ('when is sunrise in CITY', 'when is sunrise on the street', 'sunrise'),
-       "sunset": ('when is sunset in CITY', 'when is sunset on the street', 'sunset'),
-       "status": ('weather status in CITY', 'weather status on the street', 'weather status'),
 	"whoyou": ('who are you', 'who you', 'do you know who you are'),
 	"ycth": ('you can\'t even think', 'you can\'t think'),
     },
@@ -388,28 +392,53 @@ def change_main_dictionary():
 
     opts["cmds"]["music"] = changed
 
+    """
+    ["weather_forecast", 'temperature', 'wind', 'pressure', 'sunrise', 'sunset', 'status'], ["whatdaytoday", "whatdayweek", "whatdom"],
+    ["weather_forecast"], ['whatdayweek'], ["whatdayweek"], ["answer"], ["fs"], ["fs"], ["wdyh"], ["wdyh"], ["ago", "happy", "welcome"], ["ago"], ["ago"], ["hmr"],
+    ["hmr"], ["hmr"], ["happy"], ["welcome"], ["tell"],
+    """
+    """
+    get_cities(), ["today", "tomorrow", "day after tomorrow", "day after today", "yesterday"], get_months(),
+    ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'], get_dates(),
+    ['album', 'an album', 'song', 'a song'], ["season", "time of year", "year time"], [" is", "'s"], ["tell", "told"],
+    ["hear", "heard"], ['', "i ", "i am "],
+    ["n't", " not"], ["hear", "heard", "see", "seen"], ["answer", "answers", "request", "requests"],
+    ["prepared", "processed", "were in process", "protest"], ["much", "many"], ["hear", "to_hear"], ["your work", "work"], ["tell", "say"],
+    # 19 variants upper ^
+    ["girl", "woman", "voice helper", "helper", name], get_cells(), ["killed", "hit", "in water", "water", "kill"],
+    ["sea battle", "naval battle", "seabattle"],
+    """
+    """
+    "CITY", "NEAREST_DAYS", "MONTH", "DAY_OF_WEEK", "DATES", "ALBUM_SONG", "SEASON", "IS", "TELL", "HEAR", "I", "NOT", "HEAR_SEE", "ANSW_REQ",
+    "PREPARED", "MUCH_MANY", "HEAR_TO_HEAR", "YOUR_WORK", "SAY_TELL",
+    # 19 variants upper ^
+    "WHO", "CELL", "STATUS", "NAVAL_BATTLE"
+    """
+
+
+
     to_change_keys = [
-	["weather_forecast", 'temperature', 'wind', 'pressure', 'sunrise', 'sunset', 'status'],	["whatdaytoday", "whatdayweek", "whatdom"],
-	["weather_forecast"], ['whatdayweek'], ["whatdayweek"], ["answer"], ["fs"], ["fs"], ["wdyh"], ["wdyh"], ["ago", "happy", "welcome"], ["ago"], ["ago"], ["hmr"],
+	["whatdaytoday", "whatdayweek", "whatdom"],
+	['whatdayweek'], ["whatdayweek"], ["answer"], ["fs"], ["fs"], ["wdyh"], ["wdyh"], ["ago", "happy", "welcome"], ["ago"], ["ago"], ["hmr"],
 	["hmr"], ["hmr"], ["happy"], ["welcome"], ["tell"],
-	# 19 variants upper ^
+	# 18 variants upper ^
 	["thanks"], ["start_naval_battle", "naval_battle"], ["start_naval_battle", "naval_battle"], ["start_naval_battle", "naval_battle"]
 	]
     to_change_items = [
-	get_cities(), ["today", "tomorrow", "day after tomorrow", "day after today", "yesterday"], get_months(),
+	["today", "tomorrow", "day after tomorrow", "day after today", "yesterday"],
 	['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'], get_dates(),
 	['album', 'an album', 'song', 'a song'], ["season", "time of year", "year time"], [" is", "'s"], ["tell", "told"],
 	["hear", "heard"], ['', "i ", "i am "],
 	["n't", " not"], ["hear", "heard", "see", "seen"], ["answer", "answers", "request", "requests"],
 	["prepared", "processed", "were in process", "protest"], ["much", "many"], ["hear", "to_hear"], ["your work", "work"], ["tell", "say"],
-	# 19 variants upper ^
-	["girl", "woman", "voice helper", "helper", name], get_cells(), ["killed", "hit", "in water", "water", "kill"], 
+	# 18 variants upper ^
+	["girl", "woman", "voice helper", "helper", name], get_cells(), ["killed", "hit", "in water", "water", "kill"],
         ["sea battle", "naval battle", "seabattle"],
 	]
     to_change_key_words = [
-	"CITY", "NEAREST_DAYS", "MONTH", "DAY_OF_WEEK", "DATES", "ALBUM_SONG", "SEASON", "IS", "TELL", "HEAR", "I", "NOT", "HEAR_SEE", "ANSW_REQ",
+	"NEAREST_DAYS", "DAY_OF_WEEK", "DATES", "ALBUM_SONG", "SEASON", "IS", "TELL", "HEAR", "I", "NOT", "HEAR_SEE", "ANSW_REQ",
 	"PREPARED", "MUCH_MANY", "HEAR_TO_HEAR", "YOUR_WORK", "SAY_TELL",
-	# 19 variants upper ^
+	# 18 variants upper ^
 	"WHO", "CELL", "STATUS", "NAVAL_BATTLE"
 	]
 

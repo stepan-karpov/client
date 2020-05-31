@@ -98,13 +98,18 @@ def recognize_cmd(cmd):
 		except:
 			pass
 	else:
-
+		key_words = {'weather status': 'status', 'weather': 'weather_forecast', 'temperature': 'temperature', 'wind speed': 'wind', 'pressure': 'pressure',
+			     'sunrise': 'sunrise', 'sunset': 'sunset'}
+		for k, v in key_words.items():
+			if cmd.find(k) != -1:
+				print("[ log ] found '" + k + "', cmd is: " + v)
+				return {'cmd': v, 'percent': 100}
 		cells = get_cells()
 		for cell in cells:
 			if cmd.split(" ").count(cell):
 				return {'cmd': 'naval_battle', 'percent': 100}
 # was it all worth it
-		units_list = ["meter", "gram", "bit", "newton", "tesla", "byt", "piko", "nano", "micro", 
+		units_list = ["meter", "gram", "bit", "newton", "tesla", "byt", "piko", "nano", "micro",
 					  "milli", "centi", "deci", "kilo", "mega", "giga", "tera", "peta"]
 
 		for word in cmd.split(" "):
