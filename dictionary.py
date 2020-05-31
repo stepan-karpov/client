@@ -108,6 +108,8 @@ opts = {
 		 'what did i TELL', 'what have been TELL', 'what i TELL', 'what have i TELL', 'what TELL',
 		 'what did i TELL you', 'what have been TELL you', 'what i TELL you', 'what have i TELL you', 'what TELL you'),
         "servo": ('rotate servo on', 'servo on', 'turn servo'),
+	"here": ('are you here', 'are you here now'),
+	"answ": ('can you answer me', 'can you answer me now'),
         #this tuple useful for two-phrases dialog with computer
         #it can be used like this:
         # - name, turn on please please me
@@ -158,7 +160,7 @@ opts = {
 			     'weather forecast on day after tommorow', 'what is the weather in CITY', 'weather in CITY',
 			     "what is the weather in CITY", "CITY weather", "current weather in CITY", 'weather forecast',
 			     'weather forecast on the street', 'weather forecat outside', 'what is the weather outside',
-			     'the weather on the street','weather outside', 'weather'),
+			     'the weather on the street','weather outside', 'weather', 'what is the weather now'),
 
        "temperature": ('what temperature in CITY', 'which temperature in CITY now', 'what temperature in CITY is now', 'which temperature in CITY is now',
 		       'what temperature in CITY '+ day(0), 'temperature in CITY', 'temperature on the street'),
@@ -167,12 +169,14 @@ opts = {
        "sunrise": ('when is sunrise in CITY', 'when is sunrise on the street', 'sunrise'),
        "sunset": ('when is sunset in CITY', 'when is sunset on the street', 'sunset'),
        "status": ('weather status in CITY', 'weather status on the street', 'weather status'),
-
+	"whoyou": ('who are you', 'who you', 'do you know who you are'),
+	"ycth": ('you can\'t even think', 'you can\'t think'),
     },
     "answ": {
         "fs": ("summer", "I think summer"),
         "hmk": ("one thousand", "thousand"),
         "hmik": ("one million", "million"),
+	"answ": ('yes i can', 'of course. i can answer any of yours questions'),
         "hmc": ("there are actually ten", "ten"),
         "hmm": ("one thousand", "thousand"),
         "hck": ("one hundred thousand","hundred thousand"),
@@ -181,15 +185,21 @@ opts = {
         "ayw": ('yes, i am', 'i am', 'of course i am', 'yes'),
         "dyw": ('yes i do', 'of course i do', 'yes', 'i do'),
         "cyw": ('yes i can', 'yes', 'of course i can', 'i can'),
-        "happy": ('i am happy too', 'i am happy about it'),
+        "here": ('of course i am here', 'yes i am here'),
+	"happy": ('i am happy too', 'i am happy about it'),
         "welcome": ('You are welcome', 'i am happy you are pleasured'),
-        "tell": ('What should  I tell', 'i can answer any of question', 'hello world'),
+        "tell": ('What should  I tell', 'i can answer any of yours questions', 'hello world'),
         "thanks": ('thanks', 'thank you', 'thank you very much'),
         "name":  ('my name is ' + name, 'you should know me as ' + name, name),
         "sfd": ('It is just reality', 'It is true'),
+	"whoyou": ('i am artificial intelligence created for robot management', 'i am voice helper which can manage robot',
+		   'i think that i am robot'),
+	"ycth": ('my creator said that i smarter than some people', 'sadly, but it is true',
+		 'unfortunately yes. but can you imagine how much work was done to creeate me',
+		 'but i can count very well'),
         "howry":  ('i am fine', 'i am fine, thanks'),
         "wcyd":  ('i can not do a lot of things', 'my possibilities are not very big'),
-        "sorry": ('sorry am trying to work', 'slow work may be caused by julius', 'sorry'),
+        "sorry": ('sorry am trying to work', 'slow work may be caused by speech recognition', 'sorry'),
         "wmy": ('my creator is stepa k', 'stepa k made me', 'stepa k'),
 
     },

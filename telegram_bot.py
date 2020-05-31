@@ -4,7 +4,8 @@ from telegram.ext import CommandHandler
 from telegram.ext import MessageHandler
 from telegram.ext import Filters
 from text_preparation import prepare_answer
-
+from telegram import KeyboardButton
+from telegram import ReplyKeyboardMarkup
 
 def make_start(bot, update):
 	print("first message recieved")
@@ -20,8 +21,24 @@ def answer(bot, update):
 		ready_answer += sentence.capitalize() + ". "
 	ready_answer = ready_answer.replace("  ", " ").strip(" ")
 
+	if text == "hey":
+		ready_answer = "m?"
+
 	print("Answer: " + str(ready_answer))
-	bot.send_message(chat_id=update.message.chat_id, text=ready_answer)
+	bot.send_message(chat_id=update.message.chat_id, text=ready_answer, reply_markup=get_inline_keyboard())
+
+def get_inline_keyboard():
+	keyboard = [
+			[
+				KeyboardButton("Hey"),
+				KeyboardButton("How are you"),
+			],
+			[
+				KeyboardButton("How do you do"),
+				KeyboardButton("Weather"),
+			]
+	]
+	return ReplyKeyboardMarkup(keyboard=keyboard)
 
 def main():
 	bot = Bot (token="1247626625:AAHl0mBgshQuehPirtKMjylpoGEDXlI0pGE", base_url="https://telegg.ru/orig/bot")
