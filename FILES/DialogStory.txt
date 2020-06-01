@@ -3018,3 +3018,1535 @@ request: goodbye
 answer: goodbye
 datetime: 2020-05-26 18:07:56.492401
 
+request: water a5
+answer: do you want to start a new game
+datetime: 2020-05-31 15:18:36.594777
+
+request: yes
+answer: goodbye
+datetime: 2020-05-31 15:18:39.643616
+
+request: water a5
+answer: do you want to start a new game
+datetime: 2020-05-31 15:19:31.158191
+
+request: yes
+answer: goodbye
+datetime: 2020-05-31 15:19:33.147209
+
+request: water a5
+answer: do you want to start a new game
+datetime: 2020-05-31 15:19:50.141276
+
+request: yes
+answer: not recognized answer
+datetime: 2020-05-31 15:19:52.041663
+
+request: water a5
+answer: do you want to start a new game
+datetime: 2020-05-31 15:24:24.626495
+
+request: yes
+answer: not recognized answer
+datetime: 2020-05-31 15:24:26.886307
+
+request: water a5
+answer: do you want to start a new game
+datetime: 2020-05-31 15:26:55.277730
+
+request: yes
+answer: i am happy we are playing. i have already build my field. you starts. it is better to use words kill, in water and hit while playing. i am waiting for your variant
+datetime: 2020-05-31 15:26:57.602386
+
+request: water a6
+answer: in water. d10
+datetime: 2020-05-31 15:28:17.327390
+
+request: hey
+answer: hi
+datetime: 2020-05-31 19:32:29.888272
+
+request: let's play words
+answer: i am happy we are playing. i have already build my field. you starts. it is better to use words kill, in water and hit while playing. i am waiting for your variant
+datetime: 2020-05-31 19:32:37.543405
+
+request: stop 
+answer: goodbye
+datetime: 2020-05-31 19:32:44.949836
+
+request: hey
+answer: hi
+datetime: 2020-05-31 19:35:13.070424
+
+request: hey
+answer: hi
+datetime: 2020-05-31 19:35:22.611231
+
+request: let's play words
+answer: i deleted word 'hi' from my vocabulary
+datetime: 2020-05-31 19:35:27.465179
+
+request: let's play words
+answer: ok, i am ready to play. now i have 503 to use
+datetime: 2020-05-31 19:37:35.798006
+
+request: banana
+answer: account
+datetime: 2020-05-31 19:37:43.481809
+
+request: tuple
+answer: even
+datetime: 2020-05-31 19:37:50.706682
+
+request: delete this word
+answer: i deleted word 'even' from my vocabulary
+datetime: 2020-05-31 19:37:56.641028
+
+request: hey
+answer: sorry, but you can not use this word
+datetime: 2020-05-31 19:39:02.648846
+
+request: stop
+answer: none
+datetime: 2020-05-31 19:39:14.457979
+
+request: hey
+answer: hey
+datetime: 2020-05-31 19:39:45.429481
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-31 19:39:48.930121
+
+request: let's play words
+answer: ok, i am ready to play. now i have 502 to use
+datetime: 2020-05-31 19:39:53.285829
+
+request: banana
+answer: sorry, but you can not use this word
+datetime: 2020-05-31 19:40:05.746158
+
+request: wave
+answer: europe
+datetime: 2020-05-31 19:40:10.585797
+
+request: engine
+answer: eyes
+datetime: 2020-05-31 19:40:16.246220
+
+request: style
+answer: easy
+datetime: 2020-05-31 19:40:42.028966
+
+request: delete this word
+answer: i deleted word 'easy' from my vocabulary
+datetime: 2020-05-31 19:40:55.747875
+
+request: hey
+answer: hello
+datetime: 2020-05-31 21:37:31.712029
+
+request: let's play words --debug
+answer: ok, i am ready to play. now i have 501 words to use
+datetime: 2020-05-31 21:37:38.081818
+
+request: banana
+answer: sorry, but you can not use this word
+datetime: 2020-05-31 21:37:42.044276
+
+request: water
+answer: registered
+datetime: 2020-05-31 21:37:50.510859
+
+request: delete this word
+answer: you should say only one word
+datetime: 2020-05-31 21:38:02.930048
+
+request: hey
+answer: sorry, but you can not use this word
+datetime: 2020-05-31 21:38:52.389752
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 21:38:54.542756
+
+request: hey
+answer: hi
+datetime: 2020-05-31 21:39:15.643665
+
+request: lets play words
+answer: ok, i am ready to play. now i have 501 words to use
+datetime: 2020-05-31 21:39:25.671178
+
+request: banana
+answer: sorry, but you can not use this word
+datetime: 2020-05-31 21:39:27.536629
+
+request: envelo[e
+answer: sorry, i don't have more words on this letter
+datetime: 2020-05-31 21:39:32.499067
+
+request: envelope
+answer: entertain
+datetime: 2020-05-31 21:39:39.025892
+
+request: nail
+answer: lust
+datetime: 2020-05-31 21:39:51.106614
+
+request: debug
+answer: gonna
+datetime: 2020-05-31 21:39:58.804810
+
+request: delete this word
+answer: you should say only one word
+datetime: 2020-05-31 21:40:15.270152
+
+request: hey
+answer: sorry, but you can not use this word
+datetime: 2020-05-31 21:42:45.371266
+
+request: camel
+answer: late
+datetime: 2020-05-31 21:42:51.106710
+
+request: eraser
+answer: races
+datetime: 2020-05-31 21:42:55.993023
+
+request: style
+answer: sorry, but you can not use this word
+datetime: 2020-05-31 21:43:04.321873
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 21:43:08.410189
+
+request: lets play words
+answer: ok, i am ready to play. now i have 501 words to use
+datetime: 2020-05-31 21:43:24.444707
+
+request: banana
+answer: account
+datetime: 2020-05-31 21:43:26.603154
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 22:02:20.071713
+
+request: hello world
+answer: hello
+datetime: 2020-05-31 22:03:05.753418
+
+request: hey
+answer: hey
+datetime: 2020-05-31 22:09:43.367417
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-31 22:09:50.691180
+
+request: let’s play words
+answer: ok, i am ready to play. now i have 501 words to use
+datetime: 2020-05-31 22:09:58.691317
+
+request: banana
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:10:04.881304
+
+request: hey
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:11:33.855111
+
+request: how are you
+answer: you should say only one word
+datetime: 2020-05-31 22:11:37.023720
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 22:11:41.847825
+
+request: hey
+answer: hey
+datetime: 2020-05-31 22:11:45.095263
+
+request: let’s play words
+answer: ok, i am ready to play. now i have 501 words to use
+datetime: 2020-05-31 22:11:53.459349
+
+request: hey
+answer: yourself
+datetime: 2020-05-31 22:12:48.302377
+
+request: stoo
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:12:50.544295
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 22:12:52.714493
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-31 22:12:57.320926
+
+request: time
+answer: now it is 22 : 13
+datetime: 2020-05-31 22:13:03.590140
+
+request: let's play words
+answer: ok, i am ready to play. now i have 501 words to use
+datetime: 2020-05-31 22:13:11.260026
+
+request: banana
+answer: account
+datetime: 2020-05-31 22:13:16.326878
+
+request: tuple
+answer: europe
+datetime: 2020-05-31 22:13:21.118078
+
+request: end
+answer: destination
+datetime: 2020-05-31 22:13:24.865401
+
+request: nose
+answer: eyes
+datetime: 2020-05-31 22:13:30.731122
+
+request: silk
+answer: kicks
+datetime: 2020-05-31 22:14:09.355017
+
+request: success
+answer: stepa
+datetime: 2020-05-31 22:14:13.785039
+
+request: ant
+answer: telegram
+datetime: 2020-05-31 22:14:16.912245
+
+request: message
+answer: entertain
+datetime: 2020-05-31 22:14:19.638384
+
+request: nord
+answer: dc
+datetime: 2020-05-31 22:14:24.791097
+
+request: delete this word
+answer: you should say only one word
+datetime: 2020-05-31 22:14:32.935846
+
+request: hey
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:14:45.119365
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 22:14:51.313846
+
+request: let's play words --debug
+answer: ok, i am ready to play. now i have 501 words to use. !debug mode
+datetime: 2020-05-31 22:15:15.897588
+
+request: banana
+answer: account
+datetime: 2020-05-31 22:15:22.917119
+
+request: tuple
+answer: europe
+datetime: 2020-05-31 22:15:37.206050
+
+request: end
+answer: destination
+datetime: 2020-05-31 22:15:39.493907
+
+request: nord
+answer: dc
+datetime: 2020-05-31 22:15:43.765964
+
+request: delete this word
+answer: i deleted word 'dc' from my vocabulary
+datetime: 2020-05-31 22:15:50.493402
+
+request: cell
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:16:04.584921
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 22:18:06.665369
+
+request: let's play words --debug
+answer: ok, i am ready to play. now i have 503 words to use. !debug mode
+datetime: 2020-05-31 22:18:18.291531
+
+request: banana
+answer: account
+datetime: 2020-05-31 22:18:26.455792
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 22:21:24.152072
+
+request: hey
+answer: hey
+datetime: 2020-05-31 22:21:26.419334
+
+request: let's play words
+answer: ok, i am ready to play. now i have 503 words to use
+datetime: 2020-05-31 22:21:34.271811
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 22:22:11.332246
+
+request: let's play words
+answer: ok, i am ready to play. now i have 503 words to use
+datetime: 2020-05-31 22:22:14.823932
+
+request: plane
+answer: enough
+datetime: 2020-05-31 22:22:17.240493
+
+request: height
+answer: them
+datetime: 2020-05-31 22:22:44.073689
+
+request: message
+answer: earth
+datetime: 2020-05-31 22:22:50.965964
+
+request: hello
+answer: out
+datetime: 2020-05-31 22:22:56.787966
+
+request: hello
+answer: sorry, but you can not use this word
+datetime: 2020-05-31 22:23:02.117924
+
+request: amlet
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:23:07.516455
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 22:31:18.624791
+
+request: let's play words
+answer: ok, i am ready to play. now i have 503 words to use
+datetime: 2020-05-31 22:31:24.636451
+
+request: banana
+answer: an
+datetime: 2020-05-31 22:31:28.962430
+
+request: nose
+answer: entertain
+datetime: 2020-05-31 22:31:40.636039
+
+request: hello
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:31:44.552469
+
+request: water
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:31:51.710182
+
+request: hello
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:32:44.274585
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 22:33:21.093700
+
+request: hey
+answer: hey
+datetime: 2020-05-31 22:33:23.313284
+
+request: let's play words
+answer: ok, i am ready to play. now i have 503 words to use
+datetime: 2020-05-31 22:33:32.749211
+
+request: banana
+answer: an
+datetime: 2020-05-31 22:33:37.416336
+
+request: nose
+answer: enough
+datetime: 2020-05-31 22:33:43.645533
+
+request: hello
+answer: out
+datetime: 2020-05-31 22:33:46.878617
+
+request: rama
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:33:50.253505
+
+request: hey
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:33:55.834555
+
+request: hey
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:34:03.230392
+
+request: may
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:34:06.895616
+
+request: rgert
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:34:15.014352
+
+request: potato
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:35:14.779601
+
+request: greek
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:35:23.403098
+
+request: hey
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:37:06.037249
+
+request: hey
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:37:32.428739
+
+request: hey
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:39:04.896607
+
+request: hey
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:39:51.208009
+
+request: hey
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:41:23.001799
+
+request: hey
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:41:53.219951
+
+request: twist
+answer: turn
+datetime: 2020-05-31 22:42:01.997112
+
+request: hello
+answer: sorry, but you can not use this word
+datetime: 2020-05-31 22:42:06.663830
+
+request: oil
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:42:18.526301
+
+request: hey
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:43:12.443378
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 22:43:18.901312
+
+request: let's play words
+answer: ok, i am ready to play. now i have 503 words to use
+datetime: 2020-05-31 22:43:23.513717
+
+request: banana
+answer: action
+datetime: 2020-05-31 22:43:27.126134
+
+request: nose
+answer: evening
+datetime: 2020-05-31 22:43:29.320312
+
+request: hello
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:43:32.564050
+
+request: make
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:43:35.122258
+
+request: edit
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:43:36.820418
+
+request: gorilla
+answer: alright
+datetime: 2020-05-31 22:43:40.363425
+
+request: teeth
+answer: how
+datetime: 2020-05-31 22:43:45.376390
+
+request: weather
+answer: ready
+datetime: 2020-05-31 22:43:48.124177
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 22:43:59.175869
+
+request: let's play words --debug
+answer: ok, i am ready to play. now i have 503 words to use. !debug mode
+datetime: 2020-05-31 22:44:13.087891
+
+request: banana
+answer: alright
+datetime: 2020-05-31 22:44:18.178555
+
+request: delete this word
+answer: i deleted word 'alright' from my vocabulary
+datetime: 2020-05-31 22:44:31.953862
+
+request: insert 'water' into your vocabuary
+answer: shoud i insert word "'water'"
+datetime: 2020-05-31 22:48:09.413702
+
+request: no
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:48:15.853789
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 22:50:48.039873
+
+request: let's play words --debug
+answer: ok, i am ready to play. now i have 502 words to use. !debug mode
+datetime: 2020-05-31 22:50:57.637728
+
+request: banana
+answer: ago
+datetime: 2020-05-31 22:51:08.436781
+
+request: insert water in your vocabulary
+answer: shoud i insert word "water"
+datetime: 2020-05-31 22:51:17.466209
+
+request: yes
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:51:21.045071
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 22:52:10.121659
+
+request: let's play words --debug
+answer: ok, i am ready to play. now i have 502 words to use. !debug mode
+datetime: 2020-05-31 22:52:29.298606
+
+request: banana
+answer: animals
+datetime: 2020-05-31 22:52:33.526282
+
+request: insert water in your vocabulary
+answer: shoud i insert word "water"
+datetime: 2020-05-31 22:52:42.185368
+
+request: yes
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:52:45.290904
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 22:53:33.354646
+
+request: let's play word --debug
+answer: ok, i am ready to play. now i have 502 words to use. !debug mode
+datetime: 2020-05-31 22:53:41.255858
+
+request: banana
+answer: action
+datetime: 2020-05-31 22:53:45.421696
+
+request: insert word water in your vocabulary
+answer: should i insert word "water"
+datetime: 2020-05-31 22:53:56.276868
+
+request: yes
+answer: word 'water' successfully added
+datetime: 2020-05-31 22:54:00.677845
+
+request: insert management in you vocabulary
+answer: should i insert word "management"
+datetime: 2020-05-31 22:54:23.760839
+
+request: no
+answer: word won't be inserted. keep playing
+datetime: 2020-05-31 22:54:27.073126
+
+request: help
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:54:51.212123
+
+request: nose
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:54:55.239848
+
+request: nose
+answer: eyes
+datetime: 2020-05-31 22:55:35.487097
+
+request: satisfaction
+answer: nights
+datetime: 2020-05-31 22:56:06.134826
+
+request: plane
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 22:56:17.091808
+
+request: star
+answer: rhapsody
+datetime: 2020-05-31 22:56:46.205623
+
+request: insert air in your vocabulary
+answer: should i insert word "air"
+datetime: 2020-05-31 22:57:18.222405
+
+request: yes
+answer: word 'air' successfully added
+datetime: 2020-05-31 22:57:21.715097
+
+request: yogurt
+answer: teo
+datetime: 2020-05-31 22:57:38.701259
+
+request: delete this word
+answer: i deleted word 'teo' from my vocabulary
+datetime: 2020-05-31 22:57:44.051169
+
+request: opinion
+answer: needs
+datetime: 2020-05-31 22:57:51.706302
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 22:58:03.138478
+
+request: bye
+answer: goodbye
+datetime: 2020-05-31 22:58:05.753699
+
+request: hey
+answer: hello
+datetime: 2020-05-31 22:58:23.382753
+
+request: let’s play words
+answer: ok, i am ready to play. now i have 508 words to use
+datetime: 2020-05-31 22:58:31.362447
+
+request: banana
+answer: attack
+datetime: 2020-05-31 22:58:35.306172
+
+request: keyboard
+answer: dancer
+datetime: 2020-05-31 22:58:42.773628
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 22:58:47.249728
+
+request: hey
+answer: good evening
+datetime: 2020-05-31 22:59:39.192783
+
+request: what day of month is it today
+answer: it is thirty first of may
+datetime: 2020-05-31 22:59:40.578628
+
+request: let’s play words
+answer: ok, i am ready to play. now i have 508 words to use
+datetime: 2020-05-31 22:59:48.400216
+
+request: banana
+answer: at
+datetime: 2020-05-31 22:59:51.572026
+
+request: track
+answer: sorry, but you can not use this word
+datetime: 2020-05-31 22:59:55.910817
+
+request: tenement
+answer: time
+datetime: 2020-05-31 23:00:01.506989
+
+request: eraser
+answer: sorry, but you can not use this word
+datetime: 2020-05-31 23:00:04.779587
+
+request: haven't hear you for a long time
+answer: you should say only one word
+datetime: 2020-05-31 23:01:39.099288
+
+request: let's play words
+answer: you should say only one word
+datetime: 2020-05-31 23:02:31.686373
+
+request: hey
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 23:02:36.474832
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 23:02:42.276652
+
+request: let's play words
+answer: ok, i am ready to play. now i have 508 words to use
+datetime: 2020-05-31 23:02:48.126150
+
+request: banana
+answer: air
+datetime: 2020-05-31 23:02:51.570346
+
+request: row
+answer: sorry, but you can not use this word
+datetime: 2020-05-31 23:02:54.577300
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 23:02:59.133984
+
+request: let's play words --debug
+answer: ok, i am ready to play. now i have 508 words to use. !debug mode
+datetime: 2020-05-31 23:03:02.427382
+
+request: abduction
+answer: sorry, but you can not use this word
+datetime: 2020-05-31 23:03:27.952179
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 23:04:27.062738
+
+request: let's play words --debug
+answer: ok, i am ready to play. now i have 508 words to use. !debug mode
+datetime: 2020-05-31 23:04:31.762308
+
+request: abduction
+answer: november
+datetime: 2020-05-31 23:04:39.968571
+
+request: row
+answer: words
+datetime: 2020-05-31 23:04:46.217861
+
+request: delete this word
+answer: i deleted word 'words' from my vocabulary
+datetime: 2020-05-31 23:05:02.574891
+
+request: insert word month into your vocabulary
+answer: should i insert word "month"
+datetime: 2020-05-31 23:05:59.069255
+
+request: yes
+answer: word 'month' successfully added
+datetime: 2020-05-31 23:06:02.506335
+
+request: sausage
+answer: exist
+datetime: 2020-05-31 23:06:20.976678
+
+request: delete this word
+answer: i deleted word 'exist' from my vocabulary
+datetime: 2020-05-31 23:06:29.474191
+
+request: rain
+answer: this word does not starts with last char of my word
+datetime: 2020-05-31 23:06:36.712428
+
+request: train
+answer: no
+datetime: 2020-05-31 23:06:40.155757
+
+request: delete this word
+answer: i deleted word 'no' from my vocabulary
+datetime: 2020-05-31 23:06:46.479086
+
+request: opportunity
+answer: your
+datetime: 2020-05-31 23:06:55.503875
+
+request: rain
+answer: never
+datetime: 2020-05-31 23:06:59.127498
+
+request: raspberry
+answer: years
+datetime: 2020-05-31 23:07:08.138930
+
+request: delete this word
+answer: i deleted word 'years' from my vocabulary
+datetime: 2020-05-31 23:07:15.412980
+
+request: sonnet
+answer: taste
+datetime: 2020-05-31 23:07:24.296195
+
+request: eraser
+answer: registered
+datetime: 2020-05-31 23:07:28.115934
+
+request: delete this word
+answer: i deleted word 'registered' from my vocabulary
+datetime: 2020-05-31 23:07:35.042319
+
+request: drop
+answer: play
+datetime: 2020-05-31 23:07:44.087708
+
+request: delete this word
+answer: i deleted word 'play' from my vocabulary
+datetime: 2020-05-31 23:07:51.683786
+
+request: let's play words
+answer: you should say only one word
+datetime: 2020-05-31 23:44:42.176286
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 23:44:47.473835
+
+request: let's play words
+answer: ok, i am ready to play. now i have 513 words to use
+datetime: 2020-05-31 23:44:52.918720
+
+request: kicks
+answer: son
+datetime: 2020-05-31 23:45:02.376652
+
+request: nothing
+answer: goodbye
+datetime: 2020-05-31 23:45:06.252753
+
+request: eraser
+answer: roadrunner
+datetime: 2020-05-31 23:45:17.362435
+
+request: raspberry
+answer: yourself
+datetime: 2020-05-31 23:45:22.551497
+
+request: follower
+answer: rock
+datetime: 2020-05-31 23:45:28.485134
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 23:48:41.323430
+
+request: let's play words
+answer: ok, i am ready to play. now i have 513 words to use
+datetime: 2020-05-31 23:48:45.995743
+
+request: banana
+answer: am
+datetime: 2020-05-31 23:48:49.070006
+
+request: management
+answer: think
+datetime: 2020-05-31 23:49:00.532513
+
+request: knock
+answer: kicks
+datetime: 2020-05-31 23:49:06.253917
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 23:50:41.002060
+
+request: let's play words
+answer: ok, i am ready to play. now i have 513 words to use
+datetime: 2020-05-31 23:50:45.813931
+
+request: knock
+answer: sorry, but you can not use this word
+datetime: 2020-05-31 23:50:51.793323
+
+request: banana
+answer: action
+datetime: 2020-05-31 23:50:57.047432
+
+request: nothing
+answer: sorry, but you can not use this word
+datetime: 2020-05-31 23:51:02.956566
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 23:51:07.879526
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-31 23:51:25.610948
+
+request: say something
+answer: what should  i tell
+datetime: 2020-05-31 23:51:28.199665
+
+request: say something
+answer: i can answer any of yours questions
+datetime: 2020-05-31 23:51:29.478709
+
+request: say something
+answer: hello world
+datetime: 2020-05-31 23:51:30.882084
+
+request: say something
+answer: i can answer any of yours questions
+datetime: 2020-05-31 23:51:32.771816
+
+request: say something
+answer: what should  i tell
+datetime: 2020-05-31 23:51:34.076522
+
+request: weather
+answer: 16 degrees and rain
+datetime: 2020-05-31 23:51:35.506435
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-31 23:51:36.557562
+
+request: let's play sea battle
+answer: i am happy we are playing. i have already build my field. you starts. it is better to use words kill, in water and hit while playing. i am waiting for your variant
+datetime: 2020-05-31 23:51:37.866407
+
+request: stop
+answer: goodbye
+datetime: 2020-05-31 23:51:42.524875
+
+request: hey
+answer: hello
+datetime: 2020-05-31 23:56:46.292001
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-05-31 23:56:48.593777
+
+request: say something
+answer: what should  i tell
+datetime: 2020-05-31 23:56:49.724490
+
+request: how old are you
+answer: i am surely younger than you
+datetime: 2020-05-31 23:56:51.942700
+
+request: let's play sea battle
+answer: i am happy we are playing. i have already build my field. you starts. it is better to use words kill, in water and hit while playing. i am waiting for your variant
+datetime: 2020-05-31 23:56:54.603963
+
+request: stop sea battle
+answer: i am happy we are playing. i have already build my field. you starts. it is better to use words kill, in water and hit while playing. i am waiting for your variant
+datetime: 2020-05-31 23:56:56.704165
+
+request: hey
+answer: hey
+datetime: 2020-05-31 23:57:15.787270
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-31 23:57:19.556355
+
+request: say something
+answer: i can answer any of yours questions
+datetime: 2020-05-31 23:57:20.633326
+
+request: weather
+answer: 16 degrees and rain
+datetime: 2020-05-31 23:57:21.816247
+
+request: how old are you
+answer: i am surely younger than you
+datetime: 2020-05-31 23:57:22.981143
+
+request: let's play sea battle
+answer: i am happy we are playing. i have already build my field. you starts. it is better to use words kill, in water and hit while playing. i am waiting for your variant
+datetime: 2020-05-31 23:57:24.176822
+
+request: stop sea battle
+answer: stopsb
+datetime: 2020-05-31 23:57:25.924456
+
+request: hey
+answer: hello
+datetime: 2020-05-31 23:59:00.143375
+
+request: hey
+answer: hi
+datetime: 2020-05-31 23:59:00.509943
+
+request: hey
+answer: hey
+datetime: 2020-05-31 23:59:02.160839
+
+request: how are you
+answer: i am fine
+datetime: 2020-05-31 23:59:03.365346
+
+request: say something
+answer: what should  i tell
+datetime: 2020-05-31 23:59:04.962307
+
+request: weather
+answer: 16 degrees and rain
+datetime: 2020-05-31 23:59:06.492721
+
+request: how old are you
+answer: i am surely younger than you
+datetime: 2020-05-31 23:59:07.735683
+
+request: let's play sea battle
+answer: i am happy we are playing. i have already build my field. you starts. it is better to use words kill, in water and hit while playing. i am waiting for your variant
+datetime: 2020-05-31 23:59:09.927806
+
+request: stop sea battle
+answer: ok. if you want to play just tell me
+datetime: 2020-05-31 23:59:11.345711
+
+request: water a6
+answer: do you want to start a new game
+datetime: 2020-05-31 23:59:15.858886
+
+request: what day of week is it today
+answer: sunday
+datetime: 2020-05-31 23:59:20.606853
+
+request: water s9
+answer: do you want to start a new game
+datetime: 2020-05-31 23:59:25.881231
+
+request: what day of month is it today
+answer: it is thirty first of may
+datetime: 2020-05-31 23:59:30.318027
+
+request: when did you registered you telegram account
+answer: i was registered twenty ninth of may twenty twenty
+datetime: 2020-05-31 23:59:32.588118
+
+request: haven't hear you for a long time
+answer: last request was processed 3 seconds ago
+datetime: 2020-05-31 23:59:35.376045
+
+request: let's play words
+answer: ok, i am ready to play. now i have 513 words to use
+datetime: 2020-05-31 23:59:37.457879
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-05-31 23:59:40.988418
+
+request: bye
+answer: goodbye
+datetime: 2020-05-31 23:59:46.205881
+
+request: hey
+answer: hello
+datetime: 2020-06-01 00:01:17.778512
+
+request: delete this word
+answer: ok, i am ready to play. now i have 513 words to use
+datetime: 2020-06-01 00:01:21.170956
+
+request: stop
+answer: ok, i keep listening your requests
+datetime: 2020-06-01 00:01:24.966876
+
+request: hey
+answer: hello
+datetime: 2020-06-01 00:18:50.642278
+
+request: how are you
+answer: i am fine, thanks
+datetime: 2020-06-01 00:18:51.930052
+
+request: let's play words --debug
+answer: ok, i am ready to play. to leave game mode say stop. now i have 513 words to use. !debug mode
+datetime: 2020-06-01 00:19:07.375023
+
+request: highlander
+answer: raspberry
+datetime: 2020-06-01 00:19:26.466170
+
+request: yoga
+answer: age
+datetime: 2020-06-01 00:19:40.927018
+
+request: elclassico
+answer: opinion
+datetime: 2020-06-01 00:19:55.232736
+
+request: night
+answer: taste
+datetime: 2020-06-01 00:20:00.174058
+
+request: delete this word
+answer: i deleted word 'taste' from my vocabulary
+datetime: 2020-06-01 00:20:05.427206
+
+request: engine
+answer: end
+datetime: 2020-06-01 00:20:12.697351
+
+request: drum
+answer: machines
+datetime: 2020-06-01 00:20:18.420726
+
+request: delete this word
+answer: i deleted word 'machines' from my vocabulary
+datetime: 2020-06-01 00:20:34.952704
+
+request: source
+answer: evening
+datetime: 2020-06-01 00:20:38.466666
+
+request: guru
+answer: uf
+datetime: 2020-06-01 00:21:01.956040
+
+request: delete this word
+answer: i deleted word 'uf' from my vocabulary
+datetime: 2020-06-01 00:21:07.086511
+
+request: fluency
+answer: young
+datetime: 2020-06-01 00:21:34.756113
+
+request: delete this word
+answer: i deleted word 'young' from my vocabulary
+datetime: 2020-06-01 00:21:39.952335
+
+request: grapefruit
+answer: train
+datetime: 2020-06-01 00:22:27.945634
+
+request: nose
+answer: earth
+datetime: 2020-06-01 00:22:41.823103
+
+request: hedgehog
+answer: gonna
+datetime: 2020-06-01 00:22:59.134102
+
+request: delete this word
+answer: i deleted word 'gonna' from my vocabulary
+datetime: 2020-06-01 00:23:02.974864
+
+request: apple
+answer: entertain
+datetime: 2020-06-01 00:23:07.477501
+
+request: delete this word
+answer: i deleted word 'entertain' from my vocabulary
+datetime: 2020-06-01 00:23:12.628372
+
+request: nail
+answer: later
+datetime: 2020-06-01 00:23:16.586644
+
+request: delete this word
+answer: i deleted word 'later' from my vocabulary
+datetime: 2020-06-01 00:23:28.161456
+
+request: roof
+answer: fire
+datetime: 2020-06-01 00:24:25.407510
+
+request: energy
+answer: yogurt
+datetime: 2020-06-01 00:24:42.882656
+
+request: telegram
+answer: melancholy
+datetime: 2020-06-01 00:24:59.722324
+
+request: year
+answer: radio
+datetime: 2020-06-01 00:25:22.388032
+
+request: omission
+answer: nights
+datetime: 2020-06-01 00:25:36.617045
+
+request: delete this word
+answer: i deleted word 'nights' from my vocabulary
+datetime: 2020-06-01 00:25:40.997795
+
+request: seaside
+answer: eyes
+datetime: 2020-06-01 00:26:00.536605
+
+request: storm
+answer: morning
+datetime: 2020-06-01 00:26:05.707618
+
+request: gorilla
+answer: any
+datetime: 2020-06-01 00:26:11.048574
+
+request: delete this word
+answer: i deleted word 'any' from my vocabulary
+datetime: 2020-06-01 00:26:15.567937
+
+request: yard
+answer: dirty
+datetime: 2020-06-01 00:26:21.513670
+
+request: delete this word
+answer: i deleted word 'dirty' from my vocabulary
+datetime: 2020-06-01 00:26:25.908709
+
+request: yesterday
+answer: yes
+datetime: 2020-06-01 00:26:33.177435
+
+request: delete this word
+answer: i deleted word 'yes' from my vocabulary
+datetime: 2020-06-01 00:26:38.001334
+
+request: sun
+answer: now
+datetime: 2020-06-01 00:26:42.762810
+
+request: delete this word
+answer: i deleted word 'now' from my vocabulary
+datetime: 2020-06-01 00:26:46.300020
+
+request: work
+answer: kicks
+datetime: 2020-06-01 00:26:56.002958
+
+request: delete this word
+answer: i deleted word 'kicks' from my vocabulary
+datetime: 2020-06-01 00:27:05.615994
+
+request: song
+answer: gods
+datetime: 2020-06-01 00:27:17.161769
+
+request: delete this word
+answer: i deleted word 'gods' from my vocabulary
+datetime: 2020-06-01 00:27:21.811482
+
+request: snowflake
+answer: eraser
+datetime: 2020-06-01 00:27:30.879325
+
+request: rhythm
+answer: many
+datetime: 2020-06-01 00:27:41.916851
+
+request: delete this word
+answer: i deleted word 'many' from my vocabulary
+datetime: 2020-06-01 00:27:45.468370
+
+request: youngster
+answer: rock
+datetime: 2020-06-01 00:28:09.131616
+
+request: kick
+answer: know
+datetime: 2020-06-01 00:28:17.864140
+
+request: warning
+answer: glad
+datetime: 2020-06-01 00:28:22.376988
+
+request: delete this word
+answer: i deleted word 'glad' from my vocabulary
+datetime: 2020-06-01 00:28:28.107130
+
+request: duty
+answer: you
+datetime: 2020-06-01 00:28:56.436837
+
+request: delete this word
+answer: i deleted word 'you' from my vocabulary
+datetime: 2020-06-01 00:29:02.154574
+
+request: umbrella
+answer: album
+datetime: 2020-06-01 00:29:30.567199
+
+request: microphone
+answer: enough
+datetime: 2020-06-01 00:29:54.432417
+
+request: delete this word
+answer: i deleted word 'enough' from my vocabulary
+datetime: 2020-06-01 00:29:58.701924
+
+request: height
+answer: trip
+datetime: 2020-06-01 00:30:10.548512
+
+request: problem
+answer: matter
+datetime: 2020-06-01 00:30:18.625977
+
+request: reality
+answer: your
+datetime: 2020-06-01 00:31:17.476085
+
+request: delete this word
+answer: i deleted word 'your' from my vocabulary
+datetime: 2020-06-01 00:31:25.101767
+
+request: random
+answer: mother
+datetime: 2020-06-01 00:31:35.085054
+
+request: rock
+answer: sorry, but you can not use this word
+datetime: 2020-06-01 00:31:43.826040
+
+request: ride
+answer: europe
+datetime: 2020-06-01 00:32:12.437228
+
+request: delete this word
+answer: i deleted word 'europe' from my vocabulary
+datetime: 2020-06-01 00:32:18.169139
+
+request: emergency
+answer: yourself
+datetime: 2020-06-01 00:32:26.463112
+
+request: delete this word
+answer: i deleted word 'yourself' from my vocabulary
+datetime: 2020-06-01 00:32:30.380067
+
+request: flower
+answer: rotate
+datetime: 2020-06-01 00:32:38.045078
+
+request: delete this word
+answer: i deleted word 'rotate' from my vocabulary
+datetime: 2020-06-01 00:32:42.718992
+
+request: egg
+answer: game
+datetime: 2020-06-01 00:32:53.365937
+
+request: encourage
+answer: exists
+datetime: 2020-06-01 00:33:18.708969
+
+request: delete this word
+answer: i deleted word 'exists' from my vocabulary
+datetime: 2020-06-01 00:33:23.482396
+
+request: sin
+answer: naval
+datetime: 2020-06-01 00:33:40.018580
+
+request: delete this word
+answer: i deleted word 'naval' from my vocabulary
+datetime: 2020-06-01 00:33:43.953960
+
+request: hey
+answer: this word does not starts with last char of my word
+datetime: 2020-06-01 00:35:14.268192
+
+request: lesson
+answer: news
+datetime: 2020-06-01 00:35:29.154322
+
+request: delete this word
+answer: i deleted word 'news' from my vocabulary
+datetime: 2020-06-01 00:36:33.023793
+
+request: sameness
+answer: something
+datetime: 2020-06-01 00:36:45.287504
+
+request: glitter
+answer: rising
+datetime: 2020-06-01 00:37:15.462777
+
+request: delete this word
+answer: i deleted word 'rising' from my vocabulary
+datetime: 2020-06-01 00:37:21.092122
+
+request: government
+answer: til
+datetime: 2020-06-01 00:37:27.753747
+
+request: delete this word
+answer: i deleted word 'til' from my vocabulary
+datetime: 2020-06-01 00:37:31.938955
+
+request: link
+answer: king
+datetime: 2020-06-01 00:38:07.656509
+
+request: god
+answer: doing
+datetime: 2020-06-01 00:38:16.378463
+
+request: delete this word
+answer: i deleted word 'doing' from my vocabulary
+datetime: 2020-06-01 00:38:34.937345
+
+request: gas
+answer: should
+datetime: 2020-06-01 00:38:41.518755
+
+request: delete this word
+answer: i deleted word 'should' from my vocabulary
+datetime: 2020-06-01 00:38:44.884958
+
+request: dream
+answer: michael
+datetime: 2020-06-01 00:38:48.618689
+
+request: delete this word
+answer: i deleted word 'michael' from my vocabulary
+datetime: 2020-06-01 00:38:52.120773
+
+request: lust
+answer: thunderstruck
+datetime: 2020-06-01 00:39:03.438164
+
+request: delete this word
+answer: i deleted word 'thunderstruck' from my vocabulary
+datetime: 2020-06-01 00:39:06.993619
+
+request: karma
+answer: account
+datetime: 2020-06-01 00:39:25.926221
+
+request: trumpet
+answer: tell
+datetime: 2020-06-01 00:39:33.830300
+
+request: delete this word
+answer: i deleted word 'tell' from my vocabulary
+datetime: 2020-06-01 00:39:37.387526
+
+request: liar
+answer: rendezvous
+datetime: 2020-06-01 00:39:39.669132
+
+request: delete this word
+answer: i deleted word 'rendezvous' from my vocabulary
+datetime: 2020-06-01 00:39:43.944473
+
+request: steam
+answer: months
+datetime: 2020-06-01 00:39:57.367383
+
+request: delete this word
+answer: i deleted word 'months' from my vocabulary
+datetime: 2020-06-01 00:40:00.853248
+
+request: sigh
+answer: highway
+datetime: 2020-06-01 00:40:18.868174
+

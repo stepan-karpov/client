@@ -1,5 +1,6 @@
 import datetime
 import mysql.connector
+from words import *
 from dictionary import get_dates, day
 from weather import find_date
 from naval_battle import *
@@ -48,6 +49,12 @@ def find_date_without_week_days(Text):
 	else:
 		return found_date
 
+def stop_naval_battle(Text):
+    write_file("stop", "cell.txt")
+    write_file("stop", "status.txt")
+    write_file("None", "beaten_cell.txt")
+    return "ok. if you want to play just tell me"
+
 
 def day_of_a_week(Text):
 	date = find_date_without_week_days(Text)
@@ -95,43 +102,45 @@ def day_of_a_week(Text):
 
 def units(Text):
 	print("[ log ] units function")
-	f = ""
-	s = ""
-	f_unit_name = ""
-	s_unit_name = ""
-	units = ["meters", "grams", "bytes", "bits", "newtons", "tesla",
-		 "meter", "gram", "byte", "bit", "newton"]
-	for word in Text.split(" "):
-		for unit in units:
-			if word.endswith(unit):
-				if f == "" and f_unit_name == "":
-					f = word.replace(unit, "").strip()
-					f_unit_name = word.replace(f, "").strip()
-					print("rec " + word)
-				else:
-					s = word.replace(unit, "").strip()
-					s_unit_name = word.replace(s, "").strip()
-	print("[ log ] " + f + " " + f_unit_name)
-	print("[ log ] " + s + " " + s_unit_name)
+	try:
+		f = ""
+		s = ""
+		f_unit_name = ""
+		s_unit_name = ""
+		units = ["meters", "grams", "bytes", "bits", "newtons", "tesla",
+			 "meter", "gram", "byte", "bit", "newton"]
+		for word in Text.split(" "):
+			for unit in units:
+				if word.endswith(unit):
+					if f == "" and f_unit_name == "":
+						f = word.replace(unit, "").strip()
+						f_unit_name = word.replace(f, "").strip()
+						print("rec " + word)
+					else:
+						s = word.replace(unit, "").strip()
+						s_unit_name = word.replace(s, "").strip()
+		print("[ log ] " + f + " " + f_unit_name)
+		print("[ log ] " + s + " " + s_unit_name)
 
-	prefixes = {"piko": .000000000001, "nano": .000000001, "micro": .00000001,
-		    "milli": .001, "centi": .01, "deci": .1, "": 1, "kilo": 1000, "mega": 1000000,
-		    "giga": 1000000000, "tera": 1000000000000, "peta": 1000000000000000}
-	digit = ""
-	if f_unit_name == s_unit_name or f_unit_name.find(s_unit_name) != -1 or s_unit_name.find(f_unit_name) != -1:
-		digit =  prefixes[s] / prefixes[f]
-	elif f_unit_name.startswith("byt") and s_unit_name.startswith("bit"):
-		digit =  (prefixes[s] / 8) / prefixes[f]
-	elif f_unit_name.startswith("bit") and s_unit_name.startswith("byt"):
-		digit =  (prefixes[s] * 8) / prefixes[f]
-	else:
+		prefixes = {"piko": .000000000001, "nano": .000000001, "micro": .00000001,
+			    "milli": .001, "centi": .01, "deci": .1, "": 1, "kilo": 1000, "mega": 1000000,
+		    	"giga": 1000000000, "tera": 1000000000000, "peta": 1000000000000000}
+		digit = ""
+		if f_unit_name == s_unit_name or f_unit_name.find(s_unit_name) != -1 or s_unit_name.find(f_unit_name) != -1:
+			digit =  prefixes[s] / prefixes[f]
+		elif f_unit_name.startswith("byt") and s_unit_name.startswith("bit"):
+			digit =  (prefixes[s] / 8) / prefixes[f]
+		elif f_unit_name.startswith("bit") and s_unit_name.startswith("byt"):
+			digit =  (prefixes[s] * 8) / prefixes[f]
+		else:
+			return "i think that is it impossible to convert this units"
+		if digit > .99:
+			digit = str(int(digit))
+		else:
+			digit = str(digit)
+		return "there are " + digit + " " + f + f_unit_name + " in one " + s + s_unit_name
+	except:
 		return "i think that is it impossible to convert this units"
-	if digit > .99:
-		digit = str(int(digit))
-	else:
-		digit = str(digit)
-	return "there are " + digit + " " + f + f_unit_name + " in one " + s + s_unit_name
-
 
 def hello(Text):
 	try:
@@ -150,13 +159,70 @@ def hello(Text):
 			return "Good night"
 		return "Hi"
 
-def how_old_are_you(Text):
+def words(Text):
+    status = str(open("FILES/words.txt", mode='r').readlines()[0]).strip('\n')
+    file = open('FILES/DialogStory.txt', mode="r").readlines()
+    last_answer = file[len(file) - 3]
+    last_answer = last_answer[8:-1]
+
+    print("[ log ] status is: " + status)
+    print("[ log ] last_answer is: " + str(last_answer))
+    if status == "stop":
+        if Text.find("--debug") != -1:
+            open("FILES/words.txt", mode='w').write("debug")
+            return "ok, i am ready to play. to leave game mode say stop. now i have " + str(len(get_vocabulary())) + " words to use. !DEBUG MODE"
+        else:
+            open("FILES/words.txt", mode='w').write("start")
+            return "ok, i am ready to play. to leave game mode say stop. now i have " + str(len(get_vocabulary())) + " words to use"
+    elif status == "debug":
+        if Text.find("delete") != -1:
+            last_request = what_heard("does't matter what text is here :)")
+            return delete_word(last_answer)
+        elif Text.find("insert") != -1 or last_answer.startswith("should i insert word"):
+            if last_answer.startswith("should i insert word"):
+                if Text.find("yes") != -1:
+                    to_insert = last_answer[21:].replace('"', '').strip()
+                    return insert_word(to_insert)
+                else:
+                    return "word won't be inserted. keep playing"
+            else:
+                Text = Text.replace("insert", "").replace("  ", " ").replace("  ", " ").replace("word", "").replace("  ", " ").strip()
+                Text = Text.split(" ")[0]
+                return 'should i insert word "' + Text + '"'
+        elif Text.find("stop") != -1:
+            open("FILES/words.txt", mode='w').write("stop")
+            insert_used_word("abc", True)
+            return "ok, i keep listening your requests"
+        else:
+            if len(Text.split(" ")) == 1:
+                return find_word(Text, True)
+            else:
+                return "you should say only one word"
+    elif status == "start":
+        if Text.find("stop") != -1:
+            open("FILES/words.txt", mode='w').write("stop")
+            insert_used_word("abc", True)
+            return "ok, i keep listening your requests"
+        else:
+            if len(Text.split(" ")) == 1:
+                return find_word(Text)
+            else:
+                return "you should say only one word"
+    else:
+        return "words module error"
+
+def how_old_are_you(Text, teleg=False):
 	answ = ""
-	makeday = datetime.datetime(2019, 6, 21)
+	if not teleg:
+		makeday = datetime.datetime(2019, 6, 21)
+	else:
+		makeday = datetime.datetime(2020, 5, 29)
 	today = datetime.datetime.today()
 	days = str(today - makeday)
 
 	try:
+		if teleg:
+			int("not int :)")
 		answ = answers["hoy"][randint(0, len(answers) + 1)]
 	except:
 		years = int(days[0:days.find(" ")]) // 365
@@ -189,7 +255,10 @@ def how_old_are_you(Text):
 			answ = str(i) + " year old"
 		else:
 			answ = str(i) + " years old"
-	return answ
+	if not teleg:
+		return answ
+	else:
+		return answ[4:-4]
 
 def bye(Text):
 	print("[ log ] DON'T FORGET TO WRITE FUNCTION \"BYE\" FOR EXIT")
@@ -289,7 +358,6 @@ def get_naval_battle_request(start=False):
     cell = get_line("cell.txt")[1:-1]
     cell = cell.split(", ")
     print("[ log ] cell to say status: " + str(cell))
-    print(type(cell))
     status = get_line("status.txt")
     print("[ log ] status of my past cell: " + status)
 
@@ -411,8 +479,12 @@ def get_naval_battle_request(start=False):
 
 def naval_battle(Text):
 #    print(Text)
-    cell = get_line("cell.txt")
-    status = get_line("status.txt")
+    cell = get_line("cell.txt").strip("\n")
+    status = get_line("status.txt").strip("\n")
+    if cell == "stop" and status == "stop":
+        print("sdfsdfsdfsdfsdfsdfsdfsd")
+        return "do you want to start a new game"
+
     if cell != "None":
         c = "1"
     else:
@@ -634,6 +706,8 @@ def recognize_answer(Text):
 	last_answer = file[len(file) - 3]
 	last_answer = last_answer[8:-1]
 	last_request = what_heard("does't matter what text is here :)")
+	print("[ log ] last_request is: " + str(last_request))
+	print("[ log ] last_answer is: " + str(last_answer))
 	if last_answer.find("album") != -1 and last_answer.find("song") != -1:
 		if Text.find("song") != -1:
 			recognize_song("song" + last_request)
@@ -643,12 +717,17 @@ def recognize_answer(Text):
 			recognize_song("album" + last_request)
 			return ""
 		return "not recognized what to turn on"
+	elif last_answer.find("new game") != -1:
+		if Text.find("yes") != -1:
+			return start_naval_battle("abc")
+		else:
+			return "ok, then i keep waiting for your requests"
 	else:
 		return "not recognized answer"
 
 # don't call any functions "wolframalpha"
 # because it may cause some problems
-# import wolframalpha    - main module you shoud'n touch
+# import wolframalpha    - main module you shoudn't touch
 def wolframalpha_answer(Text):
 	try:
 		file = open('FILES/requests/' + Text)
@@ -656,12 +735,12 @@ def wolframalpha_answer(Text):
 		file.close()
 	except IOError:
 		client = wolframalpha.Client('GE8JUR-XX3KL8W4Q3')
-		res = client.query(Text.replace("ask wolframalpha", ""))
+		res = client.query(Text.replace("ask wolframalpha ", ""))
 		try:
 			answer = next(res.results).text
-			replace = {"^2": " squaareeed", "/": " divide by ", "+": " plus ", " dx": " by dx", "  ": " "}
-			for k, v in replace.items():
-				answer = answer.replace(k, v)
+			#replace = {"^2": " squaareeed", "/": " divide by ", "+": " plus ", " dx": " by dx", "  ": " "}
+			#for k, v in replace.items():
+			#	answer = answer.replace(k, v)
 
 			file = open('FILES/requests/' + Text, mode='w')
 			file.write(answer)

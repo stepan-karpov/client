@@ -130,13 +130,15 @@ opts = {
         "servo": ('rotate servo on', 'servo on', 'turn servo'),
 	"here": ('are you here', 'are you here now'),
 	"answ": ('can you answer me', 'can you answer me now'),
+	"stopsb": ('stop sea battle', 'don\'t want to play seabattle more'),
         #this tuple useful for two-phrases dialog with computer
         #it can be used like this:
         # - name, turn on please please me
         # - should it be an album or a song '?'
         # - an album
         "answer": ('ALBUM_SONG', 'its better to turn on ALBUM_SONG', 'i think ALBUM_SONG', 'i would like ALBUM_SONG',
-		   'i think it is better to turn on ALBUM_SONG'),
+		   'i think it is better to turn on ALBUM_SONG', 'yes', 'no'),
+	"born": ('when were you born', 'when is your birthday', 'when are you born', 'when birthday'),
         "fs": ("whatIS your favorite SEASON", "what SEASON do you like the most", "whatIS your most favorite SEASON",
 	       "whatIS your the most favorite SEASON", "what SEASON do you prefer", "what SEASON do you like more",
 	       "what SEASON do you like most", "what SEASON do you like best"),
@@ -152,8 +154,7 @@ opts = {
         "thanks": ('i made you better', 'you are better than some time ago', 'you are improved now', 'great',
                     'well done', 'that is great', 'you are smart', 'you are better now', 'you are impoved', 'you are a good WHO',
 		    'you are good WHO', 'you are good', 'you are a good WHO', 'you are good WHO',
-		    'you are the best WHO', 'you are best WHO', 'you are greatest WHO', 'you are the greates WHO'
- 		    'you are the best',
+		    'you are the best WHO', 'you are best WHO', 'you are greatest WHO', 'you are the best',
 		    'you are best', 'you are the greatest'),
         "start_naval_battle": ("let's play NAVAL_BATTLE", "let play NAVAL_BATTLE", "play NAVAL_BATTLE with me",
                                "play NAVAL_BATTLE", "how about NAVAL_BATTLE", "lets play NAVAL_BATTLE", "NAVAL_BATTLE"),
@@ -169,14 +170,26 @@ opts = {
         "ayw": ('are you working', 'are you working now', 'are you hear me', 'working', 'are you ready to work'),
         "dyw": ('do you work', 'do you work at all', 'do you working', 'do you hear me', 'hear me', 'do you ready to work'),
         "cyw": ('can you hear me', 'can you hear me now', 'can hear me'),
-        "music": ['turn on SONG', 'switch on SONG', 'turn on the SONG', 'switch on the SONG',
+        "music": ('turn on SONG', 'switch on SONG', 'turn on the SONG', 'switch on the SONG',
                   'turn on an ALBUM', 'turn on ALBUM', 'switch on ALBUM', 'switch on the ALBUM',
                   'turn on an ARTIST', 'turn on ARTIST', 'switch on ARTIST', 'switch on the ARTIST',
-                  'SONG', 'ALBUM', 'ARTIST', 'turn on something'],
+                  'SONG', 'ALBUM', 'ARTIST', 'turn on something'),
 	"whoyou": ('who are you', 'who you', 'do you know who you are'),
-	"ycth": ('you can\'t even think', 'you can\'t think'),
+	"teleg": ('do you have TA', 'have you got TA', 'are you in TA'),
+	"youteleg": ('you have TA', 'you are in TA'),
+	"htfindteleg": ('how to find your TA', 'hot to find you in TA'),
+	"sitteleg": ('how long are you sitting in TA', 'how long do you have TA', 'how long fo you have your TA',
+		     'for how long are you sitting in TA', 'how long in TA', 'how long sitting TA',
+		     'how long sitting in TA'),
+	"ycth": ('you canNOT even think', 'you canNOT think'),
+	"bteleg": ('when did you registered your account in TA', 'when registered TA'),
+	"words": ('let\'s play words', 'do you want to play words',
+		  'let\'s play words --debug'),
     },
     "answ": {
+	"teleg": ('of course i have', 'it is not funny of course i have'),
+	"youteleg": ('yes. you cand find me as isinka_robot there', 'of course. i am isinka_robot there'),
+	"htfindteleg": ('i am isinka_robot there', 'i am registered as isinka_robot'),
         "fs": ("summer", "I think summer"),
         "hmk": ("one thousand", "thousand"),
         "hmik": ("one million", "million"),
@@ -186,6 +199,8 @@ opts = {
         "hck": ("one hundred thousand","hundred thousand"),
         "hcm": ("one hundred", "hundred"),
         "fr": ("yes i have", "yes", "of corse"),
+	"born": ("my birthday is on twenty first of may twenty nineteen", "twenty first of may two thousand nineteen"),
+	"bteleg": ("i was registered twenty ninth of may twenty twenty", "i was registered twenty ninth of may 2020"),
         "ayw": ('yes, i am', 'i am', 'of course i am', 'yes'),
         "dyw": ('yes i do', 'of course i do', 'yes', 'i do'),
         "cyw": ('yes i can', 'yes', 'of course i can', 'i can'),
@@ -351,6 +366,8 @@ def change_items(to_change, items, key_word):
     print("==========")
     """
     for part in to_change:
+#        if part == "thanks":
+#            print(opts["cmds"][part])
         to_change = opts["cmds"][part]
         changed = []
         for req in to_change:
@@ -363,6 +380,8 @@ def change_items(to_change, items, key_word):
 #        for el in changed:
 #            print(el)
     #   print(changed)
+#        if part == "thanks":
+#            print(changed)
         opts["cmds"][part] = changed
 #        for el in changed:
 #            print(el)
@@ -422,7 +441,8 @@ def change_main_dictionary():
 	['whatdayweek'], ["whatdayweek"], ["answer"], ["fs"], ["fs"], ["wdyh"], ["wdyh"], ["ago", "happy", "welcome"], ["ago"], ["ago"], ["hmr"],
 	["hmr"], ["hmr"], ["happy"], ["welcome"], ["tell"],
 	# 18 variants upper ^
-	["thanks"], ["start_naval_battle", "naval_battle"], ["start_naval_battle", "naval_battle"], ["start_naval_battle", "naval_battle"]
+	["thanks"], ["start_naval_battle", "naval_battle"], ["start_naval_battle", "naval_battle"], ["start_naval_battle", "naval_battle"],
+	["ycth"], ["teleg", "youteleg", "htfindteleg", "sitteleg"]
 	]
     to_change_items = [
 	["today", "tomorrow", "day after tomorrow", "day after today", "yesterday"],
@@ -433,13 +453,13 @@ def change_main_dictionary():
 	["prepared", "processed", "were in process", "protest"], ["much", "many"], ["hear", "to_hear"], ["your work", "work"], ["tell", "say"],
 	# 18 variants upper ^
 	["girl", "woman", "voice helper", "helper", name], get_cells(), ["killed", "hit", "in water", "water", "kill"],
-        ["sea battle", "naval battle", "seabattle"],
+        ["sea battle", "naval battle", "seabattle"], ["'t", " not"], ["telegram account", "telegram"]
 	]
     to_change_key_words = [
 	"NEAREST_DAYS", "DAY_OF_WEEK", "DATES", "ALBUM_SONG", "SEASON", "IS", "TELL", "HEAR", "I", "NOT", "HEAR_SEE", "ANSW_REQ",
 	"PREPARED", "MUCH_MANY", "HEAR_TO_HEAR", "YOUR_WORK", "SAY_TELL",
 	# 18 variants upper ^
-	"WHO", "CELL", "STATUS", "NAVAL_BATTLE"
+	"WHO", "CELL", "STATUS", "NAVAL_BATTLE", "NOT", "TA"
 	]
 
     for el in b:

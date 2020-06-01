@@ -29,7 +29,7 @@ def change_request(Text):
 					if not letter.isalpha():
 						to_change += letter
 
-				if cells.count(word) == 0 and word.find(',') == -1:
+				if cells.count(word) == 0 and word.find(',') == -1 and not word.startswith("--"):
 #					print(cells)
 					Text = Text.replace(word, to_change)
 					print("[ log ] Warning! '" + word + "' changed on '" + to_change + "'")
@@ -67,11 +67,16 @@ def callback(Text):
 #    print(Text)
     cmd = recognize_cmd(cmd)
     print("[ log ] recognize_cmd() time: " + str(datetime.datetime.now() - start_time))
+    print("[ log ] recognized cmd: " + str(cmd))
     return execute_cmd(cmd['cmd'], Text)
 
 def recognize_cmd(cmd):
 	if cmd.find("ask wolframalpha") != -1:
 		return {'cmd': 'wolframalpha', 'percent' : 100}
+
+	words = str(open("FILES/words.txt", mode='r').readlines()[0])
+	if words == "start" or words == "debug":
+		return {'cmd': 'words', 'percent': 100}
 
 	variants, variants_sorted = import_variants()
 	pos = binary_search(variants_sorted, cmd)
@@ -90,7 +95,7 @@ def recognize_cmd(cmd):
 				break
 
 
-		print(str(k))
+		print("[ log ] k is: " + str(k))
 		return {'cmd': str(k), 'percent': 100}
 		try:
 			eval(cmd + " + 1")
@@ -141,6 +146,9 @@ def recognize_cmd(cmd):
 	print(RC)
 	return RC
 
+# i know. i know, i know that is tru
+# yeah, it's realy meant to me
+
 def write_request(request, answer):
 	file = open('FILES/DialogStory.txt', mode="a")
 	file.write("request: " + request + '\n')
@@ -168,6 +176,7 @@ def execute_cmd(cmd, Text):
 		"whatdayweek": day_of_a_week,
 		"hi": hello,
 		"wwyb": how_old_are_you,
+		"sitteleg": how_old_are_you,
 		"bye": bye,
 		"hmr": how_many_requests,
 		"ago": last_call,
@@ -188,8 +197,10 @@ def execute_cmd(cmd, Text):
 		"status": weather_forecast,
 		"fests": fests,
 		"units": units,
+		"stopsb": stop_naval_battle,
 		"naval_battle": naval_battle,
 		"start_naval_battle": start_naval_battle,
+		"words": words,
 	}
 
 	keys = {"temperature": " KEY: 000", "wind": " KEY: 001", "pressure": " KEY: 010", "sunrise": " KEY: 011", "sunset": " KEY: 100", "status": " KEY: 101"}
@@ -199,7 +210,10 @@ def execute_cmd(cmd, Text):
 			if k in keys:
 				return v(Text + keys[k])
 			else:
-				return v(Text)
+				if cmd == "sitteleg":
+					return v(Text, True)
+				else:
+					return v(Text)
 
 	try:
 		variat = opts['answ'][cmd]
@@ -213,11 +227,11 @@ def execute_cmd(cmd, Text):
 
 if __name__ == "__main__":
 	req = "doesn't matter what text is here :)"
-	while req != "stop":
+	while 1:
 		req = str(input("Request: "))
 		#req = "current weather in moscow on today"
 		answ = str(prepare_answer(req)).lower()
 		print("")
 		print("Request: " + req)
 		print("Answer: " + answ)
-		#write_request(req, answ)
+		write_request(req, answ)
