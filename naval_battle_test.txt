@@ -44,5 +44,3 @@ like
 AI - water a6
 M - a9
 AI - what is status? (he needs status of cell a6 he asked)
-
-Hope you understand. If not, ask me. Sorry for writing this file in English, I just start it in Eng and then forgot to change language

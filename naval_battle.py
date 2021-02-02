@@ -421,12 +421,6 @@ def make_shot():
                 return cell_to_s
         return "You lie to me"
 
-# just walking down the street
-# one cloudless sunny day
-# just minding my bussines
-# thinking my thoughts - nothing much to say
-# when suddenly i got hit - imagine my surprise
-
 def mark_shot(Text, cell):
     fields, ships = get_fields()
     ship = []

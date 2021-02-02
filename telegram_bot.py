@@ -11,7 +11,7 @@ from text_preparation import write_request
 
 def make_start(bot, update):
 	print("first message recieved")
-	bot.send_message(chat_id=update.message.chat_id, text="Hello. My Name is Isinka. I am robot AI. I was build to manage robot with a help of speech so you can find some mistakes in my request but they are all great if you'll try to pronounce them.",
+	bot.send_message(chat_id=update.message.chat_id, text="Hello. My Name is ///a. I am robot AI. I was build to manage robot with a help of speech so you can find some mistakes in my request but they are all great if you'll try to pronounce them.",
 		reply_markup=get_inline_keyboard())
 
 def answer(bot, update):

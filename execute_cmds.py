@@ -340,11 +340,6 @@ def detect_cell(Text):
 			cell = (cells_accord[word[:1]], int(word[1:]))
 	return cell
 
-# stealin'
-# i gave you the key to my home
-# i left you alone
-# in charge of my heart, hey, stealin'
-
 def write_file(item, file):
     file = open("FILES/naval_battle/" + file, mode="w")
     file.write(str(item))
@@ -471,11 +466,6 @@ def get_naval_battle_request(start=False):
             write_file(str(cell_to_shot), "beaten_cell.txt")
             draw_fields()
             return str(cells[cell_to_shot[0]]) + str(cell_to_shot[1])
-
-# hold on,
-# baby tell me
-# it's all right
-
 
 def naval_battle(Text):
 #    print(Text)
@@ -665,10 +655,6 @@ def what_heard(Text):
 	cut = file[len(file) - 4]
 	cut = cut[9:-1]
 	return cut
-
-# you found success and recognition
-# but into every life a little
-# rain must fall
 
 def what_day_of_month(Text):
 	res = what_day_today(Text)

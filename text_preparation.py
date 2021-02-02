@@ -113,7 +113,6 @@ def recognize_cmd(cmd):
 		for cell in cells:
 			if cmd.split(" ").count(cell):
 				return {'cmd': 'naval_battle', 'percent': 100}
-# was it all worth it
 		units_list = ["meter", "gram", "bit", "newton", "tesla", "byt", "piko", "nano", "micro",
 					  "milli", "centi", "deci", "kilo", "mega", "giga", "tera", "peta"]
 
@@ -146,8 +145,6 @@ def recognize_cmd(cmd):
 	print(RC)
 	return RC
 
-# i know. i know, i know that is tru
-# yeah, it's realy meant to me
 
 def write_request(request, answer):
 	file = open('FILES/DialogStory.txt', mode="a")
@@ -157,11 +154,6 @@ def write_request(request, answer):
 	file.write('\n')
 	file.close()
 	return "writing succesfull"
-
-# so let let them know when they stare,
-# it's just a private affaire
-# they'll have us hung in the air
-# and tell me what do they care
 
 def execute_cmd(cmd, Text):
 	#print(cmd)

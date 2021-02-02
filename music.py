@@ -112,8 +112,6 @@ def recognize_song(Text, is_song=False, is_album=False):
 # ......
 # seven seas of rhye 2
 
-# listen to "mr. bad guy" there must be more the life than this
-# good song, I like it :)
 def make_list(album, album_to_speak):
 	print("Should make list of: " + album_to_speak)
 	album_without_spaces = album
